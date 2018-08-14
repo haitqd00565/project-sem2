@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/demo/master-layout', function () {
     return view('layout.master');
+});
+
+Route::get('/demo/form-example', function () {
+    return view('example.form');
 });
