@@ -18,3 +18,6 @@ Route::get('/demo/master-layout', function () {
 Route::get('/demo/form-example', function () {
     return view('example.form');
 });
+Route::get('/demo/list-example', function () {
+    return view('example.list');
+});
