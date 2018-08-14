@@ -6,7 +6,7 @@
                 <i class="material-icons">assignment</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">DataTables.net</h4>
+                <h4 class="card-title">Danh sách order mẫu.</h4>
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
                 </div>
