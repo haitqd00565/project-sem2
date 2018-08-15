@@ -1,107 +1,68 @@
-@extends('layout.master', ['page_title' => 'Example form | Admin page'])
+@extends('layout.master', ['page_title' => 'Form Product'])
 @section('content')
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <form method="get" action="#" class="form-horizontal">
+                <form method="post" action="/index" class="form-horizontal">
+                    {{csrf_field()}}
                     <div class="card-header card-header-text" data-background-color="rose">
-                        <h4 class="card-title">Form Elements</h4>
+                        <h4 class="card-title">FORM PRODUCT</h4>
                     </div>
                     <div class="card-content">
                         <div class="row">
-                            <label class="col-sm-2 label-on-left">With help</label>
+                            <label class="col-sm-2 label-on-left">Name</label>
                             <div class="col-sm-10">
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label"></label>
-                                    <input type="text" class="form-control" value="">
-                                    <span class="help-block">A block of help text that breaks onto a new line.</span>
+                                    <input type="text" name="name" class="form-control">
                                     <span class="material-input"></span></div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 label-on-left">Password</label>
+                            <label class="col-sm-2 label-on-left">Image</label>
                             <div class="col-sm-10">
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label"></label>
-                                    <input type="password" class="form-control" value="">
+                                    <input type="text" name="image" class="form-control">
                                     <span class="material-input"></span></div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 label-on-left">Placeholder</label>
+                            <label class="col-sm-2 label-on-left">Price</label>
                             <div class="col-sm-10">
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label"></label>
-                                    <input type="text" class="form-control" placeholder="placeholder">
+                                    <input type="text" name="price" class="form-control">
                                     <span class="material-input"></span></div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 label-on-left">Disabled</label>
+                            <label class="col-sm-2 label-on-left">Sale</label>
                             <div class="col-sm-10">
                                 <div class="form-group label-floating is-empty">
                                     <label class="control-label"></label>
-                                    <input type="text" placeholder="Disabled input here..." disabled="" class="form-control">
+                                    <input type="text" name="sale" class="form-control">
                                     <span class="material-input"></span></div>
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-sm-2 label-on-left">Static control</label>
+                            <label class="col-sm-2 label-on-left">Description</label>
                             <div class="col-sm-10">
-                                <div class="form-group">
-                                    <p class="form-control-static">hello@creative-tim.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 label-on-left">Checkboxes and radios</label>
-                            <div class="col-sm-10 checkbox-radios">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span> First Checkbox
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span> Second Checkbox
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" checked="true"><span class="circle"></span><span class="check"></span> First Radio
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios"><span class="circle"></span><span class="check"></span> Second Radio
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label class="col-sm-2 label-on-left">Inline checkboxes</label>
-                            <div class="col-sm-10">
-                                <div class="checkbox checkbox-inline">
-                                    <label>
-                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span>a
-                                    </label>
-                                </div>
-                                <div class="checkbox checkbox-inline">
-                                    <label>
-                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span>b
-                                    </label>
-                                </div>
-                                <div class="checkbox checkbox-inline">
-                                    <label>
-                                        <input type="checkbox" name="optionsCheckboxes"><span class="checkbox-material"><span class="check"></span></span>c
-                                    </label>
-                                </div>
+                                <div class="form-group label-floating is-empty">
+                                    <label class="control-label"></label>
+                                    <input type="text" name="description    " class="form-control">
+                                    <span class="material-input"></span></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-fill btn-rose">Submit<div class="ripple-container"></div></button>
+                                <button type="submit" value="Submit" class="btn btn-fill btn-success">Submit
+                                    <div class="ripple-container"></div>
+                                </button>
+                                <button type="reset" value="Reset" class="btn btn-fill btn-rose">Reset
+                                    <div class="ripple-container"></div>
+                                </button>
                             </div>
                         </div>
                     </div>
