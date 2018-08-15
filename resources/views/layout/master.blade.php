@@ -33,12 +33,12 @@
 -->
         <div class="logo">
             <a href="/admin" class="simple-text">
-                Seafashion
+                Gamble Team
             </a>
         </div>
         <div class="logo logo-mini">
             <a href="" class="simple-text">
-                Sf
+                SEA
             </a>
         </div>
         <div class="sidebar-wrapper">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="info">
                     <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                        Tania Andrew
+                        Admin
                         <b class="caret"></b>
                     </a>
                     <div class="collapse" id="collapseExample">
@@ -83,10 +83,10 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="pages/pricing.html">Thêm mới</a>
+                                <a href="/index/create">Thêm mới</a>
                             </li>
                             <li>
-                                <a href="pages/timeline.html">Danh sách</a>
+                                <a href="/index">Danh sách</a>
                             </li>
                         </ul>
                     </div>
@@ -133,7 +133,7 @@
                 <div class="collapse navbar-collapse">
                     <form class="navbar-form navbar-right" role="search">
                         <div class="form-group form-search is-empty">
-                            <input type="text" class="form-control" placeholder="Tìm kiếm">
+                            <input type="text" class="form-control" placeholder="Search...">
                             <span class="material-input"></span>
                         </div>
                         <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -146,8 +146,8 @@
         </nav>
         <div class="content">
             <div class="container-fluid">
-               @section('content')
-               @show()
+                @section('content')
+                @show()
             </div>
         </div>
         <footer class="footer">
