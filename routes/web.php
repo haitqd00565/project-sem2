@@ -21,3 +21,6 @@ Route::get('/demo/form-example', function () {
 Route::get('/demo/list-example', function () {
     return view('example.list');
 });
+Route::get('/chart',function (){
+    return view('example.chart');
+});
