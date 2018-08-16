@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Requests\StoreCategoryRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -37,9 +38,10 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCategoryRequest $request)
     {
-        //
+        $request->validated();
+
         $obj = new Category();
         $obj->name = $request->get('name');
         $obj->description = $request->get('description');
@@ -86,8 +88,24 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $obj = Category::find($id);
+        $validate_unique = '';
+        if($obj->name != $request->get('name')){
+            $validate_unique = '|unique:categories';
+        }
+        $request->validate([
+            'name' => 'required|max:50|min:10' . $validate_unique,
+            'description' => 'required',
+            'thumbnail' => 'required'
+        ], [
+            'name.required' => 'Vui lòng nhập tên danh mục.',
+            'name.min' => 'Tên quá ngắn, vui lòng nhập ít nhất 10 ký tự.',
+            'name.max' => 'Tên quá dài, vui lòng nhập nhiều nhất 50 ký tự.',
+            'name.unique' => 'Tên đã được sử dụng, vui lòng chọn tên khác.',
+            'description.required' => 'Vui lòng nhập mô tả cho danh mục',
+            'thumbnail.required' => 'Vui lòng nhập ảnh đại diện cho danh mục',
+        ]);
+
         if ($obj == null || $obj->status != 1) {
             return view('404');
         }
