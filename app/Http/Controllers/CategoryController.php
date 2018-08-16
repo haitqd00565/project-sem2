@@ -15,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $list_obj = Category::where('status', 1)->orderBy('created_at', 'DESC')->paginate(1);
+        $limit = 10;
+        $list_obj = Category::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
         return view('admin.category.list')->with('list_obj', $list_obj);
     }
 
@@ -66,6 +67,11 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
+        $obj = Category::find($id);
+        if($obj==null){
+            return view('404');
+        }
+        return view('admin.category.edit')->with('obj', $obj);
     }
 
     /**
@@ -78,6 +84,15 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $obj = Category::find($id);
+        if($obj==null){
+            return view('404');
+        }
+        $obj->name = $request->get('name');
+        $obj->description = $request->get('description');
+        $obj->thumbnail = $request->get('thumbnail');
+        $obj->save();
+        return redirect('/admin/category');
     }
 
     /**
