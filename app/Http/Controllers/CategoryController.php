@@ -33,7 +33,7 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -50,7 +50,7 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -61,14 +61,14 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
         $obj = Category::find($id);
-        if($obj==null){
+        if ($obj == null) {
             return view('404');
         }
         return view('admin.category.edit')->with('obj', $obj);
@@ -77,15 +77,15 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         //
         $obj = Category::find($id);
-        if($obj==null){
+        if ($obj == null) {
             return view('404');
         }
         $obj->name = $request->get('name');
@@ -98,11 +98,16 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+        $obj = Category::find($id);
+        if ($obj == null) {
+            return response()->json(['message' => 'Category không tồn tại hoặc đã bị xoá!'], 404);
+        }
+        $obj->delete();
+        return response()->json(['message' => 'Đã xoá thông tin danh mục'], 200);
     }
 }

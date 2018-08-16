@@ -21,6 +21,7 @@
     <!--     Fonts and icons     -->
     <link href="/assets/css/font-awesome.css" rel="stylesheet" />
     <link href="/assets/css/google-roboto-300-700.css" rel="stylesheet" />
+    <script src="/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -185,7 +186,6 @@
 
 </body>
 <!--   Core JS Files   -->
-<script src="/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script>
 <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/assets/js/material.min.js" type="text/javascript"></script>

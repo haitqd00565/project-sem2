@@ -61,7 +61,7 @@
                                                 <td class="text-right">
                                                     <a href="/admin/category/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
-                                                    <a href="#" class="btn btn-simple btn-danger btn-icon remove"><i
+                                                    <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
                                                                 class="material-icons">close</i></a>
                                                 </td>
                                             </tr>
@@ -85,4 +85,24 @@
         </div>
         <!--  end card  -->
     </div>
+    <script>
+        $('.btn-delete').click(function () {
+            var id = $(this).attr('href');
+            $.ajax({
+                'url': '/admin/category/' + id,
+                'method': 'DELETE',
+                'data':{
+                    '_token':'{{csrf_token()}}'
+                },
+                success: function (response) {
+                    alert('Xoá thành công!');
+                    window.location.reload();
+                },
+                error: function () {
+                    alert('Có lỗi xảy ra, vui lòng thử lại sau.');
+                }
+            });
+            return false;
+        })
+    </script>
 @endsection
