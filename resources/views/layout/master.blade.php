@@ -101,10 +101,10 @@
                     <div class="{{ $current_menu == 'category_manager' ? 'collapse in' : '' }}" id="componentsExamples">
                         <ul class="nav">
                             <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
-                                <a href="components/buttons.html">Thêm mới</a>
+                                <a href="/admin/category/create">Thêm mới</a>
                             </li>
                             <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
-                                <a href="components/grid.html">Danh sách</a>
+                                <a href="/admin/category">Danh sách</a>
                             </li>
                         </ul>
                     </div>

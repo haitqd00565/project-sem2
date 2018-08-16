@@ -15,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $list_obj = Category::where('status', 1)->orderBy('created_at', 'DESC')->paginate(1);
+        return view('admin.category.list')->with('list_obj', $list_obj);
     }
 
     /**
