@@ -67,7 +67,7 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="dashboard.html">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
@@ -91,19 +91,19 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="{{ $current_menu == 'category_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#componentsExamples">
                         <i class="material-icons">apps</i>
                         <p>Danh mục sản phẩm
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="componentsExamples">
+                    <div class="{{ $current_menu == 'category_manager' ? 'collapse in' : '' }}" id="componentsExamples">
                         <ul class="nav">
-                            <li>
+                            <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
                                 <a href="components/buttons.html">Thêm mới</a>
                             </li>
-                            <li>
+                            <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
                                 <a href="components/grid.html">Danh sách</a>
                             </li>
                         </ul>
