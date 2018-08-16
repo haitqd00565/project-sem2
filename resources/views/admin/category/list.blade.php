@@ -14,6 +14,9 @@
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
                 </div>
+                @if (Session::has('message'))
+                    <div class="alert {{ Session::get('message-class') }}">{{ Session::get('message') }}</div>
+                @endif
                 <div class="material-datatables">
                     <div id="datatables_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                         <div class="row">
@@ -69,6 +72,10 @@
                                         </tbody>
                                     </table>
                             </div>
+                            @else
+                                <div class="alert alert-info">Hiện tại không có danh mục sản phẩm. Vui lòng click <a
+                                            href="/admin/category/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
+                                </div>
                             @endif
                         </div>
                         <div class="row">
@@ -87,20 +94,45 @@
     </div>
     <script>
         $('.btn-delete').click(function () {
-            var id = $(this).attr('href');
-            $.ajax({
-                'url': '/admin/category/' + id,
-                'method': 'DELETE',
-                'data':{
-                    '_token':'{{csrf_token()}}'
-                },
-                success: function (response) {
-                    alert('Xoá thành công!');
-                    window.location.reload();
-                },
-                error: function () {
-                    alert('Có lỗi xảy ra, vui lòng thử lại sau.');
-                }
+            var thisButton = $(this);
+            swal({
+                text: "Bạn có chắc muốn xoá danh mục này không?",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonClass: 'btn btn-success',
+                cancelButtonClass: 'btn btn-danger',
+                confirmButtonText: 'Đồng ý',
+                cancelButtonText: 'Huỷ bỏ',
+                buttonsStyling: false
+            }).then(function() {
+                var id = thisButton.attr('href');
+                $.ajax({
+                    'url': '/admin/category/' + id,
+                    'method': 'DELETE',
+                    'data':{
+                        '_token':$('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function (response) {
+                        swal({
+                            text: 'Danh mục đã bị xoá.',
+                            type: 'success',
+                            confirmButtonClass: "btn btn-success",
+                            buttonsStyling: false
+                        })
+                        setTimeout(function () {
+                            window.location.reload();
+                        }, 2*1000);
+                    },
+                    error: function () {
+                        swal({
+                            text: 'Có lỗi xảy ra, vui lòng thử lại sau.',
+                            type: 'warning',
+                            confirmButtonClass: "btn btn-danger",
+                            buttonsStyling: false
+                        })
+                    }
+                });
+
             });
             return false;
         })

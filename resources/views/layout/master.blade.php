@@ -11,7 +11,7 @@
     <title>{{ $page_title }}</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap core CSS     -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
@@ -101,6 +101,11 @@
                     </a>
                     <div class="{{ $current_menu == 'category_manager' ? 'collapse in' : '' }}" id="componentsExamples">
                         <ul class="nav">
+                            @if($current_menu == 'category_manager' && $current_sub_menu == 'edit')
+                            <li class="active">
+                                <a href="{{ url()->current() }}">Sửa thông tin</a>
+                            </li>
+                            @endif
                             <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
                                 <a href="/admin/category/create">Thêm mới</a>
                             </li>

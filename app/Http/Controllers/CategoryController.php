@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 class CategoryController extends Controller
 {
@@ -44,6 +45,8 @@ class CategoryController extends Controller
         $obj->description = $request->get('description');
         $obj->thumbnail = $request->get('thumbnail');
         $obj->save();
+        Session::flash('message', 'Thêm mới thành công');
+        Session::flash('message-class', 'alert-success');
         return redirect('/admin/category');
     }
 
@@ -68,7 +71,7 @@ class CategoryController extends Controller
     {
         //
         $obj = Category::find($id);
-        if ($obj == null) {
+        if ($obj == null || $obj->status != 1) {
             return view('404');
         }
         return view('admin.category.edit')->with('obj', $obj);
@@ -85,13 +88,15 @@ class CategoryController extends Controller
     {
         //
         $obj = Category::find($id);
-        if ($obj == null) {
+        if ($obj == null || $obj->status != 1) {
             return view('404');
         }
         $obj->name = $request->get('name');
         $obj->description = $request->get('description');
         $obj->thumbnail = $request->get('thumbnail');
         $obj->save();
+        Session::flash('message', 'Sửa thành công');
+        Session::flash('message-class', 'alert-success');
         return redirect('/admin/category');
     }
 
@@ -107,7 +112,8 @@ class CategoryController extends Controller
         if ($obj == null) {
             return response()->json(['message' => 'Category không tồn tại hoặc đã bị xoá!'], 404);
         }
-        $obj->delete();
+        $obj->status = 0;
+        $obj->save();
         return response()->json(['message' => 'Đã xoá thông tin danh mục'], 200);
     }
 }
