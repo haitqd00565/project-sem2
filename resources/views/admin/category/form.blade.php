@@ -7,11 +7,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <form method="post" action="/admin/category" class="form-horizontal">
+                <div class="card-header card-header-icon" data-background-color="purple">
+                    <i class="material-icons">add</i>
+                </div>
+                <div class="card-content">
+                    <h4 class="card-title">TẠO MỚI DANH MỤC SẢN PHẨM</h4>
+                    <form method="post" action="/admin/category" class="form-horizontal">
                     {{csrf_field()}}
-                    <div class="card-header card-header-text" data-background-color="rose">
-                        <h4 class="card-title">Tạo mới danh mục</h4>
-                    </div>
                     <div class="card-content">
                         <div class="row">
                             <label class="col-sm-2 label-on-left">Tên</label>
@@ -53,6 +55,7 @@
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>
