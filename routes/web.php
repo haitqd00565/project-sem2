@@ -15,10 +15,10 @@ Route::get('/demo/master-layout', function () {
     return view('layout.master');
 });
 
-//Route::get('/demo/form', function () {
-//    return view('example.form');
-//});
-//Route::get('/demo/list', function () {
-//    return view('example.list');
-//});
-Route::resource('/index', 'ProductController');
+Route::get('/demo/form', function () {
+    return view('example.form');
+});
+
+Route::get('/demo/list', function () {
+    return view('example.list');
+});
