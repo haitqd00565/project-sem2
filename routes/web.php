@@ -22,5 +22,8 @@ Route::get('/demo/form', function () {
 Route::get('/demo/list', function () {
     return view('example.list');
 });
+Route::get('/404',function (){
+    return view('error.404');
+});
 
 Route::resource('admin/category', 'CategoryController');
