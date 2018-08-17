@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Collection;
+use App\Http\Requests\StoreCollectionRequest;
 use Illuminate\Http\Request;
 
 class ConllectionController extends Controller
@@ -26,7 +27,7 @@ class ConllectionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.collection.form');
     }
 
     /**
@@ -35,9 +36,18 @@ class ConllectionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCollectionRequest $request)
     {
-        //
+        $request->validated();
+
+        $obj = new Collection();
+        $obj->name = $request->get('name');
+        $obj->description = $request->get('description');
+        $obj->thumbnail = $request->get('thumbnail');
+        $obj->save();
+        Session::flash('message', 'Thêm mới thành công');
+        Session::flash('message-class', 'alert-success');
+        return redirect('/admin/collection');
     }
 
     /**
