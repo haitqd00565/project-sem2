@@ -62,7 +62,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
-                                                    <a href="/admin/category/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
+                                                    <a href="/admin/collection/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
                                                     <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
                                                                 class="material-icons">close</i></a>
