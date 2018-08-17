@@ -74,7 +74,7 @@
                             </div>
                             @else
                                 <div class="alert alert-info">Hiện tại không có bộ sưu tập. Vui lòng click <a
-                                            href="/admin/category/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
+                                            href="/admin/collection/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
                                 </div>
                             @endif
                         </div>
