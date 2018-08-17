@@ -76,7 +76,7 @@
                 </li>
                 <li>
                     <a data-toggle="collapse" href="#pagesExamples">
-                        <i class="material-icons">image</i>
+                        <i class="material-icons">sort</i>
                         <p>Quản lý sản phẩm
                             <b class="caret"></b>
                         </p>
@@ -111,6 +111,24 @@
                             </li>
                             <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
                                 <a href="/admin/category">Danh sách</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a data-toggle="collapse" href="#pageCollection">
+                        <i class="material-icons">image</i>
+                        <p>Bộ sưu tập
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="pageCollection">
+                        <ul class="nav">
+                            <li>
+                                <a href="#">Thêm mới</a>
+                            </li>
+                            <li>
+                                <a href="#">Danh sách</a>
                             </li>
                         </ul>
                     </div>
