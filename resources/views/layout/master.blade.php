@@ -99,7 +99,8 @@
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="{{ $current_menu == 'category_manager' ? 'collapse in' : '' }}" id="componentsExamples">
+                    @if($current_menu == 'category_manager')
+                    <div class="collapse in" id="componentsExamples">
                         <ul class="nav">
                             @if($current_menu == 'category_manager' && $current_sub_menu == 'edit')
                             <li class="active">
@@ -114,24 +115,64 @@
                             </li>
                         </ul>
                     </div>
+                        @else
+                        <div class="collapse" id="componentsExamples">
+                            <ul class="nav">
+                                @if($current_menu == 'category_manager' && $current_sub_menu == 'edit')
+                                    <li class="active">
+                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                    </li>
+                                @endif
+                                <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
+                                    <a href="/admin/category/create">Thêm mới</a>
+                                </li>
+                                <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/admin/category">Danh sách</a>
+                                </li>
+                            </ul>
+                        </div>
+                        @endif
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#pageCollection">
+                <li  class="{{ $current_menu == 'collection_manager' ? 'active' : '' }}">
+                    <a data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">image</i>
                         <p>Bộ sưu tập
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="pageCollection">
+                    @if($current_menu == 'collection_manager')
+                    <div class="collapse in" id="formsExamples">
                         <ul class="nav">
-                            <li>
+                            @if($current_menu == 'collection_manager' && $current_sub_menu == 'edit')
+                                <li class="active">
+                                    <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                </li>
+                            @endif
+                            <li class="{{ ($current_menu == 'collection_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
                                 <a href="/admin/collection/create">Thêm mới</a>
                             </li>
-                            <li>
+                            <li class="{{ ($current_menu == 'collection_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
                                 <a href="/admin/collection">Danh sách</a>
                             </li>
                         </ul>
                     </div>
+                        @else
+                        <div class="collapse" id="formsExamples">
+                            <ul class="nav">
+                                @if($current_menu == 'collection_manager' && $current_sub_menu == 'edit')
+                                    <li class="active">
+                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                    </li>
+                                @endif
+                                <li class="{{ ($current_menu == 'collection_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
+                                    <a href="/admin/collection/create">Thêm mới</a>
+                                </li>
+                                <li class="{{ ($current_menu == 'collection_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/admin/collection">Danh sách</a>
+                                </li>
+                            </ul>
+                        </div>
+                        @endif
                 </li>
             </ul>
         </div>
