@@ -1,6 +1,6 @@
 @extends('layout.master', [
     'page_title' => 'Sửa thông tin danh mục sản phẩm | Seafashion Admin Page',
-    'current_menu' => 'category_manager',
+    'current_menu' => 'collection_manager',
     'current_sub_menu' => 'edit',
 ])
 @section('content')

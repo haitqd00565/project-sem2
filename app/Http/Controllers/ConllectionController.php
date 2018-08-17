@@ -38,9 +38,17 @@ class ConllectionController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCollectionRequest $request)
     {
-        //
+        $request->validated();
+        $obj = new Collection();
+        $obj->name = $request->get('name');
+        $obj->description = $request->get('description');
+        $obj->thumbnail = $request->get('thumbnail');
+        $obj->save();
+        Session::flash('message', 'Thêm mới thành công');
+        Session::flash('message-class', 'alert-success');
+        return redirect('/admin/collection');
     }
 
     /**
@@ -76,12 +84,12 @@ class ConllectionController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreCollectionRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $obj = Collection::find($id);
         $validate_unique = '';
         if ($obj->name != $request->get('name')) {
-            $validate_unique = '|unique:categories';
+            $validate_unique = '|unique:collections';
         }
         $request->validate([
             'name' => 'required|max:50|min:10' . $validate_unique,
@@ -117,6 +125,12 @@ class ConllectionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $obj = Collection::find($id);
+        if ($obj == null) {
+            return response()->json(['message' => 'Bộ sưu tập không tồn tại hoặc đã bị xóa'], 404);
+        }
+        $obj->status = 0;
+        $obj->save();
+        return response()->json(['message' => 'Xóa bộ sưu tập thành công']);
     }
 }

@@ -29,6 +29,7 @@ class StoreCollectionRequest extends FormRequest
             'thumbnail' => 'required'
         ];
     }
+
     public function messages()
     {
         return [
