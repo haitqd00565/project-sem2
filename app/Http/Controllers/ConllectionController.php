@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Collection;
 use App\Http\Requests\StoreCollectionRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ConllectionController extends Controller
 {
