@@ -75,10 +75,14 @@
                             @else
                                 <div class="alert alert-info">Hiện tại không có bộ sưu tập. Vui lòng click <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             href="/admin/collection/create" title="Thêm mới danh mục" class="btn-link">vào đây</a> để tạo mới.
 =======
                                             href="/admin/category/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
 >>>>>>> fa51353224dbf281ebeece99a1281741488bc73c
+=======
+                                            href="/admin/collection/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
+>>>>>>> 87555f8c2ebc19e9ceab9d5fc2c86277dd87834e
                                 </div>
                             @endif
                         </div>
