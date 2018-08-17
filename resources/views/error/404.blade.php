@@ -21,12 +21,12 @@
 </head>
 <body>
 <div class="header">
-    <h1>error page</h1>
+    <h1>error!!! page not found</h1>
 </div>
 <div class="w3-main">
     <div class="agile-info">
         <h3>SORRY</h3>
-        <h2>4<img src="images/error/confused.gif" alt="image">4</h2>
+        <h2>4<img src="https://images-na.ssl-images-amazon.com/images/I/41HPFwV%2BdYL._SY355_.jpg" alt="image">4</h2>
         <p>An error Occurred in the Application And Your Page could not be Served.</p>
 
         <a href="admin/category">go back</a>
