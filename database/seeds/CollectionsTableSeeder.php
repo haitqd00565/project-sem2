@@ -11,17 +11,18 @@ class collectionsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=0');
         \Illuminate\Support\Facades\DB::table('collections')->truncate();
-        \Illuminate\Support\Facades\DB::table('collections')->insert([[
-                'id' => 1,
-                'name' => 'Quần áo đôi đi biển',
-                'description' => 'Bộ sưu tập mùa hè mới nhất của năm 2018',
-                'thumbnail' => 'https://vaynudep.com/wp-content/uploads/2018/02/do-di-bien-cap-01.jpg',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
-                'status' => 1
-            ],
+        \Illuminate\Support\Facades\DB::table('collections')->insert([
+                [
+                    'id' => 1,
+                    'name' => 'Quần áo đôi đi biển',
+                    'description' => 'Bộ sưu tập mùa hè mới nhất của năm 2018',
+                    'thumbnail' => 'https://vaynudep.com/wp-content/uploads/2018/02/do-di-bien-cap-01.jpg',
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s'),
+                    'status' => 1
+                ],
                 [
                     'id' => 2,
                     'name' => 'Ao tắm nam',
@@ -42,6 +43,6 @@ class collectionsTableSeeder extends Seeder
                 ]
             ]
         );
-        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        \Illuminate\Support\Facades\DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }
 }
