@@ -125,10 +125,10 @@
                     <div class="collapse" id="pageCollection">
                         <ul class="nav">
                             <li>
-                                <a href="#">Thêm mới</a>
+                                <a href="/admin/collection/create">Thêm mới</a>
                             </li>
                             <li>
-                                <a href="#">Danh sách</a>
+                                <a href="/admin/collection">Danh sách</a>
                             </li>
                         </ul>
                     </div>
