@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Collection;
+<<<<<<< HEAD
 use App\Http\Requests\StoreCategoryRequest;
+=======
+>>>>>>> fa51353224dbf281ebeece99a1281741488bc73c
 use App\Http\Requests\StoreCollectionRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -38,9 +41,18 @@ class ConllectionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCollectionRequest $request)
     {
-        //
+        $request->validated();
+
+        $obj = new Collection();
+        $obj->name = $request->get('name');
+        $obj->description = $request->get('description');
+        $obj->thumbnail = $request->get('thumbnail');
+        $obj->save();
+        Session::flash('message', 'Thêm mới thành công');
+        Session::flash('message-class', 'alert-success');
+        return redirect('/admin/collection');
     }
 
     /**
@@ -116,6 +128,12 @@ class ConllectionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $obj = Collection::find($id);
+        if ($obj == null){
+            return response()->json(['message'=>'Category không tồn tịa hoặc đã bị xóa!'],404);
+        }
+        $obj->status = 0;
+        $obj->save();
+        return response()->json(['message'=>'Đã xóa thông tin danh mục!'],200);
     }
 }
