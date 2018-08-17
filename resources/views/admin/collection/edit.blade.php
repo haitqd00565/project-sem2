@@ -21,7 +21,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form method="post" action="/admin/category/{{$obj->id}}" class="form-horizontal">
+                    <form method="post" action="/admin/collection/{{$obj->id}}" class="form-horizontal">
                         @method('PUT')
                         {{csrf_field()}}
                         <div class="card-content">
