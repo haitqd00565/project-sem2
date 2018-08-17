@@ -11,7 +11,7 @@
     <title>{{ $page_title }}</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap core CSS     -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
@@ -21,6 +21,7 @@
     <!--     Fonts and icons     -->
     <link href="/assets/css/font-awesome.css" rel="stylesheet" />
     <link href="/assets/css/google-roboto-300-700.css" rel="stylesheet" />
+    <script src="/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -67,7 +68,7 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="active">
+                <li>
                     <a href="dashboard.html">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
@@ -91,20 +92,25 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="{{ $current_menu == 'category_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#componentsExamples">
                         <i class="material-icons">apps</i>
                         <p>Danh mục sản phẩm
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="componentsExamples">
+                    <div class="{{ $current_menu == 'category_manager' ? 'collapse in' : '' }}" id="componentsExamples">
                         <ul class="nav">
-                            <li>
-                                <a href="components/buttons.html">Thêm mới</a>
+                            @if($current_menu == 'category_manager' && $current_sub_menu == 'edit')
+                            <li class="active">
+                                <a href="{{ url()->current() }}">Sửa thông tin</a>
                             </li>
-                            <li>
-                                <a href="components/grid.html">Danh sách</a>
+                            @endif
+                            <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
+                                <a href="/admin/category/create">Thêm mới</a>
+                            </li>
+                            <li class="{{ ($current_menu == 'category_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                <a href="/admin/category">Danh sách</a>
                             </li>
                         </ul>
                     </div>
@@ -185,7 +191,6 @@
 
 </body>
 <!--   Core JS Files   -->
-<script src="/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script>
 <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/assets/js/material.min.js" type="text/javascript"></script>
