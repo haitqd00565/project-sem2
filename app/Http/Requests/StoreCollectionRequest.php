@@ -24,10 +24,6 @@ class StoreCollectionRequest extends FormRequest
     public function rules()
     {
         return [
-<<<<<<< HEAD
-=======
-
->>>>>>> fa51353224dbf281ebeece99a1281741488bc73c
             'name' => 'required|max:50|min:10|unique:collections',
             'description' => 'required',
             'thumbnail' => 'required'
@@ -36,11 +32,7 @@ class StoreCollectionRequest extends FormRequest
     public function messages()
     {
         return [
-<<<<<<< HEAD
             'name.required' => 'Vui lòng nhập tên bộ sưu tập.',
-=======
-            'name.required' => 'Vui lòng nhập tên danh mục.',
->>>>>>> fa51353224dbf281ebeece99a1281741488bc73c
             'name.min' => 'Tên quá ngắn, vui lòng nhập ít nhất 10 ký tự.',
             'name.max' => 'Tên quá dài, vui lòng nhập nhiều nhất 50 ký tự.',
             'name.unique' => 'Tên đã được sử dụng, vui lòng chọn tên khác.',
