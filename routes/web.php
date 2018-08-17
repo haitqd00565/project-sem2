@@ -27,3 +27,4 @@ Route::get('/404',function (){
 });
 
 Route::resource('admin/category', 'CategoryController');
+Route::resource('admin/collection', 'ConllectionController');
