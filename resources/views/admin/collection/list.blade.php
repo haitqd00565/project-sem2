@@ -1,5 +1,5 @@
 @extends('layout.master',[
-    'page_title'=>'Danh sách bộ sưu tập | Seafashion Admin Page',
+    'page_title'=>'Danh sách bộ sưu tập sản phẩm | Seafashion Admin Page',
     'current_menu'=>'collection_manager',
     'current_sub_menu'=>'list_item'
 ])
@@ -73,8 +73,8 @@
                                     </table>
                             </div>
                             @else
-                                <div class="alert alert-info">Hiện tại không có danh mục sản phẩm. Vui lòng click <a
-                                            href="/admin/collection/create" title="Thêm mới danh mục" class="btn-link">vào đây</a> để tạo mới.
+                                <div class="alert alert-info">Hiện tại không có bộ sưu tập. Vui lòng click <a
+                                            href="/admin/category/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
                                 </div>
                             @endif
                         </div>
@@ -107,7 +107,7 @@
             }).then(function() {
                 var id = thisButton.attr('href');
                 $.ajax({
-                    'url': '/admin/category/' + id,
+                    'url': '/admin/collection/' + id,
                     'method': 'DELETE',
                     'data':{
                         '_token':$('meta[name="csrf-token"]').attr('content')

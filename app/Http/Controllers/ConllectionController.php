@@ -92,6 +92,12 @@ class ConllectionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $obj = Collection::find($id);
+        if ($obj == null){
+            return response()->json(['message'=>'Category không tồn tịa hoặc đã bị xóa!'],404);
+        }
+        $obj->status = 0;
+        $obj->save();
+        return response()->json(['message'=>'Đã xóa thông tin danh mục!'],200);
     }
 }
