@@ -74,7 +74,7 @@ class CategoryController extends Controller
         //
         $obj = Category::find($id);
         if ($obj == null || $obj->status != 1) {
-            return view('404');
+            return view('error.404');
         }
         return view('admin.category.edit')->with('obj', $obj);
     }
@@ -107,7 +107,7 @@ class CategoryController extends Controller
         ]);
 
         if ($obj == null || $obj->status != 1) {
-            return view('404');
+            return view('error.404');
         }
         $obj->name = $request->get('name');
         $obj->description = $request->get('description');
