@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Collection;
 use Illuminate\Http\Request;
 
 class ConllectionController extends Controller
@@ -13,7 +14,9 @@ class ConllectionController extends Controller
      */
     public function index()
     {
-        //
+        $limit = 10;
+        $list_obj = Collection::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
+        return view('admin.category.list')->with('list_obj', $list_obj);
     }
 
     /**
@@ -23,7 +26,7 @@ class ConllectionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.collection.form');
     }
 
     /**
@@ -56,7 +59,11 @@ class ConllectionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $obj = Collection::find($id);
+        if ($obj == null || $obj->status != 1) {
+            return view('error.404');
+        }
+        return view('admin.collection.edit')->with('obj', $obj);
     }
 
     /**
