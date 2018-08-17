@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Collection;
 use Illuminate\Http\Request;
 
 class ConllectionController extends Controller
@@ -13,7 +14,9 @@ class ConllectionController extends Controller
      */
     public function index()
     {
-        //
+        $limit = 10;
+        $list_obj = Collection::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
+        return view('admin.collection.list')->with('list_obj', $list_obj);
     }
 
     /**
