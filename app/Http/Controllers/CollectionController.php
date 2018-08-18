@@ -8,7 +8,7 @@ use App\Http\Requests\StoreCollectionRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class ConllectionController extends Controller
+class CollectionController extends Controller
 {
     /**
      * Display a listing of the resource.
