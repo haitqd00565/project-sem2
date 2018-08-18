@@ -1,143 +1,42 @@
-/*--
 
---*/
-/* reset */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+.w3-main{
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-ol, ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* start editing from here */
-a {
-    text-decoration: none;
-}
-
-.txt-rt {
-    text-align: right;
-}
-
-/* text align right */
-.txt-lt {
-    text-align: left;
-}
-
-/* text align left */
-.txt-center {
     text-align: center;
 }
-
-/* text align center */
-.float-rt {
-    float: right;
+.w3-main .agile-info h2{
+    color: red;
 }
-
-/* float right */
-.float-lt {
-    float: left;
-}
-
-/* float left */
-.clear {
-    clear: both;
-}
-
-/* clear float */
-.pos-relative {
-    position: relative;
-}
-
-/* Position Relative */
-.pos-absolute {
-    position: absolute;
-}
-
-/* Position Absolute */
-.vertical-base {
-    vertical-align: baseline;
-}
-
-/* vertical align baseline */
-.vertical-top {
-    vertical-align: top;
-}
-
-/* vertical align top */
-nav.vertical ul li {
-    display: block;
-}
-
-/* vertical menu */
-nav.horizontal ul li {
-    display: inline-block;
-}
-
-/* horizontal menu */
-img {
-    max-width: 20%;
-}
-
-/*end reset*/
-
 body p, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Ropa Sans', sans-serif;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 body {
-
-    background-color: #8DCAF3;
-    background: url("http://www.radiolab.it/wp-content/uploads/2017/07/maxresdefault-1.jpg");
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    text-align: center;
+    /*text-align: center;*/
     background-position: center;
     background-attachment: fixed;
 }
-/*--header--*/
+/*!*--header--*!*/
 .header h1 {
     font-size: 3em;
     text-transform: uppercase;
     letter-spacing: 8px;
-    color: #fff;
+    color: black;
     font-weight: 400;
     margin-top: 1.1em;
+    text-align: center;
 }
 
-/*--//header--*/
+/*!*--//header--*!*/
 
-/*--main--*/
+/*!*--main--*!*/
 .w3-main {
-    background: #FFFFFF;
+    /*float: left;*/
+    background: url("http://thuthuatphanmem.vn/uploads/2017/11/05/hinh-nen-may-tinh-dep-2017-8_123208.jpg");
     width: 53%;
     margin: 3em auto;
     -webkit-box-shadow: -2px 11px 32px -13px rgba(0, 0, 0, 0.45);
@@ -150,6 +49,7 @@ body {
 }
 
 .agile-info h2 {
+
     font-size: 12em;
     color: black;
     line-height: 1;
@@ -157,10 +57,13 @@ body {
     letter-spacing: 20px;
 }
 
-img {
-    padding-right: 0.1em;
-}
-
+/*img {*/
+    /*padding-right: 0.1em;*/
+/*}*/
+/*.agile-info h2 .img-1 img{*/
+    /*padding-right: 0.1em;*/
+    /*max-width: 20%;*/
+/*}*/
 .agile-info h3 {
     font-size: 2.5em;
     text-transform: uppercase;
@@ -187,7 +90,7 @@ img {
     letter-spacing: 2px;
     display: inline-block;
     background: #962258;
-    font-family: 'Ropa Sans', sans-serif;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -204,26 +107,26 @@ img {
     -ms-transition: 0.5s all;
 }
 
-/*--//main--*/
+/*!*--//main--*!*/
 
 /*--footer--*/
-.footer-w3l p {
-    margin: 4em 0em;
-    color: #fff;
-    font-size: 1em;
-    letter-spacing: 2px;
-}
+/*.footer-w3l p {*/
+    /*margin: 4em 0em;*/
+    /*color:#A3A686;*/
+    /*font-size: 1em;*/
+    /*letter-spacing: 2px;*/
+/*}*/
 
-.footer-w3l a {
-    color: #fff;
-}
+/*.footer-w3l a {*/
+    /*color: #A3A686;*/
+/*}*/
 
-.footer-w3l a:hover {
-    color: #3859a0;
-    text-decoration: underline;
-}
+/*.footer-w3l a:hover {*/
+    /*color: #3859a0;*/
+    /*text-decoration: underline;*/
+/*}*/
 
-/*--//footer--*/
+/*--footer--*/
 
 /*--responsive--*/
 
