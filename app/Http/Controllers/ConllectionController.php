@@ -17,7 +17,7 @@ class ConllectionController extends Controller
      */
     public function index()
     {
-        $limit = 10;
+        $limit = 1;
         $list_obj = Collection::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
         return view('admin.collection.list')->with('list_obj', $list_obj);
     }
