@@ -26,5 +26,9 @@ Route::get('/404',function (){
     return view('error.404');
 });
 
+Route::get('/home',function (){
+    return view('customer.home');
+});
+
 Route::resource('admin/category', 'CategoryController');
 Route::resource('admin/collection', 'CollectionController');
