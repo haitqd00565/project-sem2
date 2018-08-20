@@ -514,19 +514,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                             <li><a href="#" class="facebook">
                                     <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                </a></li>
                             <li><a href="#" class="twitter">
                                     <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                </a></li>
                             <li><a href="#" class="instagram">
                                     <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                </a></li>
                             <li><a href="#" class="pinterest">
                                     <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                </a></li>
                         </ul>
                         <div class="clearfix"></div>
-                        <p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
+                        <p><a href="#" data-toggle="modal" data-target="#myModal2"> Don't have an account?</a></p>
 
                     </div>
                     <div class="col-md-4 modal_body_right modal_body_right1">
@@ -576,23 +580,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                             <li><a href="#" class="facebook">
                                     <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                </a></li>
                             <li><a href="#" class="twitter">
                                     <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                </a></li>
                             <li><a href="#" class="instagram">
                                     <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                </a></li>
                             <li><a href="#" class="pinterest">
                                     <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                </a></li>
                         </ul>
                         <div class="clearfix"></div>
                         <p><a href="#">By clicking register, I agree to your terms</a></p>
 
                     </div>
                     <div class="col-md-4 modal_body_right modal_body_right1">
-                        <img src="asset/images/log_pic.jpg" alt=" "/>
+                        <img src="{{asset('asset/asset/images/log_pic.jpg')}}" alt=" "/>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -606,7 +614,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 @section('content')
 @show()
 
+<div class="coupons">
+    <div class="coupons-grids text-center">
+        <div class="w3layouts_mail_grid">
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>FREE SHIPPING</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>24/7 SUPPORT</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>MONEY BACK GUARANTEE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-gift" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>FREE GIFT COUPONS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
 
+    </div>
+</div>
 <div class="footer">
     <div class="footer_agile_inner_info_w3l">
         <div class="col-md-12 footer-right">
@@ -663,14 +714,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-3 sign-gd flickr-post">
                     <h4>Flickr <span>Posts</span></h4>
                     <ul>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t1.jpg')}}" alt=" " class="img-responsive"></a></li>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t2.jpg')}}" alt=" " class="img-responsive"></a></li>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t3.jpg')}}" alt=" " class="img-responsive"></a></li>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t4.jpg')}}" alt=" " class="img-responsive"></a></li>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t1.jpg')}}" alt=" " class="img-responsive"></a></li>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t2.jpg')}}" alt=" " class="img-responsive"></a></li>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t3.jpg')}}" alt=" " class="img-responsive"></a></li>
-                        <li><a href="single.html"><img src="{{asset('asset/images/t4.jpg')}}" alt=" " class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t1.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t2.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t3.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t4.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t1.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t2.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t3.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
+                        <li><a href="single.html"><img src="{{asset('asset/images/t4.jpg')}}" alt=" "
+                                                       class="img-responsive"></a></li>
 
                     </ul>
                 </div>
@@ -757,6 +816,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                                                                       style="opacity: 1;"> </span></a>
 
 <script type="text/javascript" src="{{asset('asset/js/jquery-2.1.4.min.js')}}"></script>
+<script src="{{asset('asset/js/responsiveslides.min.js')}}"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+        // Slideshow 4
+        $("#slider3").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: false,
+            speed: 500,
+            namespace: "callbacks",
+            before: function () {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function () {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+    });
+</script>
 <script src="{{asset('asset/js/modernizr.custom.js')}}"></script>
 <script src="{{asset('asset/js/minicart.min.js')}}"></script>
 <script>
@@ -785,7 +864,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             width: 'auto', //auto or any width like 600px
             fit: true,   // 100% fit in a container
             closed: 'accordion', // Start closed if in accordion view
-            activate: function(event) { // Callback function if tab is switched
+            activate: function (event) { // Callback function if tab is switched
                 var $tab = $(this);
                 var $info = $('#tabInfo');
                 var $name = $('span', $info);
@@ -800,6 +879,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     });
 </script>
+<script type="text/javascript">//<![CDATA[
+    $(window).load(function(){
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 9000,
+            values: [ 1000, 7000 ],
+            slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+    });//]]>
+
+</script>
 <script src="{{asset('asset/js/jquery.waypoints.min.js')}}"></script>
 <script src="{{asset('asset/js/jquery.countup.js')}}"></script>
 <script>
@@ -808,15 +902,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="{{asset('asset/js/move-top.js')}}"></script>
 <script type="text/javascript" src="{{asset('asset/js/jquery.easing.min.js')}}"></script>
 <script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $(".scroll").click(function(event){
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
             event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
         });
     });
 </script>
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         /*
             var defaults = {
             containerID: 'toTop', // fading element id
@@ -826,7 +920,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             };
         */
 
-        $().UItoTop({ easingType: 'easeOutQuart' });
+        $().UItoTop({easingType: 'easeOutQuart'});
 
     });
 </script>

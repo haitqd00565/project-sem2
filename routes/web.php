@@ -29,6 +29,9 @@ Route::get('/404',function (){
 Route::get('/home',function (){
     return view('customer.home');
 });
+Route::get('/danhsach',function (){
+    return view('customer.listProduct');
+});
 
 Route::resource('admin/category', 'CategoryController');
 Route::resource('admin/collection', 'CollectionController');
