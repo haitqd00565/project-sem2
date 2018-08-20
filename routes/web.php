@@ -35,3 +35,4 @@ Route::get('/danhsach',function (){
 
 Route::resource('admin/category', 'CategoryController');
 Route::resource('admin/collection', 'CollectionController');
+Route::resource('admin/product', 'ProductController');
