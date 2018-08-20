@@ -17,8 +17,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $obj = Product::all();
-        return view('example.list')->with('obj', $obj);
+        $limit = 10;
+        $list_obj = Product::where('status', 1)->orderBy('created_at', 'DESC')->paginate($limit);
+        return view('admin.product.list')->with('list_obj', $list_obj);
     }
 
     /**
@@ -51,9 +52,9 @@ class ProductController extends Controller
         $obj->detail = Input::get('detail');
         $obj->colors = Input::get('colors');
         $obj->sizes = Input::get('sizes');
+        $obj->save();
         Session::flash('message', 'Thêm mới thành công');
         Session::flash('message-class', 'alert-success');
-        $obj->save();
         return redirect('/admin/product');
     }
 

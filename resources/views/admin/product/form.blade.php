@@ -61,7 +61,7 @@
                             </div>
                             <div class="row">
                                 <label class="col-sm-2 label-on-left">Giá</label>
-                                <div class="col-sm-8">
+                                <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty{{$errors->has('price')?' has-error':''}}">
                                         <label class="control-label"></label>
                                         <input type="text" name="price" class="form-control{{$errors->has('price')?' error':''}}">
@@ -70,7 +70,7 @@
                             </div>
                             <div class="row">
                                 <label class="col-sm-2 label-on-left">Khuyến mãi</label>
-                                <div class="col-sm-8">
+                                <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty{{$errors->has('discount')?' has-error':''}}">
                                         <label class="control-label"></label>
                                         <input type="text" name="discount" class="form-control{{$errors->has('discount')?' error':''}}">
@@ -97,7 +97,7 @@
                             </div>
                             <div class="row">
                                 <label class="col-sm-2 label-on-left">Màu</label>
-                                <div class="col-sm-8">
+                                <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty{{$errors->has('colors')?' has-error':''}}">
                                         <label class="control-label"></label>
                                         <input type="text" name="colors" class="form-control{{$errors->has('colors')?' error':''}}">
@@ -106,7 +106,7 @@
                             </div>
                             <div class="row">
                                 <label class="col-sm-2 label-on-left">Cỡ</label>
-                                <div class="col-sm-8">
+                                <div class="col-sm-4">
                                     <div class="form-group label-floating is-empty{{$errors->has('sizes')?' has-error':''}}">
                                         <label class="control-label"></label>
                                         <input type="text" name="sizes" class="form-control{{$errors->has('sizes')?' error':''}}">
