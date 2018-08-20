@@ -84,10 +84,10 @@
                     <div class="collapse" id="pagesExamples">
                         <ul class="nav">
                             <li>
-                                <a href="/index/create">Thêm mới</a>
+                                <a href="/admin/product/create">Thêm mới</a>
                             </li>
                             <li>
-                                <a href="/index">Danh sách</a>
+                                <a href="/admin/product">Danh sách</a>
                             </li>
                         </ul>
                     </div>
