@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class collectionsTableSeeder extends Seeder
+class CollectionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,6 @@ class collectionsTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('collections')->truncate();
         \Illuminate\Support\Facades\DB::table('collections')->insert([
                 [
-                    'id' => 1,
                     'name' => 'Quần áo đôi đi biển',
                     'description' => 'Bộ sưu tập mùa hè mới nhất của năm 2018',
                     'thumbnail' => 'https://vaynudep.com/wp-content/uploads/2018/02/do-di-bien-cap-01.jpg',
@@ -24,8 +23,7 @@ class collectionsTableSeeder extends Seeder
                     'status' => 1
                 ],
                 [
-                    'id' => 2,
-                    'name' => 'Ao tắm nam',
+                    'name' => 'Quần áo đi biển',
                     'description' => 'Bộ sưu tập đi biển của năm 2018',
                     'thumbnail' => 'http://dodoi.net/upload/files/ao-cap-doi-khi-em-la-em-1489123404.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
@@ -33,8 +31,7 @@ class collectionsTableSeeder extends Seeder
                     'status' => 1
                 ],
                 [
-                    'id' => 3,
-                    'name' => 'Ao tắm nam',
+                    'name' => 'Quần áo đi biển',
                     'description' => 'Bộ sưu tập mùa hè',
                     'thumbnail' => 'http://i.timhieu.net/wp-content/uploads/2018/01/trang-phuc-di-bien-dep-d%C3%A0nh-cho-be-2.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
