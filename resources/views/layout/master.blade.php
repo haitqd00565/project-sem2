@@ -75,14 +75,14 @@
                     </a>
                 </li>
                 <li  class="{{ $current_menu == 'product_manager' ? 'active' : '' }}">
-                    <a data-toggle="collapse" href="#formsExamples">
+                    <a data-toggle="collapse" href="#pagesExamples">
                         <i class="material-icons">sort</i>
                         <p>Quản lí sản phẩm
                             <b class="caret"></b>
                         </p>
                     </a>
                     @if($current_menu == 'product_manager')
-                        <div class="collapse in" id="formsExamples">
+                        <div class="collapse in" id="pagesExamples">
                             <ul class="nav">
                                 @if($current_menu == 'product_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
@@ -98,7 +98,7 @@
                             </ul>
                         </div>
                     @else
-                        <div class="collapse" id="formsExamples">
+                        <div class="collapse" id="pagesExamples">
                             <ul class="nav">
                                 @if($current_menu == 'product_manager' && $current_sub_menu == 'edit')
                                     <li class="active">
