@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreProductRequest;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
@@ -26,7 +28,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('example.form');
+        return view('admin.product.form');
     }
 
     /**
@@ -35,16 +37,24 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
+        $request->validated();
         $obj = new Product();
+        $obj->categoryId = Input::get('categoryId');
+        $obj->collectionId = Input::get('collectionId');
         $obj->name = Input::get('name');
-        $obj->image = Input::get('image');
+        $obj->images = Input::get('images');
         $obj->price = Input::get('price');
-        $obj->sale = Input::get('sale');
+        $obj->discount = Input::get('discount');
         $obj->description = Input::get('description');
+        $obj->detail = Input::get('detail');
+        $obj->colors = Input::get('colors');
+        $obj->sizes = Input::get('sizes');
+        Session::flash('message', 'Thêm mới thành công');
+        Session::flash('message-class', 'alert-success');
         $obj->save();
-        return redirect('/index');
+        return redirect('/admin/product');
     }
 
     /**
