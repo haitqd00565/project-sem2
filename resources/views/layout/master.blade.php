@@ -74,23 +74,46 @@
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li>
-                    <a data-toggle="collapse" href="#pagesExamples">
+                <li  class="{{ $current_menu == 'product_manager' ? 'active' : '' }}">
+                    <a data-toggle="collapse" href="#formsExamples">
                         <i class="material-icons">sort</i>
-                        <p>Quản lý sản phẩm
+                        <p>Quản lí sản phẩm
                             <b class="caret"></b>
                         </p>
                     </a>
-                    <div class="collapse" id="pagesExamples">
-                        <ul class="nav">
-                            <li>
-                                <a href="/admin/product/create">Thêm mới</a>
-                            </li>
-                            <li>
-                                <a href="/admin/product">Danh sách</a>
-                            </li>
-                        </ul>
-                    </div>
+                    @if($current_menu == 'product_manager')
+                        <div class="collapse in" id="formsExamples">
+                            <ul class="nav">
+                                @if($current_menu == 'product_manager' && $current_sub_menu == 'edit')
+                                    <li class="active">
+                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                    </li>
+                                @endif
+                                <li class="{{ ($current_menu == 'product_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
+                                    <a href="/admin/product/create">Thêm mới</a>
+                                </li>
+                                <li class="{{ ($current_menu == 'product_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/admin/product">Danh sách</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @else
+                        <div class="collapse" id="formsExamples">
+                            <ul class="nav">
+                                @if($current_menu == 'product_manager' && $current_sub_menu == 'edit')
+                                    <li class="active">
+                                        <a href="{{ url()->current() }}">Sửa thông tin</a>
+                                    </li>
+                                @endif
+                                <li class="{{ ($current_menu == 'product_manager' && $current_sub_menu == 'create_new') ? 'active' : ''}}">
+                                    <a href="/admin/product/create">Thêm mới</a>
+                                </li>
+                                <li class="{{ ($current_menu == 'product_manager' && $current_sub_menu == 'list_item') ? 'active' : ''}}">
+                                    <a href="/admin/product">Danh sách</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
                 </li>
                 <li class="{{ $current_menu == 'category_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#componentsExamples">
