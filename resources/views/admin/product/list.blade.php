@@ -74,10 +74,10 @@
                                                 </td>
                                                 <td>{{$item->price}}</td>
                                                 <td>{{$item->discount}}</td>
+                                                <td>{{$item->colors}}</td>
                                                 <td>{{$item->sizes}}</td>
-                                                <td>{{$item->discount}}</td>
                                                 <td class="text-right">
-                                                    <a href="/admin/category/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
+                                                    <a href="/admin/product/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
                                                     <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
                                                                 class="material-icons">close</i></a>
@@ -89,7 +89,7 @@
                             </div>
                             @else
                                 <div class="alert alert-info">Hiện tại không có danh mục sản phẩm. Vui lòng click <a
-                                            href="/admin/category/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
+                                            href="/admin/product/create" title="Thêm mới sản phẩm" class="btn-link">vào đây</a> để tạo mới.
                                 </div>
                             @endif
                         </div>
@@ -122,7 +122,7 @@
             }).then(function() {
                 var id = thisButton.attr('href');
                 $.ajax({
-                    'url': '/admin/category/' + id,
+                    'url': '/admin/product/' + id,
                     'method': 'DELETE',
                     'data':{
                         '_token':$('meta[name="csrf-token"]').attr('content')

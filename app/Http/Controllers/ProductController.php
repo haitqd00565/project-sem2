@@ -77,6 +77,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
+        $obj = Product::find($id);
+        if ($obj == null || $obj->status != 1) {
+            return view('error.404');
+        }
+        return view('admin.product.edit')->with('obj', $obj);
     }
 
     /**
@@ -88,7 +93,54 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $obj = Product::find($id);
+        $validate_unique = '';
+        if ($obj->name != $request->get('name')) {
+            $validate_unique = '|unique:products';
+        }
+        $request->validate([
+            'categoryId' => 'required',
+            'collectionId' => 'required',
+            'name' => 'required|max:50|min:10' . $validate_unique,
+            'images' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'detail' => 'required',
+            'colors' => 'required',
+            'sizes' => 'required'
+        ],
+            [
+                'categoryId.required'=>'Vui lòng nhập mã danh mục',
+                'collectionId.required'=>'Vui lòng nhập mã bộ sưu tập',
+                'name.required' => 'Vui lòng nhập tên cho sản phẩm.',
+                'name.min' => 'Tên quá ngắn, vui lòng nhập ít nhất 10 ký tự.',
+                'name.max' => 'Tên quá dài, vui lòng nhập nhiều nhất 50 ký tự.',
+                'name.unique' => 'Tên đã được sử dụng, vui lòng chọn tên khác.',
+                'images.required' => 'Vui lòng nhập ảnh cho sản phẩm',
+                'price.required' => 'Vui lòng nhập giá cho sản phẩm',
+                'description.required' => 'Vui lòng nhập mô tả cho sản phẩm',
+                'detail.required' => 'Vui lòng nhập chi tiết cho sản phẩm',
+                'colors.required' => 'Vui lòng nhập màu cho sản phẩm',
+                'sizes.required' => 'Vui lòng nhập cỡ cho sản phẩm',
+            ]);
+
+        if ($obj == null || $obj->status != 1) {
+            return view('error.404');
+        }
+        $obj->categoryId = $request->get('categoryId');
+        $obj->collectionId = $request->get('collectionId');
+        $obj->name = $request->get('name');
+        $obj->images = $request->get('images');
+        $obj->price = $request->get('price');
+        $obj->discount = $request->get('discount');
+        $obj->description = $request->get('description');
+        $obj->detail = $request->get('detail');
+        $obj->colors = $request->get('colors');
+        $obj->sizes = $request->get('sizes');
+        $obj->save();
+        Session::flash('message', 'Sửa thành công');
+        Session::flash('message-class', 'alert-success');
+        return redirect('/admin/product');
     }
 
     /**
@@ -99,6 +151,12 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $obj = Product::find($id);
+        if ($obj == null) {
+            return response()->json(['message' => 'Bộ sưu tập không tồn tại hoặc đã bị xóa'], 404);
+        }
+        $obj->status = 0;
+        $obj->save();
+        return response()->json(['message' => 'Xóa bộ sưu tập thành công']);
     }
 }
