@@ -29,9 +29,6 @@ Route::get('/404',function (){
 Route::get('/home',function (){
     return view('customer.home');
 });
-Route::get('/danhsach',function (){
-    return view('customer.listProduct');
-});
 
 Route::resource('admin/category', 'CategoryController');
 Route::resource('admin/collection', 'CollectionController');
@@ -40,3 +37,5 @@ Route::resource('admin/product', 'ProductController');
 Route::get('detail',function (){
     return view('customer/detail');
 });
+
+Route::get('/danh-sach-san-pham', 'Client\ProductController@index');

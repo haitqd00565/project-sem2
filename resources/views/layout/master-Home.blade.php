@@ -842,25 +842,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <script type="text/javascript" src="{{asset('asset/js/jquery-2.1.4.min.js')}}"></script>
 <script src="{{asset('asset/js/modernizr.custom.js')}}"></script>
-<script src="{{asset('asset/js/minicart.min.js')}}"></script>
-<script>
-    // Mini Cart
-    paypal.minicart.render({
-        action: '#'
-    });
-
-    if (~window.location.search.indexOf('reset=true')) {
-        paypal.minicart.reset();
-    }
-</script>
-<div id="PPMiniCart">
-    <form method="post" class="minicart-empty" action="#" target="">
-        <button type="button" class="minicart-closer">×</button>
-        <ul></ul>
-        <div class="minicart-footer"><p class="minicart-empty-text">Your shopping cart is empty</p></div>
-        <input type="hidden" name="cmd" value="_cart"> <input type="hidden" name="upload" value="1"> <input
-                type="hidden" name="bn" value="MiniCart_AddToCart_WPS_US"></form>
-</div>
 
 <script src="js/imagezoom.js"></script>
 <script src="{{asset('asset/js/easy-responsive-tabs.js')}}"></script>
