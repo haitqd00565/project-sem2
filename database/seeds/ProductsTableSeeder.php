@@ -60,7 +60,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>2,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'Quần đi biển',
                 'images'=>'https://dodoigiare.com/wp-content/uploads/2017/11/quan-di-bien-cap-doi-QDB104-540x540.jpg',
                 'price'=> 50000,
@@ -150,7 +150,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>4,
-                'collectionId'=>4,
+                'collectionId'=>2,
                 'name'=>'Mũ đi biển',
                 'images'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpa_H-5rzKiJPNx_g75yFhJWw0_-2cH5Loylsq9h54kpgmXZoh',
                 'price'=> 10000,
@@ -165,7 +165,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>4,
-                'collectionId'=>4,
+                'collectionId'=>2,
                 'name'=>'Mũ đi biển',
                 'images'=>'https://chovang.com/upload/Product/mu-coi-rong-vanh-di-bien-phong-cach-han-quoc-ms05-gia-si--1515058860.jpg',
                 'price'=> 1110000,
@@ -180,7 +180,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>4,
-                'collectionId'=>4,
+                'collectionId'=>2,
                 'name'=>'Mũ đi biển',
                 'images'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0D49e77-Nx8bcIP-26YppGkPjL13kOuoULFle5cs8OaP3rchx',
                 'price'=> 510000,
@@ -195,7 +195,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>5,
-                'collectionId'=>5,
+                'collectionId'=>3,
                 'name'=>'Dép đi biển',
                 'images'=>'http://i02.c.aliimg.com/img/ibank/2014/322/519/1374915223_1273175495.400x400.jpg',
                 'price'=> 510000,
@@ -210,7 +210,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>5,
-                'collectionId'=>5,
+                'collectionId'=>3,
                 'name'=>'Dép đi biển',
                 'images'=>'http://cuocsongvang.vn/cdn/store/11055/ps/20170818/Dep_di_bien_eva_GLD001_Navy__1__800x800.jpg',
                 'price'=> 310000,
@@ -225,7 +225,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>5,
-                'collectionId'=>5,
+                'collectionId'=>3,
                 'name'=>'Dép đi biển',
                 'images'=>'http://cuocsongvang.vn/cdn/store/11055/ps/20170818/dep_di_bien_gld001_white__0__800x800.jpg',
                 'price'=> 210000,
