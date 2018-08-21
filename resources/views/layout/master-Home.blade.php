@@ -658,6 +658,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     </div>
 </div>
+
 <div class="footer">
     <div class="footer_agile_inner_info_w3l">
         <div class="col-md-12 footer-right">
