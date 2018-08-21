@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+
     <script type="application/x-javascript"> addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
@@ -16,6 +17,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         } </script>
     <!--//tags -->
     <link href="{{asset('asset/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{{asset('asset/css/flexslider.css')}}" type="text/css" media="screen">
     <link href="{{asset('asset/css/style.css')}}" rel="stylesheet" type="text/css" media="all">
     <link href="{{asset('asset/css/font-awesome.css')}}" rel="stylesheet">
     <link href="{{asset('asset/css/easy-responsive-tabs.css')}}" rel="stylesheet" type="text/css">
@@ -23,6 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic"
           rel="stylesheet" type="text/css">
+
     <style type="text/css">@keyframes pop-in {
                                0% {
                                    opacity: 0;
@@ -600,7 +603,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     </div>
                     <div class="col-md-4 modal_body_right modal_body_right1">
-                        <img src="{{asset('asset/asset/images/log_pic.jpg')}}" alt=" "/>
+                        <img src="{{asset('/asset/images/log_pic.jpg')}}" alt=" "/>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -653,7 +656,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <p>Lorem ipsum dolor sit amet, consectetur</p>
                 </div>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
 
     </div>
@@ -816,7 +819,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <a href="#home" class="scroll" id="toTop" style="display: block;"><span id="toTopHover"></span> <span id="toTopHover"
                                                                                                       style="opacity: 1;"> </span></a>
 
-<script type="text/javascript" src="{{asset('asset/js/jquery-2.1.4.min.js')}}"></script>
 <script src="{{asset('asset/js/responsiveslides.min.js')}}"></script>
 <script>
     // You can also use "$(window).load(function() {"
@@ -837,6 +839,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     });
 </script>
+
+<script type="text/javascript" src="{{asset('asset/js/jquery-2.1.4.min.js')}}"></script>
 <script src="{{asset('asset/js/modernizr.custom.js')}}"></script>
 <script src="{{asset('asset/js/minicart.min.js')}}"></script>
 <script>
@@ -857,6 +861,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <input type="hidden" name="cmd" value="_cart"> <input type="hidden" name="upload" value="1"> <input
                 type="hidden" name="bn" value="MiniCart_AddToCart_WPS_US"></form>
 </div>
+
+<script src="js/imagezoom.js"></script>
 <script src="{{asset('asset/js/easy-responsive-tabs.js')}}"></script>
 <script>
     $(document).ready(function () {
@@ -880,17 +886,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     });
 </script>
+<script src="{{asset('asset/js/jquery.flexslider.js')}}"></script>
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
+
+
 <script type="text/javascript">//<![CDATA[
-    $(window).load(function(){
-        $( "#slider-range" ).slider({
+    $(window).load(function () {
+        $("#slider-range").slider({
             range: true,
             min: 0,
             max: 9000,
-            values: [ 1000, 7000 ],
-            slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            values: [1000, 7000],
+            slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             }
         });
-        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
 
     });//]]>
 
