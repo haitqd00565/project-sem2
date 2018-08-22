@@ -105,7 +105,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>3,
-                'collectionId'=>3,
+                'collectionId'=>2,
                 'name'=>'Kính đi biển',
                 'images'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqS9VrD-FmeiV9S9MCMb09kGIb4UD_tQZufilOJwKc1rSLzSkA',
                 'price'=> 100000,
@@ -120,7 +120,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>3,
-                'collectionId'=>3,
+                'collectionId'=>1,
                 'name'=>'Kính đi biển',
                 'images'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuO7e1eFn5FGNg2U3vGpgsBrNmYKXH8EXVTMF9zC9K5B90LwgJ',
                 'price'=> 200000,
@@ -135,7 +135,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>3,
-                'collectionId'=>3,
+                'collectionId'=>2,
                 'name'=>'Kính đi biển',
                 'images'=>'https://vn-live-02.slatic.net/p/8/kinh-mat-di-bien-di-choi-cho-nu-kieu-dang-sanh-dieu-2017-1498201539-4014096-85441f98971bff0984198be15e60dcac-product.jpg',
                 'price'=> 110000,
@@ -195,7 +195,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>5,
-                'collectionId'=>3,
+                'collectionId'=>1,
                 'name'=>'Dép đi biển',
                 'images'=>'http://i02.c.aliimg.com/img/ibank/2014/322/519/1374915223_1273175495.400x400.jpg',
                 'price'=> 510000,
@@ -210,7 +210,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>5,
-                'collectionId'=>3,
+                'collectionId'=>2,
                 'name'=>'Dép đi biển',
                 'images'=>'http://cuocsongvang.vn/cdn/store/11055/ps/20170818/Dep_di_bien_eva_GLD001_Navy__1__800x800.jpg',
                 'price'=> 310000,
@@ -225,7 +225,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>5,
-                'collectionId'=>3,
+                'collectionId'=>1,
                 'name'=>'Dép đi biển',
                 'images'=>'http://cuocsongvang.vn/cdn/store/11055/ps/20170818/dep_di_bien_gld001_white__0__800x800.jpg',
                 'price'=> 210000,
