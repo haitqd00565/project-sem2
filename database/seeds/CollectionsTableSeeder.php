@@ -15,25 +15,20 @@ class CollectionsTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('collections')->truncate();
         \Illuminate\Support\Facades\DB::table('collections')->insert([
                 [
-                    'name' => 'Quần áo đôi đi biển',
-                    'description' => 'Bộ sưu tập mùa hè mới nhất của năm 2018',
-                    'thumbnail' => 'https://vaynudep.com/wp-content/uploads/2018/02/do-di-bien-cap-01.jpg',
+                    'name' => 'Bộ sưu tập Xuân-Hạ',
+                    'description' => 'Mùa hè đã mời gọi với những mẫu đồ bơi đầy màu sắc, những đôi sandal hở ngón mát mẻ , những bộ đồ 
+                    dành cho đôi dành cho gia đình...Và bây giờ hãy tận hưởng mùa hè đi nào !
+                    ',
+                    'thumbnail' => 'http://static.thoitrangfasi.com/4098/picture/2018/04/15/ao-gia-dinh-ag0617-1523797849.png',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                     'status' => 1
                 ],
                 [
-                    'name' => 'Quần áo đi biển',
-                    'description' => 'Bộ sưu tập đi biển của năm 2018',
-                    'thumbnail' => 'http://dodoi.net/upload/files/ao-cap-doi-khi-em-la-em-1489123404.jpg',
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'updated_at' => date('Y-m-d H:i:s'),
-                    'status' => 1
-                ],
-                [
-                    'name' => 'Quần áo đi biển',
-                    'description' => 'Bộ sưu tập mùa hè',
-                    'thumbnail' => 'http://i.timhieu.net/wp-content/uploads/2018/01/trang-phuc-di-bien-dep-d%C3%A0nh-cho-be-2.jpg',
+                    'name' => 'Bộ sưu tập Thu-Đông',
+                    'description' => 'Mùa thu có rất nhiều mẫu trang phục đôi đẹp và bắt mắt dành cho những đôi lứa đang yêu nhau.
+                    Những mẫu thiết kế trẻ trung, tươi tắn dưới đây sẽ là những gợi ý tuyệt vời cho bạn khi muốn sắm đồ đôi cho mình và người ấy.',
+                    'thumbnail' => 'http://winny.com.vn/image/do-di-bien-vui-tuoi-cho-cac-cap-tinh-nhan.jpg',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                     'status' => 1
