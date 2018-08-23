@@ -52,3 +52,7 @@ Route::get('/home-v2', function (){
     return view('example.client-list-product');
 });
 
+// Order Manager
+Route::get('/admin/order', 'OrderController@index');
+Route::get('/admin/order/change-status', 'OrderController@changeStatus');
+
