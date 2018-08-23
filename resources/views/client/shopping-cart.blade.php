@@ -9,10 +9,10 @@
 
     <!-- Cart -->
     <section class="cart bgwhite p-t-70 p-b-100">
-        <form action="/sua-gio-hang" method="post">
+        <div class="container">
+            <form action="/sua-gio-hang" method="post" name="update-cart-form">
             {{csrf_field()}}
             @method('PUT')
-        <div class="container">
             <!-- Cart item -->
             <div class="container-table-cart pos-relative">
                 <div class="wrap-table-shopping-cart bgwhite">
@@ -39,7 +39,8 @@
                                         <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
                                     </button>
 
-                                    <input class="size8 m-text18 t-center num-product" type="number" name="products[{{$item->product->id}}]" value="{{$item->quantity}}">
+                                    <input class="size8 m-text18 t-center num-product"
+                                           type="number" name="products[{{$item->product->id}}]" value="{{$item->quantity}}">
 
                                     <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
                                         <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
@@ -70,61 +71,55 @@
                     <input class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" value="Lưu thay đổi" type="submit">
                 </div>
             </div>
+            </form>
 
+            <form action="/gui-don-hang" name="order-form" method="POST">
+                @csrf();
             <!-- Total -->
             <div class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
                 <h5 class="m-text20 p-b-24">
-                    Cart Totals
+                    Thông tin đơn hàng
                 </h5>
 
                 <!--  -->
                 <div class="flex-w flex-sb-m p-b-12">
 					<span class="s-text18 w-size19 w-full-sm">
-						Subtotal:
+						Tổng tiền hàng:
 					</span>
 
                     <span class="m-text21 w-size20 w-full-sm">
-						$39.00
+						{{$shopping_cart -> getTotalMoneyWithFormat()}} (VND)
 					</span>
                 </div>
 
                 <!--  -->
                 <div class="flex-w flex-sb bo10 p-t-15 p-b-20">
 					<span class="s-text18 w-size19 w-full-sm">
-						Shipping:
+						Thông tin người nhận:
 					</span>
 
                     <div class="w-size20 w-full-sm">
-                        <p class="s-text8 p-b-23">
-                            There are no shipping methods available. Please double check your address, or contact us if you need any help.
-                        </p>
-
-                        <span class="s-text19">
-							Calculate Shipping
-						</span>
-
-                        <div class="rs2-select2 rs3-select2 rs4-select2 bo4 of-hidden w-size21 m-t-8 m-b-12">
-                            <select class="selection-2" name="country">
-                                <option>Select a country...</option>
-                                <option>US</option>
-                                <option>UK</option>
-                                <option>Japan</option>
-                            </select>
+                        <div>
+                            <span class="s-text19">
+							    Họ và tên
+						    </span>
+                            <div class="size13 bo4 m-b-12">
+                                <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="ship_name" placeholder="">
+                            </div>
                         </div>
-
-                        <div class="size13 bo4 m-b-12">
-                            <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="state" placeholder="State /  country">
+                        <div>
+                            <span class="s-text19">
+                                Địa chỉ
+                            </span>
+                            <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="ship_address" placeholder=""></textarea>
                         </div>
-
-                        <div class="size13 bo4 m-b-22">
-                            <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="postcode" placeholder="Postcode / Zip">
-                        </div>
-
-                        <div class="size14 trans-0-4 m-b-10">
-                            <!-- Button -->
-                            <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-                                Update Totals
-                            </button>
+                        <div>
+                            <span class="s-text19">
+                                Số điện thoại
+                            </span>
+                                <div class="size13 bo4 m-b-12">
+                                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="ship_phone" placeholder="">
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -132,22 +127,22 @@
                 <!--  -->
                 <div class="flex-w flex-sb-m p-t-26 p-b-30">
 					<span class="m-text22 w-size19 w-full-sm">
-						Total:
+						Tổng cộng:
 					</span>
 
                     <span class="m-text21 w-size20 w-full-sm">
-						$39.00
+						{{$shopping_cart -> getTotalMoneyWithFormat()}} (VND)
 					</span>
                 </div>
 
                 <div class="size15 trans-0-4">
                     <!-- Button -->
                     <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-                        Proceed to Checkout
+                        Gửi đơn hàng
                     </button>
                 </div>
             </div>
+            </form>
         </div>
-        </form>
     </section>
 @endsection

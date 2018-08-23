@@ -68,7 +68,7 @@
 
         <div class="wrap_header">
             <!-- Logo -->
-            <a href="index.html" class="logo">
+            <a href="/danh-sach-san-pham" class="logo">
                 <img src="images/icons/logo.png" alt="IMG-LOGO">
             </a>
 
