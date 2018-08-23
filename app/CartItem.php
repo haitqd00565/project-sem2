@@ -11,5 +11,7 @@ namespace App;
 
 class CartItem
 {
-
+    public function getTotalPriceWithFormat(){
+        return sprintf('%s', number_format($this->product->discountPrice * $this->quantity, 0));
+    }
 }
