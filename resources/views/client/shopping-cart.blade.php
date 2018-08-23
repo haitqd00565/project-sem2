@@ -39,7 +39,8 @@
                                         <i class="fs-12 fa fa-minus" aria-hidden="true"></i>
                                     </button>
 
-                                    <input class="size8 m-text18 t-center num-product" type="number" name="products[{{$item->product->id}}]" value="{{$item->quantity}}">
+                                    <input class="size8 m-text18 t-center num-product"
+                                           type="number" name="products[{{$item->product->id}}]" value="{{$item->quantity}}">
 
                                     <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
                                         <i class="fs-12 fa fa-plus" aria-hidden="true"></i>
@@ -73,6 +74,7 @@
             </form>
 
             <form action="/gui-don-hang" name="order-form" method="POST">
+                @csrf();
             <!-- Total -->
             <div class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
                 <h5 class="m-text20 p-b-24">
@@ -102,21 +104,21 @@
 							    Họ và tên
 						    </span>
                             <div class="size13 bo4 m-b-12">
-                                <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="state" placeholder="">
+                                <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="ship_name" placeholder="">
                             </div>
                         </div>
                         <div>
                             <span class="s-text19">
                                 Địa chỉ
                             </span>
-                            <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message" placeholder=""></textarea>
+                            <textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="ship_address" placeholder=""></textarea>
                         </div>
                         <div>
                             <span class="s-text19">
                                 Số điện thoại
                             </span>
                                 <div class="size13 bo4 m-b-12">
-                                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="state" placeholder="">
+                                    <input class="sizefull s-text7 p-l-15 p-r-15" type="text" name="ship_phone" placeholder="">
                                 </div>
                         </div>
                     </div>
