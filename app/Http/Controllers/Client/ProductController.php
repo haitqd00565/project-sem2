@@ -26,8 +26,8 @@ class ProductController extends Controller
             $product_filter = $product_filter->where('categoryId', $selected_categoryId);
         }
         $selected_category = Category::find($selected_categoryId);
-        $list_product = $product_filter->orderBy('created_at', 'DESC')->get();
-        return view('customer.listProduct')
+        $list_product = $product_filter->orderBy('created_at', 'DESC')->paginate(100);
+        return view('client.product-list')
             ->with('categories', $categories)
             ->with('list_product', $list_product)
             ->with('selected_categoryId', $selected_categoryId)
