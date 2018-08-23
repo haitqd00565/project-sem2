@@ -44,6 +44,7 @@ Route::get('/them-gio-hang', 'Client\ShoppingCartController@addToCart');
 Route::get('/xem-gio-hang', 'Client\ShoppingCartController@showCart');
 Route::get('/xoa-gio-hang', 'Client\ShoppingCartController@destroyCart');
 Route::put('/sua-gio-hang', 'Client\ShoppingCartController@updateCart');
+Route::post('/gui-don-hang', 'Client\ShoppingCartController@checkoutCart');
 
 Route::get('/home-v2', function (){
     return view('example.client-list-product');
