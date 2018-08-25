@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2',['page_title'=>'Liên hệ'])
+@extends('layout.client-layout-v2',['page_title'=>'Giới thiệu'])
 @section('content')
     <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(//cdn.shopify.com/s/files/1/0476/6585/files/Tees1_1600x.jpg?v=15325592);">
         <h2 class="l-text2 t-center">

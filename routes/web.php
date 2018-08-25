@@ -63,6 +63,6 @@ Route::get('detail',function (){
     return view('client/detailProduct');
 });
 
-//Route::get('about', function () {
-//    return view('client/about');
-//});
+Route::get('about', function () {
+    return view('client/about');
+});
