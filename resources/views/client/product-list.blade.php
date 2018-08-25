@@ -1,11 +1,12 @@
-@extends('layout.client-layout-v2')
+@extends('layout.client-layout-v2',['page_title'=>'Danh Sách'])
 @section('content')
-    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/heading-pages-02.jpg);">
+    <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m"
+             style="background-image: url(images/heading-pages-02.jpg);">
         <h2 class="l-text2 t-center">
-            Women
+            DANH SÁCH SẢN PHẨM
         </h2>
         <p class="m-text13 t-center">
-            New Arrivals Women Collection 2018
+            {{--New Arrivals Women Collection 2018--}}
         </p>
     </section>
 
@@ -23,21 +24,24 @@
 
                         <ul class="p-b-54">
                             <li class="p-t-4">
-                                <a href="{{url()->current().'?categoryId=0'}}" class="s-text13{{$selected_categoryId==0?' active1':''}}">
+                                <a href="{{url()->current().'?categoryId=0'}}"
+                                   class="s-text13{{$selected_categoryId==0?' active1':''}}">
                                     Tất cả
                                 </a>
                             </li>
                             @foreach($categories as $category)
-                            <li class="p-t-4">
-                                <a href="{{url()->current().'?categoryId='.$category->id}}" class="s-text13{{$category->id==$selected_categoryId?' active1':''}}">
-                                    {{$category->name}}
-                                </a>
-                            </li>
+                                <li class="p-t-4">
+                                    <a href="{{url()->current().'?categoryId='.$category->id}}"
+                                       class="s-text13{{$category->id==$selected_categoryId?' active1':''}}">
+                                        {{$category->name}}
+                                    </a>
+                                </li>
                             @endforeach
                         </ul>
 
                         <div class="search-product pos-relative bo4 of-hidden">
-                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search Products...">
+                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product"
+                                   placeholder="Search Products...">
 
                             <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
                                 <i class="fs-12 fa fa-search" aria-hidden="true"></i>
@@ -84,7 +88,8 @@
                                 <!-- Block2 -->
                                 <div class="block2">
                                     <div class="wrap-pic-w of-hidden pos-relative{{$product->blockStyle}}">
-                                        <div style="background-image: url('{{$product->images}}'); background-size: cover" class="product-image"></div>
+                                        <div style="background-image: url('{{$product->images}}'); background-size: cover"
+                                             class="product-image"></div>
                                         <div class="block2-overlay trans-0-4">
                                             <a href="/them-gio-hang?id={{$product->id}}&quantity=1">
                                                 <div class="block2-btn-addcart w-size1 trans-0-4">

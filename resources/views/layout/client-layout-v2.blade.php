@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Product</title>
+    <title>{{$page_title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -25,9 +25,11 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -48,10 +50,6 @@
                 <a href="#" class="topbar-social-item fa fa-youtube-play"></a>
             </div>
 
-            <span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
-
             <div class="topbar-child2">
 					<span class="topbar-email">
 						fashe@example.com
@@ -68,7 +66,7 @@
 
         <div class="wrap_header">
             <!-- Logo -->
-            <a href="/danh-sach-san-pham" class="logo">
+            <a href="/home" class="logo">
                 <img src="images/icons/logo.png" alt="IMG-LOGO">
             </a>
 
@@ -77,36 +75,18 @@
                 <nav class="menu">
                     <ul class="main_menu">
                         <li>
-                            <a href="index.html">Home</a>
-                            <ul class="sub_menu">
-                                <li><a href="index.html">Homepage V1</a></li>
-                                <li><a href="home-02.html">Homepage V2</a></li>
-                                <li><a href="home-03.html">Homepage V3</a></li>
-                            </ul>
+                            <a href="/home">Trang chủ</a>
                         </li>
 
                         <li>
-                            <a href="/danh-sach-san-pham">Shop</a>
+                            <a href="/danh-sach-san-pham">Mua sắm</a>
                         </li>
-
-                        <li class="sale-noti">
-                            <a href="/xem-gio-hang">Sale</a>
+                        <li>
+                            <a href="blog.html">Giới thiệu</a>
                         </li>
 
                         <li>
-                            <a href="cart.html">Features</a>
-                        </li>
-
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="contact.html">Liên hệ</a>
                         </li>
                     </ul>
                 </nav>
@@ -183,7 +163,7 @@
                         <div class="header-cart-buttons">
                             <div class="header-cart-wrapbtn">
                                 <!-- Button -->
-                                <a href="/xem-gio-hang" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
                                     View Cart
                                 </a>
                             </div>
@@ -306,7 +286,7 @@
     </div>
 
     <!-- Menu Mobile -->
-    <div class="wrap-side-menu" >
+    <div class="wrap-side-menu">
         <nav class="side-menu">
             <ul class="main-menu">
                 <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
@@ -377,22 +357,22 @@
         </nav>
     </div>
 </header>
-
-@section('content')
+@section('slider')
     @show()
-
-
+@section('content')
+@show()
 <!-- Footer -->
 <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
     <div class="flex-w p-b-90">
         <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
             <h4 class="s-text12 p-b-30">
-                GET IN TOUCH
+                LIÊN HỆ
             </h4>
 
             <div>
                 <p class="s-text7 w-size27">
-                    Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                    Số 8A, Tôn Thất Thuyết, Mỹ Đình, Hà Nội.<br>
+                    (+84) 981 740 887
                 </p>
 
                 <div class="flex-m p-t-30">
@@ -407,31 +387,19 @@
 
         <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
             <h4 class="s-text12 p-b-30">
-                Categories
+                Danh mục
             </h4>
 
             <ul>
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Men
+                        Nam
                     </a>
                 </li>
 
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Women
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Dresses
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Sunglasses
+                        Nữ
                     </a>
                 </li>
             </ul>
@@ -545,11 +513,12 @@
         </a>
 
         <div class="t-center s-text8 p-t-20">
-            Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o"
+                                                                                  aria-hidden="true"></i> by <a
+                    href="https://colorlib.com" target="_blank">Colorlib</a>
         </div>
     </div>
 </footer>
-
 
 
 <!-- Back to top -->
@@ -559,10 +528,8 @@
 		</span>
 </div>
 
-<!-- Container Selection -->
+<!-- Container Selection1 -->
 <div id="dropDownSelect1"></div>
-<div id="dropDownSelect2"></div>
-
 
 
 <!--===============================================================================================-->
@@ -579,61 +546,32 @@
         minimumResultsForSearch: 20,
         dropdownParent: $('#dropDownSelect1')
     });
-
-    $(".selection-2").select2({
-        minimumResultsForSearch: 20,
-        dropdownParent: $('#dropDownSelect2')
-    });
 </script>
-<!--===============================================================================================-->
-<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
-<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/slick-custom.js"></script>
 <!--===============================================================================================-->
+<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+<!--===============================================================================================-->
 <script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript">
-    // $('.block2-btn-addcart').each(function(){
-    //     var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-    //     $(this).on('click', function(){
-    //         swal(nameProduct, "is added to cart !", "success");
-    //     });
-    // });
-
-    $('.block2-btn-addwishlist').each(function(){
+    $('.block2-btn-addcart').each(function () {
         var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $(this).on('click', function(){
+        $(this).on('click', function () {
+            swal(nameProduct, "is added to cart !", "success");
+        });
+    });
+
+    $('.block2-btn-addwishlist').each(function () {
+        var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+        $(this).on('click', function () {
             swal(nameProduct, "is added to wishlist !", "success");
         });
     });
 </script>
 
-<!--===============================================================================================-->
-<script type="text/javascript" src="vendor/noui/nouislider.min.js"></script>
-<script type="text/javascript">
-    /*[ No ui ]
-    ===========================================================*/
-    var filterBar = document.getElementById('filter-bar');
-
-    noUiSlider.create(filterBar, {
-        start: [ 50, 200 ],
-        connect: true,
-        range: {
-            'min': 50,
-            'max': 200
-        }
-    });
-
-    var skipValues = [
-        document.getElementById('value-lower'),
-        document.getElementById('value-upper')
-    ];
-
-    filterBar.noUiSlider.on('update', function( values, handle ) {
-        skipValues[handle].innerHTML = Math.round(values[handle]) ;
-    });
-</script>
 <!--===============================================================================================-->
 <script src="js/main.js"></script>
 
