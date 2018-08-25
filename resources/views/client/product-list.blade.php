@@ -1,7 +1,7 @@
 @extends('layout.client-layout-v2',['page_title'=>'Danh Sách'])
 @section('content')
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m"
-             style="background-image: url(images/heading-pages-02.jpg);">
+             style="background-image: url(http:////cdn.shopify.com/s/files/1/0476/6585/files/outerwear_1600x.jpg?v=1532559381);">
         <h2 class="l-text2 t-center">
             DANH SÁCH SẢN PHẨM
         </h2>
@@ -19,7 +19,7 @@
                     <div class="leftbar p-r-20 p-r-0-sm">
                         <!--  -->
                         <h4 class="m-text14 p-b-7">
-                            Categories
+                            Danh mục
                         </h4>
 
                         <ul class="p-b-54">
@@ -87,19 +87,18 @@
                             <div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
                                 <!-- Block2 -->
                                 <div class="block2">
-                                    <div class="wrap-pic-w of-hidden pos-relative{{$product->blockStyle}}">
-                                        <div style="background-image: url('{{$product->images}}'); background-size: cover"
-                                             class="product-image"></div>
+                                    <div class="block2-img wrap-pic-w of-hidden pos-relative {{$product->blockStyle}}">
+                                    <img src="{{$product->images}}" alt="IMG-PRODUCT">
+                                    </div>
                                         <div class="block2-overlay trans-0-4">
                                             {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
                                                 <div class="block2-btn-addcart w-size1 trans-0-4" id="add-cart-{{$product->id}}">
                                                     <!-- Button -->
                                                     <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
-                                                        Thêm vào giỏ hàng
+                                                        Mua
                                                     </button>
                                                 </div>
                                             {{--</a>--}}
-                                        </div>
                                     </div>
 
                                     <div class="block2-txt p-t-20">

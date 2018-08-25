@@ -123,7 +123,7 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
+                                                            Mua
                                                         </button>
                                                     </div>
                                                 </a>
@@ -135,9 +135,12 @@
                                                 {{$item->name}}
                                             </a>
 
-                                            <span class="block2-price m-text6 p-r-5">
+                                            <span class="block2-newprice m-text8 p-r-5">
 											{{$item->discountPrice}}
-										</span>
+										    </span>
+                                            <span class="block2-newprice m-text7 p-r-5">
+                                            {{$item->originalPriceString}}
+                                        </span>
                                         </div>
                                     </div>
                                 </div>
