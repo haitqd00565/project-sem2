@@ -41,10 +41,13 @@ Route::get('detail', function () {
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
 
 Route::get('/them-gio-hang', 'Client\ShoppingCartController@addToCart');
+Route::post('/api-them-gio-hang', 'Client\ShoppingCartController@addToCartApi');
 Route::get('/xem-gio-hang', 'Client\ShoppingCartController@showCart');
 Route::get('/xoa-gio-hang', 'Client\ShoppingCartController@destroyCart');
 Route::put('/sua-gio-hang', 'Client\ShoppingCartController@updateCart');
 Route::post('/gui-don-hang', 'Client\ShoppingCartController@checkoutCart');
+
+Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
 
 Route::get('/test', 'Client\ShoppingCartController@demoTransaction');
 

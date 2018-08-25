@@ -61,6 +61,11 @@ class CategoryController extends Controller
     public function show($id)
     {
         //
+        $obj =Category::find($id);
+        if ($obj == null){
+            return view('error.404');
+        }
+        return view('admin.category.show')->with('obj',$obj);
     }
 
     /**

@@ -59,7 +59,12 @@ class CollectionController extends Controller
      */
     public function show($id)
     {
-        //
+        $obj = Collection::find($id);
+        if ($obj == null){
+            return view('error.404');
+        }
+
+        return view('admin.collection.show')->with('obj',$obj);
     }
 
     /**

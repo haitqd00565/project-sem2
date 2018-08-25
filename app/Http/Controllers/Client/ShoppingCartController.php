@@ -22,26 +22,6 @@ use Illuminate\Support\Facades\Session;
 
 class ShoppingCartController extends Controller
 {
-    public function demoTransaction()
-    {
-        $cate1 = new Category();
-        $cate2 = new Category();
-        $cate1->name = 'Cate1';
-        $cate1->description = 'Description';
-        $cate1->thumbnail = 'Hi';
-        $cate2->name = 'Cate2';
-        $cate2->description = 'Description';
-        $cate2->thumbnail = 'Hi2';
-        DB::beginTransaction();
-        try {
-            $cate1->save();
-            $cate2->save();
-            DB::rollBack();
-        } catch (\Exception $exception) {
-            DB::rollBack();
-            return redirect()->back();
-        }
-    }
 
     public function addToCart()
     {
@@ -65,9 +45,40 @@ class ShoppingCartController extends Controller
         $item = new CartItem();
         $item->product = $product;
         $item->quantity = $quantity;
+        $item->product->dicountPriceString = $product->discountPriceString;
         $shopping_cart->items[$id] = $item;
+        $shopping_cart->count = ShoppingCart::calculateTotalItem($shopping_cart);
         Session::put('cart', $shopping_cart);
         return redirect('/xem-gio-hang');
+    }
+
+    public function addToCartApi()
+    {
+        $id = Input::get('id');
+        $quantity = Input::get('quantity');
+        if ($id == null || $quantity == null) {
+            return response()->json(['msg' => 'Thông tin không hợp lệ'], 404);
+        }
+        $product = Product::find($id);
+        if ($product == null || $product->status != 1) {
+            return response()->json(['msg' => 'Sản phẩm không tồn tại hoặc đã bị xoá!'], 404);
+        }
+        $shopping_cart = new ShoppingCart();
+        if (Session::has('cart')) {
+            $shopping_cart = Session::get('cart');
+            if (array_key_exists($id, $shopping_cart->items)) {
+                $quantity += $shopping_cart->items[$id]->quantity;
+            }
+        }
+        $item = new CartItem();
+        $item->product = $product;
+        $item->product->dicountPriceString = $product->discountPriceString;
+        $item->quantity = $quantity;
+        $shopping_cart->items[$id] = $item;
+        $shopping_cart->count = ShoppingCart::calculateTotalItem($shopping_cart);
+        $shopping_cart->total_money = $shopping_cart->getTotalMoneyString();
+        Session::put('cart', $shopping_cart);
+        return response()->json(['msg' => 'Thêm vào giỏ hàng thành công', 'shopping_cart' => $shopping_cart], 200);
     }
 
     public function removeFromCart()
