@@ -17,6 +17,7 @@
                 @if (Session::has('message'))
                     <div class="alert {{ Session::get('message-class') }}">{{ Session::get('message') }}</div>
                 @endif
+                <div id="linechart_material"></div>
                 <div class="material-datatables">
                     <div id="datatables_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                         <div class="row">
@@ -86,6 +87,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
             <!-- end content-->
         </div>
@@ -135,5 +138,44 @@
             });
             return false;
         })
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['line']});
+        google.charts.setOnLoadCallback(function () {
+            $.ajax({
+                url:'/api-get-chart-data',
+                method:'GET',
+                success:function (resp) {
+                    drawChart(resp);
+                },
+                error: function () {
+                    swal('Có lỗi xảy ra', 'Không thể lấy dữ liệu từ api', 'error');
+                }
+            });
+        });
+
+        function drawChart(chart_data) {
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Ngày');
+            data.addColumn('number', 'Doanh thu');
+            for (var i = 0; i < chart_data.length; i++){
+                data.addRow([new Date(chart_data[i].day),  Number(chart_data[i].revenue)]);
+            }
+            var options = {
+                chart: {
+                    title: 'Biểu đồ doanh thu theo thời gian',
+                    subtitle: 'tính theo đơn vị (vnd)'
+                },
+                height: 500,
+                hAxis: {
+                    format: 'dd/MM/yyyy'
+                }
+            };
+
+            var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
     </script>
 @endsection

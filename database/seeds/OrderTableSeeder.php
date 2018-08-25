@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class orderTableSeeder extends Seeder
+class OrderTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,7 +20,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 5, 20, 6, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 5, 20, 12, 20, 20),
             ],
             [
                 'customer_id'=>2,
@@ -28,7 +29,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A2',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 5, 22, 3, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 5, 22, 12, 20, 20),
             ],
             [
                 'customer_id'=>3,
@@ -36,7 +38,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A3',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 5, 24, 3, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 5, 24, 12, 20, 20),
             ],
             [
                 'customer_id'=>4,
@@ -44,7 +47,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A4',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 6, 21, 2, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 6, 21, 12, 20, 20),
             ],
             [
                 'customer_id'=>5,
@@ -52,7 +56,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A5',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 6, 22, 1, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 6, 22, 12, 20, 20),
             ],
             [
                 'customer_id'=>6,
@@ -60,7 +65,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A6',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 6, 23, 9, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 6, 23, 12, 20, 20),
             ],
             [
                 'customer_id'=>7,
@@ -68,7 +74,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A7',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 7, 10, 10, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 7, 10, 12, 20, 20),
             ],
             [
                 'customer_id'=>8,
@@ -76,7 +83,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A8',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 20, 10, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 20, 12, 20, 20),
             ],
             [
                 'customer_id'=>9,
@@ -84,7 +92,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A49',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 21, 11, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 21, 11, 20, 20),
             ],
             [
                 'customer_id'=>10,
@@ -92,7 +101,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A10',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 22, 12, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 22, 12, 20, 20),
             ],
             [
                 'customer_id'=>11,
@@ -100,7 +110,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A11',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 23, 12, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 23, 12, 20, 20),
             ],
             [
                 'customer_id'=>12,
@@ -108,7 +119,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A12',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 23, 13, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 23, 13, 20, 20),
             ],
             [
                 'customer_id'=>13,
@@ -116,7 +128,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A13',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 23, 14, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 23, 14, 20, 20),
             ],
             [
                 'customer_id'=>14,
@@ -124,7 +137,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A14',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 23, 15, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 23, 15, 20, 20),
             ],
             [
                 'customer_id'=>15,
@@ -132,7 +146,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A15',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 23, 15, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 23, 15, 22, 20),
             ],
             [
                 'customer_id'=>16,
@@ -140,7 +155,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A16',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 23, 16, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 23, 16, 20, 20),
             ],
             [
                 'customer_id'=>17,
@@ -148,7 +164,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A17',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 23, 17, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 23, 17, 20, 20),
             ],
             [
                 'customer_id'=>18,
@@ -156,7 +173,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A18',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 12, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 12, 20, 20),
             ],
             [
                 'customer_id'=>19,
@@ -164,7 +182,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A19',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 13, 20, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 13, 20, 20),
             ],
             [
                 'customer_id'=>20,
@@ -172,7 +191,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang 20',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 13, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 13, 22, 20),
             ],
             [
                 'customer_id'=>21,
@@ -180,7 +200,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A21',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 14, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 14, 22, 20),
             ],
             [
                 'customer_id'=>22,
@@ -188,7 +209,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A22',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 15, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 15, 22, 20),
             ],
             [
                 'customer_id'=>23,
@@ -196,7 +218,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A23',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 16, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 16, 22, 20),
             ],
             [
                 'customer_id'=>24,
@@ -204,7 +227,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A24',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 17, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 17, 22, 20),
             ],
             [
                 'customer_id'=>25,
@@ -212,7 +236,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A25',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 18, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 18, 22, 20),
             ],
             [
                 'customer_id'=>26,
@@ -220,7 +245,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A26',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 19, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 19, 22, 20),
             ],
             [
                 'customer_id'=>27,
@@ -228,7 +254,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A27',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 20, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 20, 22, 20),
             ],
             [
                 'customer_id'=>28,
@@ -236,7 +263,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A28',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 21, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 21, 22, 20),
             ],
             [
                 'customer_id'=>29,
@@ -244,7 +272,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A29',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 24, 22, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 24, 22, 22, 20),
             ],
             [
                 'customer_id'=>30,
@@ -252,7 +281,8 @@ class orderTableSeeder extends Seeder
                 'ship_name'=>'Trần Quang A30',
                 'ship_address'=>'Cầu Giay',
                 'ship_phone'=>'012345667889',
-
+                'created_at'=>\Carbon\Carbon::create(2018, 8, 25, 13, 22, 20),
+                'updated_at'=>\Carbon\Carbon::create(2018, 8, 25, 13, 22, 20),
             ]
 
         ]);
