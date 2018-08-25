@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2')
+@extends('layout.client-layout-v2',['page_title'=>'Mua hàng thành công'])
 @section('content')
  <div class="container-fluid" style="height: 400px;">
         <h1 style="padding-top: 150px; margin-left:400px;">

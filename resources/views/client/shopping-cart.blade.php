@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2')
+@extends('layout.client-layout-v2',['page_title'=>'Giỏ hàng'])
 @section('content')
     <!-- Title Page -->
     <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url('images/heading-pages-01.jpg');">
@@ -74,7 +74,7 @@
             </form>
 
             <form action="/gui-don-hang" name="order-form" method="POST">
-                @csrf();
+                @csrf()
             <!-- Total -->
             <div class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
                 <h5 class="m-text20 p-b-24">
