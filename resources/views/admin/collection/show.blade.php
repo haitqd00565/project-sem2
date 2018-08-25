@@ -54,7 +54,7 @@
             }).then(function() {
                 var id = thisButton.attr('href');
                 $.ajax({
-                    'url': '/admin/category/' + id,
+                    'url': '/admin/collection/' + id,
                     'method': 'DELETE',
                     'data':{
                         '_token':$('meta[name="csrf-token"]').attr('content')
