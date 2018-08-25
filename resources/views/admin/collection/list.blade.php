@@ -62,6 +62,8 @@
                                                     </div>
                                                 </td>
                                                 <td class="text-right">
+                                                    <a href="/admin/collection/{{$item->id}}" class="btn btn-simple btn-success btn-icon android-search"><i
+                                                                class="material-icons">search</i></a>
                                                     <a href="/admin/collection/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
                                                     <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i

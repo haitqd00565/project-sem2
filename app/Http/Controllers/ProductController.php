@@ -66,6 +66,11 @@ class ProductController extends Controller
      */
     public function show($id)
     {
+        $obj = Product::find($id);
+        if ($obj == null){
+            return view('error.404');
+        }
+        return view('admin.product.show')->with('obj',$obj);
         //
     }
 
