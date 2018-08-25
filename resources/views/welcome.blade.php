@@ -1,95 +1,46 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="card">
+    <div class="card-body">
+        <div class="float-left">
+            <h2 class="card-title">Danh sách chung cư</h2>
+        </div>
+        <div class="clearfix"></div>
+        <div class="card-body">
+            @if($obj->count()>0)
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Customer_ID</th>
+                        <th scope="col">Total_Price</th>
+                        <th scope="col">Ship_Name</th>
+                        <th scope="col">Ship_Address</th>
+                        <th scope="col">Ship_Phone</th>
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($obj as $item)
+                        <tr>
+                            <th scope="row">{{$item->id}}</th>
+                            <th scope="row">{{$item->customer_id}}</th>
+                            <th scope="row">{{$item->total_price}}</th>
+                            <th scope="row">{{$item->ship_name}}</th>
+                            <th scope="row">{{$item->ship_address}}</th>
+                            <th scope="row">{{$item->ship_phone}}</th>
+                            <td>
+                                <div class="card" style="width: 90px;height: 70px;background-image: url('{{$item->image}}'); background-size: cover">
+                                </div>
+                            </td>
+                            <td>{{$item->status}}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+                <div class="row float-right">
+                    {{$obj->links()}}
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
         </div>
-    </body>
-</html>
+    </div>
+
+</div>

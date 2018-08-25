@@ -1,13 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    Order success: {{$order->id}}
-</body>
-</html>
+@extends('layout.client-layout-v2')
+@section('content')
+ <div class="container-fluid" style="height: 400px;">
+        <h1 style="padding-top: 150px; margin-left:400px;">
+            Bạn đã mua hàng thành công
+        </h1>
+ </div>
+
+
+@endsection
