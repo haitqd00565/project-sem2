@@ -17,8 +17,8 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
                             <!-- Button -->
-                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Shop Now
+                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Mua hàng
                             </a>
                         </div>
                     </div>
@@ -39,15 +39,15 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
                             <!-- Button -->
-                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Shop Now
+                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Mua hàng
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item-slick1 item3-slick1"
-                     style="background-image: url(http://cdn.shopify.com/s/files/1/0476/6585/files/Trenton_1600x.jpg?v=1532559078);">
+                     style="background-image: url(http:////cdn.shopify.com/s/files/1/0476/6585/files/Hats_1600x.jpg?v=1532559318);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15"
                               data-appear="rotateInDownLeft">
@@ -61,8 +61,8 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
                             <!-- Button -->
-                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Shop Now
+                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Mua hàng
                             </a>
                         </div>
                     </div>
