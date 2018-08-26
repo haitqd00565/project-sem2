@@ -57,13 +57,12 @@ Route::get('/home', 'Client\ProductController@index');
 Route::get('/admin/order', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
-<<<<<<< HEAD
+
 
 Route::get('detail',function (){
     return view('client/detailProduct');
 });
-=======
-Route::get('about', function () {
-    return view('client/about');
-});
->>>>>>> a684a1168fcc92a3537b0fddeb8246354bb08224
+
+//Route::get('about', function () {
+//    return view('client/about');
+//});
