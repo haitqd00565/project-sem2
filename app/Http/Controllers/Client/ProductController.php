@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 use App\Product;
 use App\Collection;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -45,4 +46,18 @@ class ProductController extends Controller
             ->with('selected_categoryId', $selected_categoryId)
             ->with('selected_category', $selected_category);
     }
+
+    public function getSearch(Request $request)
+    {
+        $product = Product::where('name', 'like', '%' . $request->key . '%')
+            ->
+            orWhere('description', 'like', '%' . $request->key . '%')
+            ->
+            get();
+//           $category = Category::where('name', 'like', '%' . $request->key . '%')
+//            ->orWhere('', $request->key)
+//               ->get();
+        return view('client.search', compact('product'));
+    }
+
 }

@@ -69,7 +69,8 @@
         <div class="wrap_header">
             <!-- Logo -->
             <a href="/home" class="logo">
-                <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32" alt="IMG-LOGO">
+                <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32"
+                     alt="IMG-LOGO">
             </a>
 
             <!-- Menu -->
@@ -96,6 +97,15 @@
 
             <!-- Header Icon -->
             <div class="header-icons">
+                <form method="get" action="/search">
+                    <div class="pos-relative bo11 of-hidden" style="margin-right: 20px">
+                        <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="key" placeholder="Search">
+
+                        <button type="submit" class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
+                            <i class="fs-13 fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
                 <a href="#" class="header-wrapicon1 dis-block">
                     <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
                 </a>
@@ -110,28 +120,29 @@
                         <ul class="header-cart-wrapitem" id="header-cart-wrapitem">
                             @if(count(\App\ShoppingCart::getCart()->items)>0)
                                 @foreach(\App\ShoppingCart::getCart()->items as $item)
-                                <li class="header-cart-item">
-                                    <div class="header-cart-item-img">
-                                        <img src="{{$item->product->images}}" alt="IMG">
-                                    </div>
+                                    <li class="header-cart-item">
+                                        <div class="header-cart-item-img">
+                                            <img src="{{$item->product->images}}" alt="IMG">
+                                        </div>
 
-                                    <div class="header-cart-item-txt">
-                                        <a href="#" class="header-cart-item-name">
-                                            {{$item->product->name}}
-                                        </a>
+                                        <div class="header-cart-item-txt">
+                                            <a href="#" class="header-cart-item-name">
+                                                {{$item->product->name}}
+                                            </a>
 
-                                        <span class="header-cart-item-info">
+                                            <span class="header-cart-item-info">
                                                 {{$item->quantity}} x {{$item->product->discountPriceString}}
                                             </span>
-                                    </div>
-                                </li>
+                                        </div>
+                                    </li>
                                 @endforeach
                             @else
                                 'Hiện tại không có sản phẩm nào trong giỏ hàng'
                             @endif
                         </ul>
                         <div class="header-cart-total">
-                            Tổng cộng: <span id="header-cart-total">{{\App\ShoppingCart::getCart()->getTotalMoneyString()}}</span>
+                            Tổng cộng: <span
+                                    id="header-cart-total">{{\App\ShoppingCart::getCart()->getTotalMoneyString()}}</span>
                         </div>
 
                         <div class="header-cart-buttons">
@@ -154,7 +165,8 @@
     <div class="wrap_header_mobile">
         <!-- Logo moblie -->
         <a href="/home" class="logo-mobile">
-            <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32" alt="IMG-LOGO">
+            <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32"
+                 alt="IMG-LOGO">
         </a>
 
         <!-- Button show menu -->
@@ -303,7 +315,7 @@
     </div>
 </header>
 @section('slider')
-    @show()
+@show()
 @section('content')
 @show()
 <!-- Footer -->
