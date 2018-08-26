@@ -17,8 +17,8 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
                             <!-- Button -->
-                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Mua hàng
+                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Shop Now
                             </a>
                         </div>
                     </div>
@@ -39,15 +39,15 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
                             <!-- Button -->
-                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Mua hàng
+                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Shop Now
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="item-slick1 item3-slick1"
-                     style="background-image: url(http:////cdn.shopify.com/s/files/1/0476/6585/files/Hats_1600x.jpg?v=1532559318);">
+                     style="background-image: url(http://cdn.shopify.com/s/files/1/0476/6585/files/Trenton_1600x.jpg?v=1532559078);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15"
                               data-appear="rotateInDownLeft">
@@ -61,8 +61,8 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
                             <!-- Button -->
-                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Mua hàng
+                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Shop Now
                             </a>
                         </div>
                     </div>
@@ -168,11 +168,23 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Mua
+                                                            Add to Cart
                                                         </button>
                                                     </div>
                                                 </a>
                                             </div>
+                                        </div>
+
+                                        <div class="block2-txt p-t-20">
+                                            <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                                {{$item->name}}
+                                            </a>
+                                            <span class="block2-newprice m-text8 p-r-5">
+											{{$item->discountPrice}}
+										    </span>
+                                            <span class="block2-newprice m-text7 p-r-5">
+                                            {{$item->originalPriceString}}
+                                        </span>
                                         </div>
                                     </div>
                                 </div>
@@ -200,7 +212,7 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Mua
+                                                            Add to Cart
                                                         </button>
                                                     </div>
                                                 </a>
@@ -211,10 +223,12 @@
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
                                                 {{$item->name}}
                                             </a>
-
-                                            <span class="block2-price m-text6 p-r-5">
+                                            <span class="block2-newprice m-text8 p-r-5">
 											{{$item->discountPrice}}
-										</span>
+										    </span>
+                                            <span class="block2-newprice m-text7 p-r-5">
+                                            {{$item->originalPriceString}}
+                                        </span>
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +256,7 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Mua
+                                                            Add to Cart
                                                         </button>
                                                     </div>
                                                 </a>
@@ -253,10 +267,12 @@
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
                                                 {{$item->name}}
                                             </a>
-
-                                            <span class="block2-price m-text6 p-r-5">
+                                            <span class="block2-newprice m-text8 p-r-5">
 											{{$item->discountPrice}}
-										</span>
+										    </span>
+                                            <span class="block2-newprice m-text7 p-r-5">
+                                            {{$item->originalPriceString}}
+                                        </span>
                                         </div>
                                     </div>
                                 </div>
@@ -282,7 +298,7 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Mua
+                                                            Add to Cart
                                                         </button>
                                                     </div>
                                                 </a>
@@ -293,10 +309,12 @@
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
                                                 {{$item->name}}
                                             </a>
-
-                                            <span class="block2-price m-text6 p-r-5">
+                                            <span class="block2-newprice m-text8 p-r-5">
 											{{$item->discountPrice}}
-										</span>
+										    </span>
+                                            <span class="block2-newprice m-text7 p-r-5">
+                                            {{$item->originalPriceString}}
+                                        </span>
                                         </div>
                                     </div>
                                 </div>
