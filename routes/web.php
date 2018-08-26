@@ -59,3 +59,7 @@ Route::get('/home-v2', function (){
 Route::get('/admin/order', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
+
+Route::get('detail',function (){
+    return view('client/detailProduct');
+});
