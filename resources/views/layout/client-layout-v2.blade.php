@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{csrf_token()}}">
+    <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
     <!--===============================================================================================-->
