@@ -197,7 +197,7 @@ class ProductsTableSeeder extends Seeder
             ],
             //Áo nữ đi biển
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>1,
                 'name'=>'MORRISON TANK',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/408400009_GCM_1_large.jpg?v=1532037589',
@@ -212,7 +212,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'DIVE CUTOFF TANK',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/403200031_BLKW_2_copy_large.jpg?v=1518653614',
@@ -227,7 +227,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>1,
                 'name'=>'ARDAMA TRIBLEND TANK',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/402100019_IND_1_large.jpg?v=1517442825',
@@ -242,7 +242,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>1,
                 'name'=>'BASIC TEE',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/404000048_WHT_2_copy_large.jpg?v=1518653891',
@@ -257,7 +257,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'DIVER TEE',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/404000062_WHT_1_large.jpg?v=1532036286',
@@ -272,7 +272,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'CALI TEE',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/404000061_DSD_2_large.jpg?v=1532035734',
@@ -287,7 +287,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'MEMORIAL STOW',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/407600012_YEL_2_copy_large.jpg?v=1518658297',
@@ -302,7 +302,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'ROSE SHRUNKEN',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/405000004_WHT_2_large.jpg?v=1532037927',
@@ -317,7 +317,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'ROSE STOW',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/407600021_PBU_2_large.jpg?v=1532038174',
@@ -332,7 +332,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'SWELL TD',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/404000053_BLKW_2_large.jpg?v=1517443742',
@@ -347,7 +347,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'SUNBURN',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/402100022_HEA_1_copy_large.jpg?v=1518653532',
@@ -362,7 +362,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>2,
+                'categoryId'=>1,
                 'collectionId'=>2,
                 'name'=>'GRAVEYARD',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/401100024_GHE_1_large.jpg?v=1532037005',
@@ -378,7 +378,7 @@ class ProductsTableSeeder extends Seeder
             ],
             //Quần đi biển nam
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'BLACKWALL I',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_CAM_1_large.jpg?v=1532378454',
@@ -393,7 +393,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'BLACKWALL II',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_NAVYTOBACCO_1_large.jpg?v=1516836073',
@@ -408,7 +408,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'BLACKWALL III',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_NAVY_RED-1_large.jpg?v=1532104878',
@@ -423,7 +423,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'BLACKWALL IV',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_CAVIAR-1_large.jpg?v=1532045768',
@@ -438,7 +438,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'STOKEHOLD',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200037_BLACK-1_large.jpg?v=1524697048',
@@ -453,7 +453,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'LANDLOPER',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200036_BLACK_1_18801f16-b604-4dcb-bc8f-b98627d9eb54_large.jpg?v=1520011227',
@@ -468,7 +468,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'RANRI',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_CAM_1_copy_large.jpg?v=1520025805',
@@ -483,7 +483,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'ZUBIES I',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_NAVY_1_6e192388-7b3b-4154-b7f8-46a19ebbea46_large.jpg?v=1520009194',
@@ -498,7 +498,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'ZUBIES II',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200035_DENIM_1_large.jpg?v=1516836392',
@@ -513,7 +513,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'ZUBIES III',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200027_BLACKWHITE_1WEB_large.jpg?v=1499389981',
@@ -528,7 +528,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'BLACKWALL',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200027_BROWNRED_1_large.jpg?v=1532104770',
@@ -543,7 +543,7 @@ class ProductsTableSeeder extends Seeder
                 'status' => 1
             ],
             [
-                'categoryId'=>1,
+                'categoryId'=>2,
                 'collectionId'=>2,
                 'name'=>'LANDLOPER II',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200036_ARMY_1_large.jpg?v=1520011292',
@@ -788,7 +788,7 @@ class ProductsTableSeeder extends Seeder
                 'categoryId'=>4,
                 'collectionId'=>2,
                 'name'=>'GAFFTOP HAT',
-                'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/321000251_PEACH_1_large.jpg?v=1516838137',
+                'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/321000264_ORG_1_large.jpg?v=1531507733',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -923,8 +923,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'GUCCI FLIP FLOP SANDAL',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/46/33/55/12463355_11564055_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -938,8 +938,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'DOLICE & GABBANA',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/96/97/67/12969767_14055828_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -953,8 +953,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'FILA',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/78/17/77/12781777_13312263_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -968,8 +968,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'ZEUS',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/14/71/86/12147186_10187115_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -983,8 +983,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'TORY BURCH',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/73/29/22/12732922_13864363_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -998,8 +998,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'VALENTINO',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/63/75/03/12637503_12219556_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -1013,8 +1013,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'ANCIENT GREEK SANDALS',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/97/01/97/12970197_13733131_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -1028,8 +1028,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'GYVENCHY',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/53/48/30/12534830_12369562_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -1043,8 +1043,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'VARSACE',
+                'images'=>'https://cdn-images.farfetch-contents.com/11/89/76/02/11897602_8949578_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -1058,8 +1058,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'FENDI',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/98/93/85/12989385_14669777_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -1073,8 +1073,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'NIKE',
+                'images'=>'https://cdn-images.farfetch-contents.com/13/12/17/25/13121725_14163634_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',
@@ -1088,8 +1088,8 @@ class ProductsTableSeeder extends Seeder
             [
                 'categoryId'=>5,
                 'collectionId'=>2,
-                'name'=>'',
-                'images'=>'',
+                'name'=>'SOPHIA WEBSTER',
+                'images'=>'https://cdn-images.farfetch-contents.com/12/95/04/35/12950435_13431168_255.jpg',
                 'price'=> 10000,
                 'discount'=>10,
                 'description'=>'Hàng tốt',

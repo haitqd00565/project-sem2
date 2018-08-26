@@ -98,7 +98,7 @@
                         <a class="nav-link" data-toggle="tab" href="#top-rate" role="tab">Mũ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#sale" role="tab">Dép</a>
+                        <a class="nav-link" data-toggle="tab" href="#last" role="tab">Dép</a>
                     </li>
                 </ul>
 
@@ -168,25 +168,11 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
+                                                            Mua
                                                         </button>
                                                     </div>
                                                 </a>
                                             </div>
-                                        </div>
-
-                                        <div class="block2-txt p-t-20">
-                                            <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-                                                {{$item->name}}
-                                            </a>
-
-                                            <span class="block2-oldprice m-text7 p-r-5">
-											$29.50
-										</span>
-
-                                            <span class="block2-newprice m-text8 p-r-5">
-											$15.90
-										</span>
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +200,7 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
+                                                            Mua
                                                         </button>
                                                     </div>
                                                 </a>
@@ -256,7 +242,7 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
+                                                            Mua
                                                         </button>
                                                     </div>
                                                 </a>
@@ -278,7 +264,7 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="#sale" role="tabpanel">
+                    <div class="tab-pane fade" id="last" role="tabpanel">
                         <div class="row">
                             @foreach($list_5 as $item)
                                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
@@ -296,7 +282,7 @@
                                                     <div class="block2-btn-addcart w-size1 trans-0-4">
                                                         <!-- Button -->
                                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
+                                                            Mua
                                                         </button>
                                                     </div>
                                                 </a>
