@@ -15,20 +15,20 @@ class CollectionsTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('collections')->truncate();
         \Illuminate\Support\Facades\DB::table('collections')->insert([
                 [
-                    'name' => 'Bộ sưu tập Xuân-Hạ',
+                    'name' => 'Mùa hè',
                     'description' => 'Mùa hè đã mời gọi với những mẫu đồ bơi đầy màu sắc, những đôi sandal hở ngón mát mẻ , những bộ đồ 
                     dành cho đôi dành cho gia đình...Và bây giờ hãy tận hưởng mùa hè đi nào !
                     ',
-                    'thumbnail' => 'http://static.thoitrangfasi.com/4098/picture/2018/04/15/ao-gia-dinh-ag0617-1523797849.png',
+                    'thumbnail' => 'http:////cdn.shopify.com/s/files/1/0476/6585/t/14/assets/home__tile-8.jpg?17373659371421586599',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                     'status' => 1
                 ],
                 [
-                    'name' => 'Bộ sưu tập Thu-Đông',
+                    'name' => 'Mùa đông',
                     'description' => 'Mùa thu có rất nhiều mẫu trang phục đôi đẹp và bắt mắt dành cho những đôi lứa đang yêu nhau.
                     Những mẫu thiết kế trẻ trung, tươi tắn dưới đây sẽ là những gợi ý tuyệt vời cho bạn khi muốn sắm đồ đôi cho mình và người ấy.',
-                    'thumbnail' => 'http://winny.com.vn/image/do-di-bien-vui-tuoi-cho-cac-cap-tinh-nhan.jpg',
+                    'thumbnail' => 'http:////cdn.shopify.com/s/files/1/0476/6585/t/14/assets/home__tile-7.jpg?17373659371421586599',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                     'status' => 1
