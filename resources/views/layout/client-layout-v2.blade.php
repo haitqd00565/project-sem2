@@ -68,7 +68,7 @@
         <div class="wrap_header">
             <!-- Logo -->
             <a href="/home" class="logo">
-                <img src="images/icons/logo.png" alt="IMG-LOGO">
+                <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32" alt="IMG-LOGO">
             </a>
 
             <!-- Menu -->
@@ -80,7 +80,7 @@
                         </li>
 
                         <li>
-                            <a href="/danh-sach-san-pham">Mua sắm</a>
+                            <a href="/danh-sach-san-pham">Mua hàng</a>
                         </li>
                         <li>
                             <a href="/about">Giới thiệu</a>
@@ -152,8 +152,8 @@
     <!-- Header Mobile -->
     <div class="wrap_header_mobile">
         <!-- Logo moblie -->
-        <a href="index.html" class="logo-mobile">
-            <img src="images/icons/logo.png" alt="IMG-LOGO">
+        <a href="/home" class="logo-mobile">
+            <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32" alt="IMG-LOGO">
         </a>
 
         <!-- Button show menu -->
@@ -258,12 +258,6 @@
         <nav class="side-menu">
             <ul class="main-menu">
                 <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-                </li>
-
-                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
                     <div class="topbar-child2-mobile">
 							<span class="topbar-email">
 								fashe@example.com
@@ -289,37 +283,19 @@
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="index.html">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Homepage V1</a></li>
-                        <li><a href="home-02.html">Homepage V2</a></li>
-                        <li><a href="home-03.html">Homepage V3</a></li>
-                    </ul>
-                    <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="/home">Trang chủ</a>
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="product.html">Shop</a>
+                    <a href="/danh-sach-san-pham">Mua hàng</a>
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="product.html">Sale</a>
+                    <a href="product.html">Giới thiệu</a>
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="cart.html">Features</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="blog.html">Blog</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="about.html">About</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="contact.html">Contact</a>
+                    <a href="cart.html">Liên hệ</a>
                 </li>
             </ul>
         </nav>
@@ -375,31 +351,31 @@
 
         <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
             <h4 class="s-text12 p-b-30">
-                Links
+                Tìm kiếm
             </h4>
 
             <ul>
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Search
+                        Trang chủ
                     </a>
                 </li>
 
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        About Us
+                        Mua hàng
                     </a>
                 </li>
 
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Contact Us
+                        Giới thiệu
                     </a>
                 </li>
 
                 <li class="p-b-9">
                     <a href="#" class="s-text7">
-                        Returns
+                        Liên hệ
                     </a>
                 </li>
             </ul>
@@ -407,7 +383,7 @@
 
         <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
             <h4 class="s-text12 p-b-30">
-                Help
+                Trợ giúp
             </h4>
 
             <ul>
@@ -439,7 +415,7 @@
 
         <div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
             <h4 class="s-text12 p-b-30">
-                Newsletter
+                Tin tức
             </h4>
 
             <form>
@@ -451,7 +427,7 @@
                 <div class="w-size2 p-t-20">
                     <!-- Button -->
                     <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-                        Subscribe
+                        Theo dõi
                     </button>
                 </div>
 
