@@ -83,7 +83,7 @@
                             <a href="/danh-sach-san-pham">Mua sắm</a>
                         </li>
                         <li>
-                            <a href="blog.html">Giới thiệu</a>
+                            <a href="/about">Giới thiệu</a>
                         </li>
 
                         <li>
