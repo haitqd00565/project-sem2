@@ -83,19 +83,32 @@
                             <a href="/danh-sach-san-pham">Mua sắm</a>
                         </li>
                         <li>
-                            <a href="blog.html">Giới thiệu</a>
+                            <a href="#">Giới thiệu</a>
                         </li>
 
                         <li>
-                            <a href="contact.html">Liên hệ</a>
+                            <a href="#">Liên hệ</a>
                         </li>
+
                     </ul>
+
                 </nav>
+
             </div>
 
             <!-- Header Icon -->
             <div class="header-icons">
-                <a href="#" class="header-wrapicon1 dis-block">
+                <form method="get" action="/search">
+                    <div class="pos-relative bo11 of-hidden">
+                        <input class="s-text7 size16 p-l-23 p-r-50" type="text" name="key"
+                               placeholder="Search">
+
+                        <button type="submit" class="flex-c-m size5 ab-r-m color1 color0-hov trans-0-4">
+                            <i class="fs-13 fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+                <a style="margin-left: 50px" href="#" class="header-wrapicon1 dis-block">
                     <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
                 </a>
 
@@ -109,28 +122,29 @@
                         <ul class="header-cart-wrapitem" id="header-cart-wrapitem">
                             @if(count(\App\ShoppingCart::getCart()->items)>0)
                                 @foreach(\App\ShoppingCart::getCart()->items as $item)
-                                <li class="header-cart-item">
-                                    <div class="header-cart-item-img">
-                                        <img src="{{$item->product->images}}" alt="IMG">
-                                    </div>
+                                    <li class="header-cart-item">
+                                        <div class="header-cart-item-img">
+                                            <img src="{{$item->product->images}}" alt="IMG">
+                                        </div>
 
-                                    <div class="header-cart-item-txt">
-                                        <a href="#" class="header-cart-item-name">
-                                            {{$item->product->name}}
-                                        </a>
+                                        <div class="header-cart-item-txt">
+                                            <a href="#" class="header-cart-item-name">
+                                                {{$item->product->name}}
+                                            </a>
 
-                                        <span class="header-cart-item-info">
+                                            <span class="header-cart-item-info">
                                                 {{$item->quantity}} x {{$item->product->discountPriceString}}
                                             </span>
-                                    </div>
-                                </li>
+                                        </div>
+                                    </li>
                                 @endforeach
                             @else
                                 'Hiện tại không có sản phẩm nào trong giỏ hàng'
                             @endif
                         </ul>
                         <div class="header-cart-total">
-                            Tổng cộng: <span id="header-cart-total">{{\App\ShoppingCart::getCart()->getTotalMoneyString()}}</span>
+                            Tổng cộng: <span
+                                    id="header-cart-total">{{\App\ShoppingCart::getCart()->getTotalMoneyString()}}</span>
                         </div>
 
                         <div class="header-cart-buttons">
@@ -152,7 +166,7 @@
     <!-- Header Mobile -->
     <div class="wrap_header_mobile">
         <!-- Logo moblie -->
-        <a href="index.html" class="logo-mobile">
+        <a href="/home" class="logo-mobile">
             <img src="images/icons/logo.png" alt="IMG-LOGO">
         </a>
 
@@ -257,11 +271,11 @@
     <div class="wrap-side-menu">
         <nav class="side-menu">
             <ul class="main-menu">
-                <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-                </li>
+                {{--<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">--}}
+                {{--<span class="topbar-child1">--}}
+                {{--Free shipping for standard order over $100--}}
+                {{--</span>--}}
+                {{--</li>--}}
 
                 <li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
                     <div class="topbar-child2-mobile">
@@ -289,44 +303,32 @@
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="index.html">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html">Homepage V1</a></li>
-                        <li><a href="home-02.html">Homepage V2</a></li>
-                        <li><a href="home-03.html">Homepage V3</a></li>
-                    </ul>
-                    <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+                    <a href="/home">Trang chủ</a>
+                    {{--<ul class="sub-menu">--}}
+                    {{--<li><a href="index.html">Homepage V1</a></li>--}}
+                    {{--<li><a href="home-02.html">Homepage V2</a></li>--}}
+                    {{--<li><a href="home-03.html">Homepage V3</a></li>--}}
+                    {{--</ul>--}}
+                    {{--<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>--}}
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="product.html">Shop</a>
+                    <a href="/danh-sach-san-pham">Mua sắm</a>
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="product.html">Sale</a>
+                    <a href="product.html">Giới thiệu</a>
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="cart.html">Features</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="blog.html">Blog</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="about.html">About</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="contact.html">Contact</a>
+                    <a href="cart.html">Liên hệ</a>
                 </li>
             </ul>
         </nav>
     </div>
 </header>
 @section('slider')
-    @show()
+@show()
 @section('content')
 @show()
 <!-- Footer -->

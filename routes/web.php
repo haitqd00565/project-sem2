@@ -34,11 +34,13 @@ Route::resource('admin/category', 'CategoryController');
 Route::resource('admin/collection', 'CollectionController');
 Route::resource('admin/product', 'ProductController');
 
-Route::get('detail', function () {
-    return view('customer/detail');
-});
+//Route::get('detail', function () {
+//    return view('customer/detail');
+//});
 
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
+
+Route::get('/search', 'Client\ProductController@getSearch');
 
 Route::get('/them-gio-hang', 'Client\ShoppingCartController@addToCart');
 Route::post('/api-them-gio-hang', 'Client\ShoppingCartController@addToCartApi');

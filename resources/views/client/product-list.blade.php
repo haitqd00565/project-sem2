@@ -39,14 +39,14 @@
                             @endforeach
                         </ul>
 
-                        <div class="search-product pos-relative bo4 of-hidden">
-                            <input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product"
-                                   placeholder="Search Products...">
+                        {{--<div class="search-product pos-relative bo4 of-hidden">--}}
+                        {{--<input class="s-text7 size6 p-l-23 p-r-50" type="text" name="search-product"--}}
+                        {{--placeholder="Search Products...">--}}
 
-                            <button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">
-                                <i class="fs-12 fa fa-search" aria-hidden="true"></i>
-                            </button>
-                        </div>
+                        {{--<button class="flex-c-m size5 ab-r-m color2 color0-hov trans-0-4">--}}
+                        {{--<i class="fs-12 fa fa-search" aria-hidden="true"></i>--}}
+                        {{--</button>--}}
+                        {{--</div>--}}
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@
                         </div>
 
                         <span class="s-text8 p-t-5 p-b-5">
-							Showing 1–12 of 16 results
+                           <h4> CÓ {{$list_product->count()}} SẢN PHẨM</h4>
 						</span>
                     </div>
 
@@ -88,17 +88,18 @@
                                 <!-- Block2 -->
                                 <div class="block2">
                                     <div class="block2-img wrap-pic-w of-hidden pos-relative {{$product->blockStyle}}">
-                                    <img src="{{$product->images}}" alt="IMG-PRODUCT">
+                                        <img src="{{$product->images}}" alt="IMG-PRODUCT">
                                     </div>
-                                        <div class="block2-overlay trans-0-4">
-                                            {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
-                                                <div class="block2-btn-addcart w-size1 trans-0-4" id="add-cart-{{$product->id}}">
-                                                    <!-- Button -->
-                                                    <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
-                                                        Mua
-                                                    </button>
-                                                </div>
-                                            {{--</a>--}}
+                                    <div class="block2-overlay trans-0-4">
+                                        {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
+                                        <div class="block2-btn-addcart w-size1 trans-0-4"
+                                             id="add-cart-{{$product->id}}">
+                                            <!-- Button -->
+                                            <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
+                                                Mua
+                                            </button>
+                                        </div>
+                                        {{--</a>--}}
                                     </div>
 
                                     <div class="block2-txt p-t-20">
