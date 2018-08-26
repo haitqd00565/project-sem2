@@ -107,171 +107,147 @@
                     <!-- - -->
                     <div class="tab-pane fade show active" id="best-seller" role="tabpanel">
                         <div class="row">
-                            @foreach($list_1 as $item)
-                                <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                            @foreach($list_1 as $product)
+                                <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
                                     <!-- Block2 -->
                                     <div class="block2">
-                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$item->blockStyle}}">
-                                            <img src="{{$item->images}}" alt="IMG-PRODUCT">
-
-                                            <div class="block2-overlay trans-0-4">
-                                                <a href="/them-gio-hang?id={{$item->id}}&quantity=1">
-                                                    {{--<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>--}}
-                                                    {{--<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>--}}
-
-
-                                                    <div class="block2-btn-addcart w-size1 trans-0-4">
-                                                        <!-- Button -->
-                                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Mua
-                                                        </button>
-                                                    </div>
-                                                </a>
+                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$product->blockStyle}}">
+                                            <img src="{{$product->images}}" alt="IMG-PRODUCT">
+                                        </div>
+                                        <div class="block2-overlay trans-0-4">
+                                            {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
+                                            <div class="block2-btn-addcart w-size1 trans-0-4" id="add-cart-{{$product->id}}">
+                                                <!-- Button -->
+                                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
+                                                    Mua
+                                                </button>
                                             </div>
+                                            {{--</a>--}}
                                         </div>
 
                                         <div class="block2-txt p-t-20">
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-                                                {{$item->name}}
+                                                {{$product->name}}
                                             </a>
-
                                             <span class="block2-newprice m-text8 p-r-5">
-											{{$item->discountPrice}}
-										    </span>
-                                            <span class="block2-newprice m-text7 p-r-5">
-                                            {{$item->originalPriceString}}
+                                            {{$product->discountPriceString}}
+                                        </span>
+                                            <span class="block2-oldprice m-text7 p-r-5">
+                                            {{$product->originalPriceString}}
                                         </span>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
                     </div>
 
                     <!-- - -->
                     <div class="tab-pane fade" id="featured" role="tabpanel">
                         <div class="row">
-                            @foreach($list_2 as $item)
-                                <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                            @foreach($list_2 as $product)
+                                <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
                                     <!-- Block2 -->
                                     <div class="block2">
-                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$item->blockStyle}}">
-                                            <img src="{{$item->images}}" alt="IMG-PRODUCT">
-
-                                            <div class="block2-overlay trans-0-4">
-                                                <a href="/them-gio-hang?id={{$item->id}}&quantity=1">
-                                                    {{--<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>--}}
-                                                    {{--<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>--}}
-
-
-                                                    <div class="block2-btn-addcart w-size1 trans-0-4">
-                                                        <!-- Button -->
-                                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
-                                                        </button>
-                                                    </div>
-                                                </a>
+                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$product->blockStyle}}">
+                                            <img src="{{$product->images}}" alt="IMG-PRODUCT">
+                                        </div>
+                                        <div class="block2-overlay trans-0-4">
+                                            {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
+                                            <div class="block2-btn-addcart w-size1 trans-0-4" id="add-cart-{{$product->id}}">
+                                                <!-- Button -->
+                                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
+                                                    Mua
+                                                </button>
                                             </div>
+                                            {{--</a>--}}
                                         </div>
 
                                         <div class="block2-txt p-t-20">
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-                                                {{$item->name}}
+                                                {{$product->name}}
                                             </a>
                                             <span class="block2-newprice m-text8 p-r-5">
-											{{$item->discountPrice}}
-										    </span>
-                                            <span class="block2-newprice m-text7 p-r-5">
-                                            {{$item->originalPriceString}}
+                                            {{$product->discountPriceString}}
+                                        </span>
+                                            <span class="block2-oldprice m-text7 p-r-5">
+                                            {{$product->originalPriceString}}
                                         </span>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
                     </div>
 
                     <!--  -->
                     <div class="tab-pane fade" id="sale" role="tabpanel">
                         <div class="row">
-                            @foreach($list_3 as $item)
-                                <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                            @foreach($list_3 as $product)
+                                <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
                                     <!-- Block2 -->
                                     <div class="block2">
-                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$item->blockStyle}}">
-                                            <img src="{{$item->images}}" alt="IMG-PRODUCT">
-
-                                            <div class="block2-overlay trans-0-4">
-                                                <a href="/them-gio-hang?id={{$item->id}}&quantity=1">
-                                                    {{--<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>--}}
-                                                    {{--<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>--}}
-
-
-                                                    <div class="block2-btn-addcart w-size1 trans-0-4">
-                                                        <!-- Button -->
-                                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
-                                                        </button>
-                                                    </div>
-                                                </a>
+                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$product->blockStyle}}">
+                                            <img src="{{$product->images}}" alt="IMG-PRODUCT">
+                                        </div>
+                                        <div class="block2-overlay trans-0-4">
+                                            {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
+                                            <div class="block2-btn-addcart w-size1 trans-0-4" id="add-cart-{{$product->id}}">
+                                                <!-- Button -->
+                                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
+                                                    Mua
+                                                </button>
                                             </div>
+                                            {{--</a>--}}
                                         </div>
 
                                         <div class="block2-txt p-t-20">
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-                                                {{$item->name}}
+                                                {{$product->name}}
                                             </a>
                                             <span class="block2-newprice m-text8 p-r-5">
-											{{$item->discountPrice}}
-										    </span>
-                                            <span class="block2-newprice m-text7 p-r-5">
-                                            {{$item->originalPriceString}}
+                                            {{$product->discountPriceString}}
+                                        </span>
+                                            <span class="block2-oldprice m-text7 p-r-5">
+                                            {{$product->originalPriceString}}
                                         </span>
                                         </div>
                                     </div>
                                 </div>
                             @endforeach
-
                         </div>
                     </div>
 
                     <!--  -->
                     <div class="tab-pane fade" id="top-rate" role="tabpanel">
                         <div class="row">
-                            @foreach($list_4 as $item)
-                                <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                            @foreach($list_4 as $product)
+                                <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
                                     <!-- Block2 -->
                                     <div class="block2">
-                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$item->blockStyle}}">
-                                            <img src="{{$item->images}}" alt="IMG-PRODUCT">
-
-                                            <div class="block2-overlay trans-0-4">
-                                                <a href="/them-gio-hang?id={{$item->id}}&quantity=1">
-                                                    {{--<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>--}}
-                                                    {{--<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>--}}
-
-
-                                                    <div class="block2-btn-addcart w-size1 trans-0-4">
-                                                        <!-- Button -->
-                                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
-                                                        </button>
-                                                    </div>
-                                                </a>
+                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$product->blockStyle}}">
+                                            <img src="{{$product->images}}" alt="IMG-PRODUCT">
+                                        </div>
+                                        <div class="block2-overlay trans-0-4">
+                                            {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
+                                            <div class="block2-btn-addcart w-size1 trans-0-4" id="add-cart-{{$product->id}}">
+                                                <!-- Button -->
+                                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
+                                                    Mua
+                                                </button>
                                             </div>
+                                            {{--</a>--}}
                                         </div>
 
                                         <div class="block2-txt p-t-20">
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-                                                {{$item->name}}
+                                                {{$product->name}}
                                             </a>
                                             <span class="block2-newprice m-text8 p-r-5">
-											{{$item->discountPrice}}
-										    </span>
-                                            <span class="block2-newprice m-text7 p-r-5">
-                                            {{$item->originalPriceString}}
+                                            {{$product->discountPriceString}}
+                                        </span>
+                                            <span class="block2-oldprice m-text7 p-r-5">
+                                            {{$product->originalPriceString}}
                                         </span>
                                         </div>
                                     </div>
@@ -282,38 +258,33 @@
 
                     <div class="tab-pane fade" id="last" role="tabpanel">
                         <div class="row">
-                            @foreach($list_5 as $item)
-                                <div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
+                            @foreach($list_5 as $product)
+                                <div class="col-sm-12 col-md-6 col-lg-3 p-b-50">
                                     <!-- Block2 -->
                                     <div class="block2">
-                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$item->blockStyle}}">
-                                            <img src="{{$item->images}}" alt="IMG-PRODUCT">
-
-                                            <div class="block2-overlay trans-0-4">
-                                                <a href="/them-gio-hang?id={{$item->id}}&quantity=1">
-                                                    {{--<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>--}}
-                                                    {{--<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>--}}
-
-
-                                                    <div class="block2-btn-addcart w-size1 trans-0-4">
-                                                        <!-- Button -->
-                                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-                                                            Add to Cart
-                                                        </button>
-                                                    </div>
-                                                </a>
+                                        <div class="block2-img wrap-pic-w of-hidden pos-relative {{$product->blockStyle}}">
+                                            <img src="{{$product->images}}" alt="IMG-PRODUCT">
+                                        </div>
+                                        <div class="block2-overlay trans-0-4">
+                                            {{--<a href="/them-gio-hang?id={{$product->id}}&quantity=1">--}}
+                                            <div class="block2-btn-addcart w-size1 trans-0-4" id="add-cart-{{$product->id}}">
+                                                <!-- Button -->
+                                                <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1-small trans-0-4">
+                                                    Mua
+                                                </button>
                                             </div>
+                                            {{--</a>--}}
                                         </div>
 
                                         <div class="block2-txt p-t-20">
                                             <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-                                                {{$item->name}}
+                                                {{$product->name}}
                                             </a>
                                             <span class="block2-newprice m-text8 p-r-5">
-											{{$item->discountPrice}}
-										    </span>
-                                            <span class="block2-newprice m-text7 p-r-5">
-                                            {{$item->originalPriceString}}
+                                            {{$product->discountPriceString}}
+                                        </span>
+                                            <span class="block2-oldprice m-text7 p-r-5">
+                                            {{$product->originalPriceString}}
                                         </span>
                                         </div>
                                     </div>

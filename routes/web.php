@@ -37,6 +37,10 @@ Route::resource('admin/product', 'ProductController');
 Route::get('detail', function () {
     return view('customer/detail');
 });
+//Route::get('/search',function (){
+//    return view('client.search');
+//});
+Route::get('/search', 'Client\ProductController@getSearch');
 
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
 
@@ -58,11 +62,10 @@ Route::get('/admin/order', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
 
-
-Route::get('detail',function (){
+Route::get('detail', function () {
     return view('client/detailProduct');
 });
-Route::get('login',function (){
+Route::get('login', function () {
     return view('client.login');
 });
 Route::get('register',function (){

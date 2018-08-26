@@ -77,7 +77,7 @@
                         </div>
 
                         <span class="s-text8 p-t-5 p-b-5">
-							Showing 1–12 of 16 results
+							<h4>CÓ {{$list_product->count()}} SẢN PHẨM</h4>
 						</span>
                     </div>
 
