@@ -68,6 +68,10 @@ Route::get('detail', function () {
 Route::get('login', function () {
     return view('client.login');
 });
+Route::get('register',function (){
+    return view('client.register');
+});
+
 Route::get('about', function () {
     return view('client/about');
 });
