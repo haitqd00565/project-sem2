@@ -28,11 +28,11 @@ class ShoppingCartController extends Controller
         $id = Input::get('id');
         $quantity = Input::get('quantity');
         if ($id == null || $quantity == null) {
-            return view('error.404');// làm trang lỗi 400, bad request.
+            return view('client.error');// làm trang lỗi 400, bad request.
         }
         $product = Product::find($id);
         if ($product == null || $product->status != 1) {
-            return view('error.404');
+            return view('client.error');
         }
         // validate quantity.
         $shopping_cart = new ShoppingCart();
@@ -105,7 +105,7 @@ class ShoppingCartController extends Controller
             foreach (array_keys($products) as $key) {
                 $product = Product::find($key);
                 if ($product == null || $product->status != 1) {
-                    return view('error.404');
+                    return view('client.error');
                 }
                 $item = new CartItem();
                 $item->product = $product;
@@ -143,7 +143,7 @@ class ShoppingCartController extends Controller
                 foreach ($shopping_cart->items as $item) {
                     $product = Product::find($item->product->id);
                     if ($product == null || $product->status != 1) {
-                        return view('error.404');
+                        return view('client.error');
                     }
                     $quantity = $item->quantity;
                     $order_detail = new OrderDetail();
@@ -162,8 +162,9 @@ class ShoppingCartController extends Controller
                 // send mail or sms.
                 return view('client.order-success')->with('order', $order)->with('order_details', $order_details);
             } catch (\Exception $exception) {
-                DB::rollBack();
-                return 'Có lỗi xảy ra.' . $exception->getMessage();
+                return view('client.error');
+//                DB::rollBack();
+//                return 'Có lỗi xảy ra.' . $exception->getMessage();
             }
 
         } else {

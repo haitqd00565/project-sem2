@@ -74,3 +74,6 @@ Route::get('register',function (){
 Route::get('about', function () {
     return view('client/about');
 });
+Route::get('error', function () {
+    return view('client/error');
+});
