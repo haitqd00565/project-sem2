@@ -39,7 +39,6 @@ Route::get('detail', function () {
 });
 
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
-
 Route::get('/them-gio-hang', 'Client\ShoppingCartController@addToCart');
 Route::post('/api-them-gio-hang', 'Client\ShoppingCartController@addToCartApi');
 Route::get('/xem-gio-hang', 'Client\ShoppingCartController@showCart');
