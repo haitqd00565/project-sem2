@@ -59,5 +59,4 @@ class ProductController extends Controller
 //               ->get();
         return view('client.search', compact('product'));
     }
-
 }

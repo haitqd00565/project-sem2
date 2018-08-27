@@ -13,8 +13,8 @@
                     <!--  -->
                     <div class="flex-sb-m flex-w p-b-35">
                         <span class="s-text8 p-t-5 p-b-5">
-							<h3>Tìm kiếm được {{$product->count()}} sản phẩm</h3>
-						</span>
+                            <h3>Tìm kiếm được {{$product->count()}} sản phẩm</h3>
+                        </span>
                     </div>
                     <!-- Product -->
                     <div class="row">
@@ -85,8 +85,8 @@
                     </div>
                     <!-- Pagination -->
                     {{--<div class="pagination flex-m flex-w p-t-26">--}}
-                        {{--<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>--}}
-                        {{--<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>--}}
+                    {{--<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>--}}
+                    {{--<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>--}}
                     {{--</div>--}}
                 </div>
             </div>
