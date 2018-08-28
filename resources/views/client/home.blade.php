@@ -17,8 +17,8 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
                             <!-- Button -->
-                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Shop Now
+                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Mua hàng
                             </a>
                         </div>
                     </div>
@@ -39,8 +39,8 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
                             <!-- Button -->
-                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Shop Now
+                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Mua hàng
                             </a>
                         </div>
                     </div>
@@ -61,8 +61,8 @@
 
                         <div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
                             <!-- Button -->
-                            <a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-                                Shop Now
+                            <a href="/danh-sach-san-pham" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+                                Mua hàng
                             </a>
                         </div>
                     </div>
