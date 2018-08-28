@@ -63,7 +63,6 @@ class ProductController extends Controller
 //               ->get();
         return view('client.search', compact('product'));
     }
-<<<<<<< HEAD
 
     public function getSignIn()
     {
@@ -136,6 +135,4 @@ class ProductController extends Controller
         Auth::logout();
         return redirect('/home');
     }
-=======
->>>>>>> f566a74042a4d716da17ed7d616d5138339bf63c
 }
