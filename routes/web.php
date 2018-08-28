@@ -14,7 +14,9 @@
 Route::get('/demo/master-layout', function () {
     return view('layout.master');
 });
-
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/demo/form', function () {
     return view('example.form');
 });
@@ -81,3 +83,6 @@ Route::get('about', function () {
 Route::get('error', function () {
     return view('client/error');
 });
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');

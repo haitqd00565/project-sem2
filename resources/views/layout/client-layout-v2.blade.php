@@ -56,7 +56,6 @@
 
                 <span class="topbar-email">
                         @if(Auth::check())
-                            <h1>abcsdfkjsfd</h1>
                         <li><a href="">{{Auth::user()->name}}</a></li>
                         <li><a href="{{route('logout')}}">Đăng xuất</a></li>
                     @else
