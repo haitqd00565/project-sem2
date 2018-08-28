@@ -35,7 +35,6 @@ Route::get('/404', function () {
 
 // admin
 
-<<<<<<< HEAD
 Route::middleware('admin')->group(function (){
     Route::resource('admin/category', 'CategoryController');
     Route::resource('admin/collection', 'CollectionController');
@@ -50,14 +49,12 @@ Route::middleware('admin')->group(function (){
 
 // Client
 
-=======
 //Route::get('detail', function () {
 //    return view('customer/detail');
 //});
 //Route::get('/search',function (){
 //    return view('client.search');
 //});
->>>>>>> fd643b0ddcddf0d6e85fe2127449225d852b5266
 Route::get('/search', 'Client\ProductController@getSearch');
 
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
@@ -73,13 +70,11 @@ Route::post('/gui-don-hang', 'Client\ShoppingCartController@checkoutCart');
 Route::get('/test', 'Client\ShoppingCartController@demoTransaction');
 
 Route::get('/home', 'Client\ProductController@index');
-<<<<<<< HEAD
-=======
+
 Route::get('/detail', 'Client\ProductController@show');
 // Order Manager
 Route::get('/admin/order', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
->>>>>>> fd643b0ddcddf0d6e85fe2127449225d852b5266
 
 
 //Route::get('detail', function () {
