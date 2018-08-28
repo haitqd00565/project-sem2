@@ -34,9 +34,9 @@ Route::resource('admin/category', 'CategoryController');
 Route::resource('admin/collection', 'CollectionController');
 Route::resource('admin/product', 'ProductController');
 
-Route::get('detail', function () {
-    return view('customer/detail');
-});
+//Route::get('detail', function () {
+//    return view('customer/detail');
+//});
 //Route::get('/search',function (){
 //    return view('client.search');
 //});
@@ -55,15 +55,15 @@ Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
 Route::get('/test', 'Client\ShoppingCartController@demoTransaction');
 
 Route::get('/home', 'Client\ProductController@index');
-
+Route::get('/detail', 'Client\ProductController@show');
 // Order Manager
 Route::get('/admin/order', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
 
-Route::get('detail', function () {
-    return view('client/detailProduct');
-});
+//Route::get('detail', function () {
+//    return view('client/detailProduct');
+//});
 
 Route::get('/login', ['as' => 'login', 'uses' => 'Client\ProductController@getSignIn']);
 

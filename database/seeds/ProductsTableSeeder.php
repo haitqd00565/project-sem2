@@ -22,7 +22,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 250000,
                 'discount'=>0,
                 'description'=>'Áo SEE YOU PIGMENT TEE trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -38,7 +38,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 250000,
                 'discount'=>0,
                 'description'=>'Áo DEAD BEAT OLD TIME TEE trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -54,7 +54,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 250000,
                 'discount'=>5,
                 'description'=>'Áo GREAT WHITE PREMIUM TEE trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -70,7 +70,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 250000,
                 'discount'=>0,
                 'description'=>'Áo MOVEMENT BLENDED TEE trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -86,7 +86,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 300000,
                 'discount'=>10,
                 'description'=>'Áo BLENDED trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -102,7 +102,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 320000,
                 'discount'=>0,
                 'description'=>'Áo STESS JACKET trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế có mũ, dài tay cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -118,7 +118,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 300000,
                 'discount'=>0,
                 'description'=>'Áo SLEEVE TEE trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay dài cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -134,7 +134,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 250000,
                 'discount'=>10,
                 'description'=>'Áo PREMIUM TEE trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -150,7 +150,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 320000,
                 'discount'=>0,
                 'description'=>'Áo STOCK TEE trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay dài cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -166,7 +166,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 250000,
                 'discount'=>20,
                 'description'=>'Áo CLASSIC TEA trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -182,7 +182,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 300000,
                 'discount'=>0,
                 'description'=>'Hàng tốt',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
@@ -198,7 +198,7 @@ class ProductsTableSeeder extends Seeder
                 'price'=> 300000,
                 'discount'=>0,
                 'description'=>'Áo PASSION trẻ trung phù hợp mặc đi biển',
-                'detail'=>'Áo đi biển nam họa sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
+                'detail'=>'Áo đi biển nam họa tiết sành điệu: Chất liệu kate thấm hút ẩm tốt, dễ dàng giặt ủi đem lại
                 cảm giác thoải mái và thông thoáng cho người sử dụng.Thiết kế cổ tròn, tay ngắn cho phái mạnh tự tin đi biển',
                 'colors'=>1,
                 'sizes'=>1,
