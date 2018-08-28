@@ -58,7 +58,7 @@
                         @if(Auth::check())
                         <li><a href="">{{Auth::user()->name}}</a></li>
                         <li><a href="{{route('logout')}}">Đăng xuất</a></li>
-                            @csrf
+                        @csrf
                     @else
                         <li><a href="{{route('login')}}">Đăng nhập</a></li>
                     @endif
@@ -115,14 +115,10 @@
                     </a>
                 @endif
 
-
-                <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="{{asset('images/icons/icon-header-01.png')}}" class="header-icon1" alt="ICON">
-                </a>
-
                 <span class="linedivide1"></span>
                 <div class="header-wrapicon2">
-                    <img src="{{asset('images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <img src="{{asset('images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown"
+                         alt="ICON">
                     <span class="header-icons-noti" id="header-icons-noti">{{\App\ShoppingCart::getTotalItem()}}</span>
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown">
@@ -189,7 +185,8 @@
                 <span class="linedivide2"></span>
 
                 <div class="header-wrapicon2">
-                    <img src="{{asset('images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <img src="{{asset('images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown"
+                         alt="ICON">
                     <span class="header-icons-noti">0</span>
 
                     <!-- Header cart noti -->

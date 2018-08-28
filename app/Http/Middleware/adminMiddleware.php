@@ -12,13 +12,13 @@ use Closure;
 
 class adminMiddleware
 {
-    public function handle($request, Closure $next)
-    {
-        if (auth()->check()) {
-            if (auth()->user()->adminLevel > 0){
-                return $next($request);
-            }
-        }
-        return redirect()->guest('/home');
-    }
+//    public function handle($request, Closure $next)
+//    {
+//        if (auth()->check()) {
+//            if (auth()->user()->adminLevel > 0){
+//                return $next($request);
+//            }
+//        }
+//        return redirect()->guest('/home');
+//    }
 }
