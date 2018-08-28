@@ -35,7 +35,7 @@ Route::get('/404', function () {
 
 // admin
 
-Route::middleware('admin')->group(function (){
+//Route::middleware('admin')->group(function () {
     Route::resource('admin/category', 'CategoryController');
     Route::resource('admin/collection', 'CollectionController');
     Route::resource('admin/product', 'ProductController');
@@ -44,7 +44,7 @@ Route::middleware('admin')->group(function (){
     Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 //
     Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
-});
+//});
 
 
 // Client
@@ -64,7 +64,6 @@ Route::get('/xem-gio-hang', 'Client\ShoppingCartController@showCart');
 Route::get('/xoa-gio-hang', 'Client\ShoppingCartController@destroyCart');
 Route::put('/sua-gio-hang', 'Client\ShoppingCartController@updateCart');
 Route::post('/gui-don-hang', 'Client\ShoppingCartController@checkoutCart');
-
 
 
 Route::get('/test', 'Client\ShoppingCartController@demoTransaction');
