@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route::get('detail', function () {
+//    return view('customer/detail');
+//});
+//Route::get('/search',function (){
+//    return view('client.search');
+//});
 Route::get('/demo/master-layout', function () {
     return view('layout.master');
 });
@@ -28,20 +33,22 @@ Route::get('/404', function () {
     return view('error.404');
 });
 
-//Route::get('/home',function (){
-//    return view('customer.home');
-//});
+// admin
 
-Route::resource('admin/category', 'CategoryController');
-Route::resource('admin/collection', 'CollectionController');
-Route::resource('admin/product', 'ProductController');
-
-Route::get('detail', function () {
-    return view('customer/detail');
+Route::middleware('admin')->group(function (){
+    Route::resource('admin/category', 'CategoryController');
+    Route::resource('admin/collection', 'CollectionController');
+    Route::resource('admin/product', 'ProductController');
+// Order Manager
+    Route::get('/admin/order', 'OrderController@index');
+    Route::get('/admin/order/change-status', 'OrderController@changeStatus');
+//
+    Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
 });
-//Route::get('/search',function (){
-//    return view('client.search');
-//});
+
+
+// Client
+
 Route::get('/search', 'Client\ProductController@getSearch');
 
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
@@ -52,15 +59,11 @@ Route::get('/xoa-gio-hang', 'Client\ShoppingCartController@destroyCart');
 Route::put('/sua-gio-hang', 'Client\ShoppingCartController@updateCart');
 Route::post('/gui-don-hang', 'Client\ShoppingCartController@checkoutCart');
 
-Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
+
 
 Route::get('/test', 'Client\ShoppingCartController@demoTransaction');
 
 Route::get('/home', 'Client\ProductController@index');
-
-// Order Manager
-Route::get('/admin/order', 'OrderController@index');
-Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
 
 Route::get('detail', function () {
