@@ -5,36 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{{asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+    <link rel="icon" type="image/png" href="{{asset('images/icons/favicon.png')}}"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('fonts/themify/themify-icons.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('fonts/elegant-font/html-css/style.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/animate/animate.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/css-hamburgers/hamburgers.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/animsition/css/animsition.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/select2/select2.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/daterangepicker/daterangepicker.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/slick/slick.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('vendor/lightbox2/css/lightbox.min.css')}}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/util.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -76,7 +76,7 @@
         <div class="wrap_header">
             <!-- Logo -->
             <a href="/home" class="logo">
-                <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32"
+                <img src="{{asset('https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32')}}"
                      alt="IMG-LOGO">
             </a>
 
@@ -109,16 +109,22 @@
                         </button>
                     </div>
                 </form>
+<<<<<<< HEAD
                 @if(Auth::check())
                     <a href="/admin/order" title="admin page" class="header-wrapicon1 dis-block">
                         <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
                     </a>
                 @endif
 
+=======
+                <a href="#" class="header-wrapicon1 dis-block">
+                    <img src="{{asset('images/icons/icon-header-01.png')}}" class="header-icon1" alt="ICON">
+                </a>
+>>>>>>> fd643b0ddcddf0d6e85fe2127449225d852b5266
 
                 <span class="linedivide1"></span>
                 <div class="header-wrapicon2">
-                    <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <img src="{{asset('images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti" id="header-icons-noti">{{\App\ShoppingCart::getTotalItem()}}</span>
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown">
@@ -170,7 +176,7 @@
     <div class="wrap_header_mobile">
         <!-- Logo moblie -->
         <a href="/home" class="logo-mobile">
-            <img src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32"
+            <img src="{{asset('https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32')}}"
                  alt="IMG-LOGO">
         </a>
 
@@ -179,13 +185,13 @@
             <!-- Header Icon mobile -->
             <div class="header-icons-mobile">
                 <a href="#" class="header-wrapicon1 dis-block">
-                    <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                    <img src="{{asset('images/icons/icon-header-01.png')}}" class="header-icon1" alt="ICON">
                 </a>
 
                 <span class="linedivide2"></span>
 
                 <div class="header-wrapicon2">
-                    <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+                    <img src="{{asset('images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti">0</span>
 
                     <!-- Header cart noti -->
@@ -193,7 +199,7 @@
                         <ul class="header-cart-wrapitem">
                             <li class="header-cart-item">
                                 <div class="header-cart-item-img">
-                                    <img src="images/item-cart-01.jpg" alt="IMG">
+                                    <img src="{{asset('images/item-cart-01.jpg')}}" alt="IMG">
                                 </div>
 
                                 <div class="header-cart-item-txt">
@@ -209,7 +215,7 @@
 
                             <li class="header-cart-item">
                                 <div class="header-cart-item-img">
-                                    <img src="images/item-cart-02.jpg" alt="IMG">
+                                    <img src="{{asset('images/item-cart-02.jpg')}}" alt="IMG">
                                 </div>
 
                                 <div class="header-cart-item-txt">
@@ -225,7 +231,7 @@
 
                             <li class="header-cart-item">
                                 <div class="header-cart-item-img">
-                                    <img src="images/item-cart-03.jpg" alt="IMG">
+                                    <img src="{{asset('images/item-cart-03.jpg')}}" alt="IMG">
                                 </div>
 
                                 <div class="header-cart-item-txt">
@@ -455,23 +461,23 @@
 
     <div class="t-center p-l-15 p-r-15">
         <a href="#">
-            <img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
+            <img class="h-size2" src="{{asset('images/icons/paypal.png')}}" alt="IMG-PAYPAL">
         </a>
 
         <a href="#">
-            <img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA">
+            <img class="h-size2" src="{{asset('images/icons/visa.png')}}" alt="IMG-VISA">
         </a>
 
         <a href="#">
-            <img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD">
+            <img class="h-size2" src="{{asset('images/icons/mastercard.png')}}" alt="IMG-MASTERCARD">
         </a>
 
         <a href="#">
-            <img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS">
+            <img class="h-size2" src="{{asset('images/icons/express.png')}}" alt="IMG-EXPRESS">
         </a>
 
         <a href="#">
-            <img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
+            <img class="h-size2" src="{{asset('images/icons/discover.png')}}" alt="IMG-DISCOVER">
         </a>
 
         <div class="t-center s-text8 p-t-20">
@@ -495,14 +501,14 @@
 
 
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="{{asset('vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+<script type="text/javascript" src="{{asset('vendor/animsition/js/animsition.min.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
-<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{asset('vendor/bootstrap/js/popper.js')}}"></script>
+<script type="text/javascript" src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+<script type="text/javascript" src="{{asset('vendor/select2/select2.min.js')}}"></script>
 <script type="text/javascript">
     $(".selection-1").select2({
         minimumResultsForSearch: 20,
@@ -510,14 +516,14 @@
     });
 </script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
-<script type="text/javascript" src="js/slick-custom.js"></script>
+<script type="text/javascript" src="{{asset('vendor/slick/slick.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/slick-custom.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+<script type="text/javascript" src="{{asset('vendor/countdowntime/countdowntime.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+<script type="text/javascript" src="{{asset('vendor/lightbox2/js/lightbox.min.js')}}"></script>
 <!--===============================================================================================-->
-<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="{{asset('vendor/sweetalert/sweetalert.min.js')}}"></script>
 <script type="text/javascript">
     $('.block2-btn-addcart').each(function () {
         var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
@@ -535,7 +541,7 @@
 </script>
 
 <!--===============================================================================================-->
-<script src="js/main.js"></script>
-<script src="js/my-script.js"></script>
+<script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('js/my-script.js')}}"></script>
 </body>
 </html>
