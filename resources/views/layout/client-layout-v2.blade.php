@@ -53,8 +53,15 @@
             </div>
 
             <div class="topbar-child2">
-					<span class="topbar-email">
-						fashe@example.com
+
+                <span class="topbar-email">
+                        @if(Auth::check())
+                            <h1>abcsdfkjsfd</h1>
+                        <li><a href="">{{Auth::user()->name}}</a></li>
+                        <li><a href="{{route('logout')}}">Đăng xuất</a></li>
+                    @else
+                        <li><a href="{{route('login')}}">Đăng nhập</a></li>
+                    @endif
 					</span>
 
                 <div class="topbar-language rs1-select2">
@@ -111,7 +118,6 @@
                 </a>
 
                 <span class="linedivide1"></span>
-
                 <div class="header-wrapicon2">
                     <img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
                     <span class="header-icons-noti" id="header-icons-noti">{{\App\ShoppingCart::getTotalItem()}}</span>

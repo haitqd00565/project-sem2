@@ -32,6 +32,7 @@ class OrderController extends Controller
         return $chart_data;
     }
 
+
     public function changeStatus()
     {
         $id = Input::get('id');
