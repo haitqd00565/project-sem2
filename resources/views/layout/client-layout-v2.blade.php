@@ -58,6 +58,7 @@
                         @if(Auth::check())
                         <li><a href="">{{Auth::user()->name}}</a></li>
                         <li><a href="{{route('logout')}}">Đăng xuất</a></li>
+                            @csrf
                     @else
                         <li><a href="{{route('login')}}">Đăng nhập</a></li>
                     @endif
@@ -108,9 +109,18 @@
                         </button>
                     </div>
                 </form>
+<<<<<<< HEAD
+                @if(Auth::check())
+                    <a href="/admin/order" title="admin page" class="header-wrapicon1 dis-block">
+                        <img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+                    </a>
+                @endif
+
+=======
                 <a href="#" class="header-wrapicon1 dis-block">
                     <img src="{{asset('images/icons/icon-header-01.png')}}" class="header-icon1" alt="ICON">
                 </a>
+>>>>>>> fd643b0ddcddf0d6e85fe2127449225d852b5266
 
                 <span class="linedivide1"></span>
                 <div class="header-wrapicon2">

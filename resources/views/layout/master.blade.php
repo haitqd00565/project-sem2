@@ -117,8 +117,8 @@
                 </li>
                 <li class="{{ $current_menu == 'order_manager' ? 'active' : '' }}">
                     <a data-toggle="collapse" href="#componentsExamples">
-                        <i class="material-icons">sort</i>
-                        <p>Quản lí danh mục
+                        <i class="material-icons">book</i>
+                        <p>Quản lí đơn hàng
                             <b class="caret"></b>
                         </p>
                     </a>
