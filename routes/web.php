@@ -64,12 +64,16 @@ Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 Route::get('detail', function () {
     return view('client/detailProduct');
 });
-Route::get('login', function () {
-    return view('client.login');
-});
-Route::get('register',function (){
-    return view('client.register');
-});
+
+Route::get('/login', ['as' => 'login', 'uses' => 'Client\ProductController@getSignIn']);
+
+Route::get('/register', ['as' => 'register', 'uses' => 'Client\ProductController@getSignUp']);
+
+Route::post('/login', ['as' => 'login', 'uses' => 'Client\ProductController@postSignIn']);
+
+Route::post('/register', ['as' => 'register', 'uses' => 'Client\ProductController@postSignUp']);
+
+Route::get('/logout', ['as' => 'logout', 'uses' => 'Client\ProductController@getLogOut']);
 
 Route::get('about', function () {
     return view('client/about');

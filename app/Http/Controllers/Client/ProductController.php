@@ -13,8 +13,12 @@ use App\Category;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Collection;
+use App\User;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+
 
 class ProductController extends Controller
 {
@@ -59,4 +63,79 @@ class ProductController extends Controller
 //               ->get();
         return view('client.search', compact('product'));
     }
+<<<<<<< HEAD
+
+    public function getSignIn()
+    {
+        return view('client.login');
+    }
+
+    public function postSignIn(Request $request)
+    {
+        $request->validate(
+            [
+                'email' => 'required|max:50|min:10|unique:users|email',
+                'password' => 'required|max:20|min:6'
+            ],
+            [
+                'email.required' => 'Vui lòng nhập Email',
+                'email.max' => 'Email không quá 50 ký tự',
+                'email.min' => 'Email phải dài hơn 10 ký tự',
+                'email.unique' => 'Email đã được sử dụng, vui lòng nhập đúng email',
+                'email.email' => 'Không đúng định dạng email',
+                'password.required' => 'Vui lòng nhập password',
+                'password.max' => 'Password không quá 20 ký tự',
+                'password.min' => 'Password phải dài hơn 6 ký tự'
+            ]);
+        $credentials = array('email' => $request->email, 'password' => $request->password);
+        if (Auth::attempt($credentials)) {
+            return redirect()->back()->with(['flag' => 'success', 'message' => 'Đăng nhập thành công']);
+        } else {
+            return redirect()->back()->with(['flag' => 'danger', 'message' => 'Đăng nhập thất bại']);
+        }
+    }
+
+    public function getSignUp()
+    {
+        return view('client.register');
+    }
+
+    public function postSignUp(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|max:20|min:6|unique:users',
+            'email' => 'required|max:50|min:10|unique:users|email',
+            'password' => 'required|max:20|min:6',
+            'confirmPassword' => 'required|max:20|min:6|same:password'
+        ], [
+            'name.required' => 'Vui lòng nhập tên người dùng',
+            'name.max' => 'Tên không được quá 50 ký tự',
+            'name.min' => 'Tên phải dài hơn 10 ký tự',
+            'name.unique' => 'Tên đã được sử dụng, vui lòng nhập tên khác',
+            'email.required' => 'Vui lòng nhập Email',
+            'email.max' => 'Email không quá 20 ký tự',
+            'email.min' => 'Email phải dài hơn 6 ký tự',
+            'email.unique' => 'Email đã được sử dụng, vui lòng nhập đúng email',
+            'email.email' => 'Email không đúng định dạng',
+            'password.required' => 'Vui lòng nhập password',
+            'password.max' => 'Password không quá 20 ký tự',
+            'password.min' => 'Password phải dài hơn 6 ký tự',
+            'confirmPassword.required' => 'Vui lòng nhập lại password',
+            'confirmPassword.same' => 'Password không trùng nhau, vui lòng nhập lại',
+        ]);
+        $users = new User();
+        $users->name = $request->name;
+        $users->email = $request->email;
+        $users->password = Hash::make($request->password);
+        $users->save();
+        return redirect()->back()->with('thanhcong', 'Tạo tài khoản thành công!');
+    }
+
+    public function getLogOut()
+    {
+        Auth::logout();
+        return redirect('/home');
+    }
+=======
+>>>>>>> f566a74042a4d716da17ed7d616d5138339bf63c
 }

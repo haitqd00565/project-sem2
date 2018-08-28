@@ -13,8 +13,13 @@
                     <!--  -->
                     <div class="flex-sb-m flex-w p-b-35">
                         <span class="s-text8 p-t-5 p-b-5">
+<<<<<<< HEAD
+                        <h3>Tìm kiếm được {{$product->count()}} sản phẩm</h3>
+						</span>
+=======
                             <h3>Tìm kiếm được {{$product->count()}} sản phẩm</h3>
                         </span>
+>>>>>>> f566a74042a4d716da17ed7d616d5138339bf63c
                     </div>
                     <!-- Product -->
                     <div class="row">
