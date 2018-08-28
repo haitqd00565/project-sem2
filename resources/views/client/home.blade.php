@@ -122,6 +122,11 @@
                                                     Mua
                                                 </button>
                                             </div>
+                                            <a href="/detail/{{'?id='.$product->id}}">
+                                                <button style="border-radius: 50px; width: 50px; height: 50px; float: right" class=" hov1 s-text1-small trans-0-4">
+                                                    Xem
+                                                </button>
+                                            </a>
                                             {{--</a>--}}
                                         </div>
 
@@ -160,6 +165,11 @@
                                                     Mua
                                                 </button>
                                             </div>
+                                            <a href="/detail/{{'?id='.$product->id}}">
+                                                <button style="border-radius: 50px; width: 50px; height: 50px; float: right" class=" hov1 s-text1-small trans-0-4">
+                                                    Xem
+                                                </button>
+                                            </a>
                                             {{--</a>--}}
                                         </div>
 
@@ -198,6 +208,11 @@
                                                     Mua
                                                 </button>
                                             </div>
+                                            <a href="/detail/{{'?id='.$product->id}}">
+                                                <button style="border-radius: 50px; width: 50px; height: 50px; float: right" class=" hov1 s-text1-small trans-0-4">
+                                                    Xem
+                                                </button>
+                                            </a>
                                             {{--</a>--}}
                                         </div>
 
@@ -236,6 +251,11 @@
                                                     Mua
                                                 </button>
                                             </div>
+                                            <a href="/detail/{{'?id='.$product->id}}">
+                                                <button style="border-radius: 50px; width: 50px; height: 50px; float: right" class=" hov1 s-text1-small trans-0-4">
+                                                    Xem
+                                                </button>
+                                            </a>
                                             {{--</a>--}}
                                         </div>
 
@@ -273,6 +293,11 @@
                                                     Mua
                                                 </button>
                                             </div>
+                                            <a href="/detail/{{'?id='.$product->id}}">
+                                                <button style="border-radius: 50px; width: 50px; height: 50px; float: right" class=" hov1 s-text1-small trans-0-4">
+                                                    Xem
+                                                </button>
+                                            </a>
                                             {{--</a>--}}
                                         </div>
 

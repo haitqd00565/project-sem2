@@ -135,4 +135,12 @@ class ProductController extends Controller
         Auth::logout();
         return redirect('/home');
     }
+    public function show(){
+        $id = Input::get('id');
+        $obj = Product::find($id);
+        if ($obj == null){
+            return "Lỗi";
+        }
+        return view('client.detailProduct',compact('obj'));
+    }
 }
