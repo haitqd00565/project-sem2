@@ -17,7 +17,6 @@
                 @if (Session::has('message'))
                     <div class="alert {{ Session::get('message-class') }}">{{ Session::get('message') }}</div>
                 @endif
-                <div id="linechart_material"></div>
                 <div class="material-datatables">
                     <div id="datatables_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
                         <div class="row">
@@ -33,7 +32,7 @@
                                             <th class="col-1">Người đặt</th>
                                             <th class="col-2">Người nhận</th>
                                             <th class="col-2">Thời gian</th>
-                                            <th class="col-2">Thông tin</th>
+                                            <th class="col-2">Số lượng</th>
                                             <th class="col-1">Trạng thái</th>
                                             <th class="col-3">Thao tác</th>
                                         </tr>
@@ -47,25 +46,34 @@
                                                 <td class="col-2">{{$item->created_at}}</td>
                                                 <td class="col-2">
                                                     <ul>
-                                                        @foreach($item->details as $order_detail)
-                                                            <li>{{$order_detail->product->name}} - {{$order_detail->quantity}}</li>
-                                                        @endforeach
+                                                        {{--@foreach($item->details as $order_detail)--}}
+                                                        {{--{{$order_detail->quantity}}--}}
+                                                        {{--@endforeach--}}
+                                                        {{--@foreach($item->details as $order_detail)--}}
+                                                        {{--<li>{{$order_detail->product->name}} - {{$order_detail->quantity}}</li>--}}
+                                                        {{--@endforeach--}}
                                                     </ul>
                                                 </td>
                                                 <td class="col-1">{{$item->statusLabel}}</td>
                                                 <td class="col-3">
                                                     @if($item->status==0)
-                                                    <a href="/admin/order/change-status?id={{$item->id}}&status=1" onclick="return confirm('Bạn có chắc muốn xác nhận đơn hàng?')"
-                                                       class="btn btn-simple btn-success btn-icon edit"><i
-                                                                class="material-icons">how_to_reg</i></a>
+                                                        <a href="/admin/order/change-status?id={{$item->id}}&status=1"
+                                                           onclick="return confirm('Bạn có chắc muốn xác nhận đơn hàng?')"
+                                                           class="btn btn-simple btn-success btn-icon edit"><i
+                                                                    class="material-icons">how_to_reg</i></a>
                                                     @elseif($item->status==1)
-                                                    <a href="/admin/order/change-status?id={{$item->id}}&status=2" onclick="return confirm('Bạn có chắc muốn hoàn thành đơn hàng?')"
-                                                       class="btn btn-simple btn-success btn-icon edit"><i
-                                                                class="material-icons">done</i></a>
+                                                        <a href="/admin/order/change-status?id={{$item->id}}&status=2"
+                                                           onclick="return confirm('Bạn có chắc muốn hoàn thành đơn hàng?')"
+                                                           class="btn btn-simple btn-success btn-icon edit"><i
+                                                                    class="material-icons">done</i></a>
                                                     @endif
                                                     @if($item->status==0)
-                                                    <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
-                                                                class="material-icons">close</i></a>
+                                                        <a href="/admin/order/change-status?id={{$item->id}}&status=-1"
+                                                           onclick="return confirm('Bạn có chắc muốn hủy đơn hàng?')"
+                                                           class="btn btn-simple btn-danger btn-icon remove"><i
+                                                                    class="material-icons">close</i></a>
+                                                        {{--<a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i--}}
+                                                        {{--class="material-icons">close</i></a>--}}
                                                     @endif
                                                 </td>
                                             </tr>
@@ -94,88 +102,50 @@
         </div>
         <!--  end card  -->
     </div>
-    <script>
-        $('.btn-delete').click(function () {
-            var thisButton = $(this);
-            swal({
-                text: "Bạn có chắc muốn xoá danh mục này không?",
-                type: 'warning',
-                showCancelButton: true,
-                confirmButtonClass: 'btn btn-success',
-                cancelButtonClass: 'btn btn-danger',
-                confirmButtonText: 'Đồng ý',
-                cancelButtonText: 'Huỷ bỏ',
-                buttonsStyling: false
-            }).then(function() {
-                var id = thisButton.attr('href');
-                $.ajax({
-                    'url': '/admin/order/' + id,
-                    'method': 'DELETE',
-                    'data':{
-                        '_token':$('meta[name="csrf-token"]').attr('content')
-                    },
-                    success: function (response) {
-                        swal({
-                            text: 'Danh mục đã bị xoá.',
-                            type: 'success',
-                            confirmButtonClass: "btn btn-success",
-                            buttonsStyling: false
-                        })
-                        setTimeout(function () {
-                            window.location.reload();
-                        }, 2*1000);
-                    },
-                    error: function () {
-                        swal({
-                            text: 'Có lỗi xảy ra, vui lòng thử lại sau.',
-                            type: 'warning',
-                            confirmButtonClass: "btn btn-danger",
-                            buttonsStyling: false
-                        })
-                    }
-                });
+    {{--<script>--}}
+    {{--$('.btn-delete').click(function () {--}}
+    {{--var thisButton = $(this);--}}
+    {{--swal({--}}
+    {{--text: "Bạn có chắc muốn xoá danh mục này không?",--}}
+    {{--type: 'warning',--}}
+    {{--showCancelButton: true,--}}
+    {{--confirmButtonClass: 'btn btn-success',--}}
+    {{--cancelButtonClass: 'btn btn-danger',--}}
+    {{--confirmButtonText: 'Đồng ý',--}}
+    {{--cancelButtonText: 'Huỷ bỏ',--}}
+    {{--buttonsStyling: false--}}
+    {{--}).then(function() {--}}
+    {{--var id = thisButton.attr('href');--}}
+    {{--$.ajax({--}}
+    {{--'url': '/admin/order/' + id,--}}
+    {{--'method': 'DELETE',--}}
+    {{--'data':{--}}
+    {{--'_token':$('meta[name="csrf-token"]').attr('content')--}}
+    {{--},--}}
+    {{--success: function (response) {--}}
+    {{--swal({--}}
+    {{--text: 'Danh mục đã bị xoá.',--}}
+    {{--type: 'success',--}}
+    {{--confirmButtonClass: "btn btn-success",--}}
+    {{--buttonsStyling: false--}}
+    {{--})--}}
+    {{--setTimeout(function () {--}}
+    {{--window.location.reload();--}}
+    {{--}, 2*1000);--}}
+    {{--},--}}
+    {{--error: function () {--}}
+    {{--swal({--}}
+    {{--text: 'Có lỗi xảy ra, vui lòng thử lại sau.',--}}
+    {{--type: 'warning',--}}
+    {{--confirmButtonClass: "btn btn-danger",--}}
+    {{--buttonsStyling: false--}}
+    {{--})--}}
+    {{--}--}}
+    {{--});--}}
 
-            });
-            return false;
-        })
-    </script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['line']});
-        google.charts.setOnLoadCallback(function () {
-            $.ajax({
-                url:'/api-get-chart-data',
-                method:'GET',
-                success:function (resp) {
-                    drawChart(resp);
-                },
-                error: function () {
-                    swal('Có lỗi xảy ra', 'Không thể lấy dữ liệu từ api', 'error');
-                }
-            });
-        });
+    {{--});--}}
+    {{--return false;--}}
+    {{--})--}}
+    {{--</script>--}}
 
-        function drawChart(chart_data) {
-            var data = new google.visualization.DataTable();
-            data.addColumn('date', 'Ngày');
-            data.addColumn('number', 'Doanh thu');
-            for (var i = 0; i < chart_data.length; i++){
-                data.addRow([new Date(chart_data[i].day),  Number(chart_data[i].revenue)]);
-            }
-            var options = {
-                chart: {
-                    title: 'Biểu đồ doanh thu theo thời gian',
-                    subtitle: 'tính theo đơn vị (vnd)'
-                },
-                height: 500,
-                hAxis: {
-                    format: 'dd/MM/yyyy'
-                }
-            };
-
-            var chart = new google.charts.Line(document.getElementById('linechart_material'));
-
-            chart.draw(data, google.charts.Line.convertOptions(options));
-        }
-    </script>
 @endsection

@@ -36,14 +36,14 @@ Route::get('/404', function () {
 // admin
 
 //Route::middleware('admin')->group(function () {
-    Route::resource('admin/category', 'CategoryController');
-    Route::resource('admin/collection', 'CollectionController');
-    Route::resource('admin/product', 'ProductController');
+Route::resource('admin/category', 'CategoryController');
+Route::resource('admin/collection', 'CollectionController');
+Route::resource('admin/product', 'ProductController');
 // Order Manager
-    Route::get('/admin/order', 'OrderController@index');
-    Route::get('/admin/order/change-status', 'OrderController@changeStatus');
+Route::get('/admin/order', 'OrderController@index');
+Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 //
-    Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
+Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
 //});
 
 
@@ -72,9 +72,11 @@ Route::get('/home', 'Client\ProductController@index');
 
 Route::get('/detail', 'Client\ProductController@show');
 // Order Manager
-Route::get('/admin/order', 'OrderController@index');
+Route::get('/admin/order/', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
-
+Route::get('/admin/dashboard', function () {
+    return view('admin/dashboard/chart');
+});
 
 //Route::get('detail', function () {
 //    return view('client/detailProduct');
