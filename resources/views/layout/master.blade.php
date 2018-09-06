@@ -21,7 +21,10 @@
     <!--     Fonts and icons     -->
     <link href="/assets/css/font-awesome.css" rel="stylesheet"/>
     <link href="/assets/css/google-roboto-300-700.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script src="/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 </head>
 
 <body>
@@ -68,8 +71,8 @@
                 </div>
             </div>
             <ul class="nav">
-                <li>
-                    <a href="dashboard.html">
+                <li class="{{$current_menu == 'chart_manager' ? 'active' : ''}}">
+                    <a href="/admin/dashboard">
                         <i class="material-icons">dashboard</i>
                         <p>Dashboard</p>
                     </a>
@@ -314,6 +317,7 @@
 
 </body>
 <!--   Core JS Files   -->
+
 <script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script>
 <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="/assets/js/material.min.js" type="text/javascript"></script>
@@ -352,5 +356,8 @@
 <script src="/assets/js/jquery.tagsinput.js"></script>
 <!-- Material Dashboard javascript methods -->
 <script src="/assets/js/material-dashboard.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
 <!-- Mirrored from demos.creative-tim.com/material-dashboard-pro/examples/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 21:32:16 GMT -->
 </html>

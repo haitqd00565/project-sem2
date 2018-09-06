@@ -158,10 +158,10 @@ class ProductController extends Controller
     {
         $obj = Product::find($id);
         if ($obj == null) {
-            return response()->json(['message' => 'Bộ sưu tập không tồn tại hoặc đã bị xóa'], 404);
+            return response()->json(['message' => 'Sản phẩm không tồn tại hoặc đã bị xóa'], 404);
         }
         $obj->status = 0;
         $obj->save();
-        return response()->json(['message' => 'Xóa bộ sưu tập thành công']);
+        return response()->json(['message' => 'Xóa sản phẩm thành công']);
     }
 }
