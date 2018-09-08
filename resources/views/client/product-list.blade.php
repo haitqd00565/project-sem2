@@ -1,7 +1,7 @@
-@extends('layout.client-layout-v2',['page_title'=>'Danh Sách'])
+@extends('layout.client-layout-v2',['page_title'=>'Danh Sách','active'=>'list'])
 @section('content')
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m"
-             style="background-image: url(http:////cdn.shopify.com/s/files/1/0476/6585/files/outerwear_1600x.jpg?v=1532559381);">
+             style="background-image: url(https://cdn.shopify.com/s/files/1/0476/6585/files/Su18_Lookbook_12.jpg?v=1525801572);">
         <h2 class="l-text2 t-center">
             DANH SÁCH SẢN PHẨM
         </h2>

@@ -2,7 +2,7 @@
 @section('content')
     <!-- Title Page -->
     <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
-             style="background-image: url('images/heading-pages-01.jpg');">
+             style="background-image: url('https://cdn.shopify.com/s/files/1/0476/6585/files/DS_Maine-32.jpg?v=1532566742');">
         <h2 class="l-text2 t-center">
             Giỏ hàng
         </h2>

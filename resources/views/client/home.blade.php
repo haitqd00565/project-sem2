@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2',['page_title'=>'Trang chủ'])
+@extends('layout.client-layout-v2',['page_title'=>'Trang chủ','active'=>'home'])
 @section('slider')
     <section class="slide1">
         <div class="wrap-slick1">
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="item-slick1 item3-slick1"
-                     style="background-image: url(http://cdn.shopify.com/s/files/1/0476/6585/files/Trenton_1600x.jpg?v=1532559078);">
+                     style="background-image: url(https://cdn.shopify.com/s/files/1/0476/6585/files/DS_Maine-52.jpg?v=1532566790);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15"
                               data-appear="rotateInDownLeft">

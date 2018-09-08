@@ -1,7 +1,7 @@
 @extends('layout.client-layout-v2',['page_title'=>'Tìm kiếm'])
 @section('content')
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m"
-             style="background-image: url(images/heading-pages-02.jpg);">
+             style="background-image: url(https://cdn.shopify.com/s/files/1/0476/6585/files/DS_Maine-52.jpg?v=1532566790);">
         <h2 class="l-text2 t-center">
             Tìm kiếm
         </h2>
