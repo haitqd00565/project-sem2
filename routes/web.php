@@ -101,3 +101,4 @@ Route::get('error', function () {
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/xoa-san-pham', 'Client\ShoppingCartController@removeFromCart');

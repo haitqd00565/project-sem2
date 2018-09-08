@@ -28,9 +28,11 @@
                             @foreach($shopping_cart->items as $item)
                                 <tr class="table-row">
                                     <td class="column-1">
-                                        <div class="cart-img-product b-rad-4 o-f-hidden">
-                                            <img src="{{$item->product->images}}" alt="{{$item->product->name}}">
-                                        </div>
+                                        <a href="/xoa-san-pham/{{'?id='.$item->product->id}}">
+                                            <div class="cart-img-product b-rad-4 o-f-hidden">
+                                                <img src="{{$item->product->images}}" alt="{{$item->product->name}}">
+                                            </div>
+                                        </a>
                                     </td>
                                     <td class="column-2">{{$item->product->name}}</td>
                                     <td class="column-3">{{$item->product->discountPriceWithFormat}}</td>

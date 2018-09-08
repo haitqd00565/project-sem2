@@ -29,10 +29,9 @@
                                         <thead>
                                         <tr role="row">
                                             <th class="col-1">ID</th>
-                                            <th class="col-1">Người đặt</th>
-                                            <th class="col-2">Người nhận</th>
+                                            <th class="col-2">Người đặt</th>
                                             <th class="col-2">Thời gian</th>
-                                            <th class="col-2">Số lượng</th>
+                                            <th class="col-2">Sản phẩm</th>
                                             <th class="col-1">Trạng thái</th>
                                             <th class="col-3">Thao tác</th>
                                         </tr>
@@ -41,18 +40,10 @@
                                         @foreach($list_obj as $item)
                                             <tr role="row" class="odd">
                                                 <td class="col-1">{{$item->id}}</td>
-                                                <td class="col-1">xuanhung2401</td>
                                                 <td class="col-2">{!! $item->shipInformation !!}</td>
                                                 <td class="col-2">{{$item->created_at}}</td>
                                                 <td class="col-2">
-                                                    <ul>
-                                                        {{--@foreach($item->details as $order_detail)--}}
-                                                        {{--{{$order_detail->quantity}}--}}
-                                                        {{--@endforeach--}}
-                                                        {{--@foreach($item->details as $order_detail)--}}
-                                                        {{--<li>{{$order_detail->product->name}} - {{$order_detail->quantity}}</li>--}}
-                                                        {{--@endforeach--}}
-                                                    </ul>
+                                                    {{$item->name}}
                                                 </td>
                                                 <td class="col-1">{{$item->statusLabel}}</td>
                                                 <td class="col-3">

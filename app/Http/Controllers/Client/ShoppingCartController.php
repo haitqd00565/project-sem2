@@ -16,6 +16,7 @@ use App\Order;
 use App\OrderDetail;
 use App\Product;
 use App\ShoppingCart;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
@@ -81,9 +82,14 @@ class ShoppingCartController extends Controller
         return response()->json(['msg' => 'Thêm vào giỏ hàng thành công', 'shopping_cart' => $shopping_cart], 200);
     }
 
-    public function removeFromCart()
+    public function removeFromCart(Request $request)
     {
-
+        $id = Input::get('id');
+        if (Session::has('cart')){
+            $cart = Session::get('cart');
+            unset($cart->items[$id]);
+        }
+        return redirect()->back();
     }
 
     public function showCart()
