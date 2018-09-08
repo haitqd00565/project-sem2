@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2',['page_title'=>'Chi tiết'])
+@extends('layout.client-layout-v2',['page_title'=>'Chi tiết','active'=>''])
 @section('content')
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m"
              style="background-image: url(https://cdn.shopify.com/s/files/1/0476/6585/files/322A9991.jpg?v=1531778253);">

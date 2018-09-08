@@ -1,5 +1,5 @@
 {{--<link rel="stylesheet" href="/css/login-register.css" type="text/css">--}}
-@extends('layout.client-layout-v2',['page_title'=>'Đăng nhập'])
+@extends('layout.client-layout-v2',['page_title'=>'Đăng nhập','active'=>''])
 @section('content')
 
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m"

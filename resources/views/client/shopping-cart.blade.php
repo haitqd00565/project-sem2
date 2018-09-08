@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2',['page_title'=>'Giỏ hàng'])
+@extends('layout.client-layout-v2',['page_title'=>'Giỏ hàng','active'=>''])
 @section('content')
     <!-- Title Page -->
     <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m"
