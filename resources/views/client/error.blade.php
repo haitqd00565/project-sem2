@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2',['page_title' => 'Error'])
+@extends('layout.client-layout-v2',['page_title' => 'Error','active'=>''])
 
 @section('content')
     <head>
