@@ -54,9 +54,12 @@
                 <h4 class="product-detail-name m-text16 p-b-13">
                     {{$obj->name}}
                 </h4>
-                <span class="m-text17">
-					{{$obj->discountPriceWithFormat}}(VND)
-				</span>
+                <span class="block2-newprice m-text8 p-r-5">
+                                            {{$obj->discountPriceString}}
+                                        </span>
+                <span class="block2-oldprice m-text7 p-r-5">
+                                            {{$obj->originalPriceString}}
+                                        </span>
                 <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
                     <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
                         Mô tả
@@ -85,7 +88,7 @@
                         </button>
                     </div>
 
-                    <div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10" id="add-cart-{{$obj->id}}">
+                    <div class="block2-btn-addcart2 btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10" id="add-cart-{{$obj->id}}">
                         <!-- Button -->
                         <button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
                             Mua hàng

@@ -76,7 +76,7 @@
         <div class="wrap_header">
             <!-- Logo -->
             <a href="/home" class="logo">
-                <img src="{{asset('https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32')}}"
+                <img src="{{asset('anh/logo.jpg')}}"
                      alt="IMG-LOGO">
             </a>
 
