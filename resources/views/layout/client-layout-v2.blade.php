@@ -84,14 +84,14 @@
             <div class="wrap_menu">
                 <nav class="menu">
                     <ul class="main_menu">
-                        <li>
+                        <li class="{{$active == 'home' ? 'sale-noti' : ''}}">
                             <a href="/home">Trang chủ</a>
                         </li>
 
-                        <li>
+                        <li class="{{$active == 'list' ? 'sale-noti' : ''}}">
                             <a href="/danh-sach-san-pham">Mua hàng</a>
                         </li>
-                        <li>
+                        <li class="{{$active == 'about' ? 'sale-noti' : ''}}">
                             <a href="/about">Giới thiệu</a>
                         </li>
                     </ul>
@@ -446,7 +446,7 @@
                 <div class="w-size2 p-t-20">
                     <!-- Button -->
                     <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-                        Theo dõi
+                        Đăng ký
                     </button>
                 </div>
 

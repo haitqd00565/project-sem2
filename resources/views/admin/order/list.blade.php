@@ -30,8 +30,9 @@
                                         <tr role="row">
                                             <th class="col-1">ID</th>
                                             <th class="col-2">Người đặt</th>
-                                            <th class="col-2">Thời gian</th>
-                                            <th class="col-2">Sản phẩm</th>
+                                            <th class="col-1">Thời gian</th>
+                                            <th class="col-1">Số lượng</th>
+                                            <th class="col-2">Tổng tiền</th>
                                             <th class="col-1">Trạng thái</th>
                                             <th class="col-3">Thao tác</th>
                                         </tr>
@@ -41,10 +42,9 @@
                                             <tr role="row" class="odd">
                                                 <td class="col-1">{{$item->id}}</td>
                                                 <td class="col-2">{!! $item->shipInformation !!}</td>
-                                                <td class="col-2">{{$item->created_at}}</td>
-                                                <td class="col-2">
-                                                    {{$item->name}}
-                                                </td>
+                                                <td class="col-1">{{$item->created_at}}</td>
+                                                <td class="col-1"></td>
+                                                <td class="col-2">{{$item->total_price}}</td>
                                                 <td class="col-1">{{$item->statusLabel}}</td>
                                                 <td class="col-3">
                                                     @if($item->status==0)
