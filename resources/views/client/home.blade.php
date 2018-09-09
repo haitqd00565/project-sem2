@@ -327,7 +327,7 @@
                 <div style="text-align: center; font-size: 30px ; margin-bottom: 30px;"
                      class="col-sm-10 col-md-8 col-lg-12">BỘ SƯU TẬP
                 </div>
-                @foreach($collection_obj as $item)
+                @foreach($collections as $item)
                     <div class="col-sm-10 col-md-8 col-lg-6 m-l-r-auto">
                         <!-- block1 -->
                         <div class="block1 hov-img-zoom pos-relative m-b-30">
@@ -335,7 +335,7 @@
 
                             <div class="block1-wrapbtn w-size2">
                                 <!-- Button -->
-                                <a href="#" style="text-align: center" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+                                <a href="{{'/bo-suu-tap-san-pham/?collectionId='.$item->id}}" style="text-align: center" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
                                     {{$item->name}}
                                 </a>
                             </div>
