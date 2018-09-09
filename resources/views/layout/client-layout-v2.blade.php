@@ -84,14 +84,14 @@
             <div class="wrap_menu">
                 <nav class="menu">
                     <ul class="main_menu">
-                        <li class="{{$active == 'home' ? 'sale-noti' : ''}}">
+                        <li>
                             <a href="/home">Trang chủ</a>
                         </li>
 
-                        <li class="{{$active == 'list' ? 'sale-noti' : ''}}">
+                        <li>
                             <a href="/danh-sach-san-pham">Mua hàng</a>
                         </li>
-                        <li class="{{$active == 'about' ? 'sale-noti' : ''}}">
+                        <li>
                             <a href="/about">Giới thiệu</a>
                         </li>
                     </ul>
