@@ -57,6 +57,7 @@ Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
 //});
 Route::get('/search', 'Client\ProductController@getSearch');
 
+Route::get('/bo-suu-tap-san-pham','Client\ProductController@getListColleciton');
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
 Route::get('/them-gio-hang', 'Client\ShoppingCartController@addToCart');
 Route::post('/api-them-gio-hang', 'Client\ShoppingCartController@addToCartApi');

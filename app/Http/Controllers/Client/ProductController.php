@@ -29,8 +29,8 @@ class ProductController extends Controller
         $list_3 = Product::where('categoryId', 3)->paginate(8);
         $list_4 = Product::where('categoryId', 4)->paginate(8);
         $list_5 = Product::where('categoryId', 5)->paginate(8);
-        $collection_obj = Collection::paginate(3);
-        return view('client.home', compact('list_1', 'list_2', 'list_3', 'list_4', 'list_5', 'collection_obj'));
+        $collections = Collection::where('status', 1)->get();
+        return view('client.home', compact('list_1', 'list_2', 'list_3', 'list_4', 'list_5', 'collections'));
     }
 
     public function getListProduct()
@@ -43,12 +43,28 @@ class ProductController extends Controller
             $product_filter = $product_filter->where('categoryId', $selected_categoryId);
         }
         $selected_category = Category::find($selected_categoryId);
-        $list_product = $product_filter->orderBy('created_at', 'DESC')->paginate(100);
+        $list_product = $product_filter->orderBy('created_at', 'DESC')->paginate(39);
         return view('client.product-list')
             ->with('categories', $categories)
             ->with('list_product', $list_product)
             ->with('selected_categoryId', $selected_categoryId)
             ->with('selected_category', $selected_category);
+    }
+
+    public function getListColleciton()
+    {
+        $selected_collectionId = 0;
+        $product_filter = Product::where('status', 1);
+        if (Input::has('collectionId') && Input::get('collectionId') != 0) {
+            $selected_collectionId = Input::get('collectionId');
+            $product_filter = $product_filter->where('collectionId', $selected_collectionId);
+            $collections_type = Collection::where('id', $selected_collectionId)->first();
+        }
+        $list_colleciton = $product_filter->orderBy('created_at', 'DESC')->paginate(12);
+        return view('client.collection')
+            ->with('selected_collectionId', $selected_collectionId)
+            ->with('collections_type', $collections_type)
+            ->with('list_colleciton', $list_colleciton);
     }
 
     public function getSearch(Request $request)
@@ -135,12 +151,14 @@ class ProductController extends Controller
         Auth::logout();
         return redirect('/home');
     }
-    public function show(){
+
+    public function show()
+    {
         $id = Input::get('id');
         $obj = Product::find($id);
-        if ($obj == null){
+        if ($obj == null) {
             return "Lỗi";
         }
-        return view('client.detailProduct',compact('obj'));
+        return view('client.detailProduct', compact('obj'));
     }
 }
