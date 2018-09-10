@@ -44,8 +44,14 @@ Route::get('/admin/order', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 //
 Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
-});
+// Order Manager
+    Route::get('/admin/order/', 'OrderController@index');
+    Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
+Route::get('/admin/dashboard', function () {
+    return view('admin/dashboard/chart');
+});
+});
 
 // Client
 
@@ -72,12 +78,7 @@ Route::get('/test', 'Client\ShoppingCartController@demoTransaction');
 Route::get('/home', 'Client\ProductController@index');
 
 Route::get('/detail', 'Client\ProductController@show');
-// Order Manager
-Route::get('/admin/order/', 'OrderController@index');
-Route::get('/admin/order/change-status', 'OrderController@changeStatus');
-Route::get('/admin/dashboard', function () {
-    return view('admin/dashboard/chart');
-});
+
 
 //Route::get('detail', function () {
 //    return view('client/detailProduct');
@@ -101,5 +102,5 @@ Route::get('error', function () {
 });
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/xoa-san-pham', 'Client\ShoppingCartController@removeFromCart');

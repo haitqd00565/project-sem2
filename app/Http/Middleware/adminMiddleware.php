@@ -16,9 +16,9 @@ class adminMiddleware
     {
         if (auth()->check()) {
             if (auth()->user()->adminLevel > 0){
-                return $next($request);
+                return redirect()->guest('/admin');
             }
         }
-        return redirect()->guest('/home');
+        return $next($request);
     }
 }
