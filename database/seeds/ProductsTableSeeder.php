@@ -96,7 +96,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>1,
+                'collectionId'=>2,
                 'name'=>'STESS JACKET',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/313000089_Anorak_NoStress_WHT_2_large.jpg?v=1524525523',
                 'price'=> 320000,
@@ -112,7 +112,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>1,
+                'collectionId'=>2,
                 'name'=>'SLEEVE TEE',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/309000060_StockLS_SunUp_BLU_2_large.jpg?v=1524592995',
                 'price'=> 300000,
@@ -144,7 +144,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>1,
+                'collectionId'=>2,
                 'name'=>'STOCK TEE',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/309000056_WHT_2_1024x1024_ebe0fba0-6c7f-46c0-bd5b-3869537b56dd_large.jpg?v=1525716966',
                 'price'=> 320000,
@@ -160,9 +160,9 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>1,
+                'collectionId'=>2,
                 'name'=>'CLASSIC TEA',
-                'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/304400177M_BLK_1_copy_large.jpg?v=1525735327',
+                'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/309500006G_BLK_1_large.jpg?v=1531439107',
                 'price'=> 250000,
                 'discount'=>20,
                 'description'=>'Áo CLASSIC TEA trẻ trung phù hợp mặc đi biển',
@@ -225,7 +225,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'DIVE CUTOFF TANK',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/403200031_BLKW_2_copy_large.jpg?v=1518653614',
                 'price'=> 1500000,
@@ -273,7 +273,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'DIVER TEE',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/404000062_WHT_1_large.jpg?v=1532036286',
                 'price'=> 110000,
@@ -289,7 +289,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'CALI TEE',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/404000061_DSD_2_large.jpg?v=1532035734',
                 'price'=> 100000,
@@ -321,7 +321,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'ROSE SHRUNKEN',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/405000004_WHT_2_large.jpg?v=1532037927',
                 'price'=> 110000,
@@ -353,7 +353,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'SWELL TD',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/404000053_BLKW_2_large.jpg?v=1517443742',
                 'price'=> 150000,
@@ -369,7 +369,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>1,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'SUNBURN',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/402100022_HEA_1_copy_large.jpg?v=1518653532',
                 'price'=> 100000,
@@ -402,7 +402,7 @@ class ProductsTableSeeder extends Seeder
             //Quần đi biển nam
             [
                 'categoryId'=>2,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'SUPPER RANRI',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_CAM_1_large.jpg?v=1532378454',
                 'price'=> 300000,
@@ -417,7 +417,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>2,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'BLACKWALL II',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_NAVYTOBACCO_1_large.jpg?v=1516836073',
                 'price'=> 200000,
@@ -432,7 +432,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>2,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'BLACKWALL III',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_NAVY_RED-1_large.jpg?v=1532104878',
                 'price'=> 200000,
@@ -447,7 +447,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>2,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'BLACKWALL IV',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200034_CAVIAR-1_large.jpg?v=1532045768',
                 'price'=> 32000,
@@ -462,7 +462,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>2,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'STOKEHOLD',
                 'images'=>'https://cdn.shopify.com/s/files/1/0476/6585/products/315200037_BLACK-1_large.jpg?v=1524697048',
                 'price'=> 250000,
@@ -583,7 +583,7 @@ class ProductsTableSeeder extends Seeder
             //Kính đi biển
             [
                 'categoryId'=>3,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'EYEGLASSES',
                 'images'=>'https://www.seeeyewear.com/images/default-source/product_images/august-18/see-6656-28-angle.jpg?sfvrsn=8f6de21b_4',
                 'price'=> 70000,
@@ -599,7 +599,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>3,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'UNISEX',
                 'images'=>'https://www.seeeyewear.com/images/default-source/product_images/august-18/see-5832-100-angle.jpg?sfvrsn=b176e21b_4',
                 'price'=> 50000,
@@ -615,7 +615,7 @@ class ProductsTableSeeder extends Seeder
             ],
             [
                 'categoryId'=>3,
-                'collectionId'=>2,
+                'collectionId'=>1,
                 'name'=>'RBSPACE',
                 'images'=>'https://www.seeeyewear.com/images/default-source/product_images/july-18/see-0533-423-angle.jpg?sfvrsn=d2fbe21b_4',
                 'price'=> 50000,
