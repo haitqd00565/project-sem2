@@ -1,7 +1,7 @@
 @extends('layout.client-layout-v2',['page_title'=>'Bộ sưu tập','active'=>''])
 @section('content')
     <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m"
-             style="background-image: url(http:////cdn.shopify.com/s/files/1/0476/6585/files/outerwear_1600x.jpg?v=1532559381);">
+             style="background-image: url(https://cdn.shopify.com/s/files/1/0476/6585/files/DS_MAINE-213.jpg?v=1532566470);">
         <h2 class="l-text2 t-center">
             Bộ sưu tập {{$collections_type->name}}
         </h2>
@@ -70,10 +70,6 @@
                     {{--<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>--}}
                     {{--</div>--}}
                     {{--{{$list_product -> links()}}--}}
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-7 col-lg-7"></div>
-                    <div class="col-sm-12 col-md-5 col-lg-5">{{$list_collection->links()}}</div>
                 </div>
             </div>
         </div>
