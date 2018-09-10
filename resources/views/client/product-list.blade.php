@@ -96,10 +96,6 @@
                         {{--<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>--}}
                     {{--</div>--}}
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-7 col-lg-7"></div>
-                    <div class="col-sm-12 col-md-5 col-lg-5">{{$list_product -> links()}}</div>
-                </div>
             </div>
         </div>
     </section>
