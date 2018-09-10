@@ -60,11 +60,12 @@ class ProductController extends Controller
             $product_filter = $product_filter->where('collectionId', $selected_collectionId);
             $collections_type = Collection::where('id', $selected_collectionId)->first();
         }
-        $list_colleciton = $product_filter->orderBy('created_at', 'DESC')->paginate(12);
+        $list_collection = $product_filter->orderBy('created_at', 'DESC')->paginate(12);
         return view('client.collection')
+            ->with('list_collection', $list_collection)
             ->with('selected_collectionId', $selected_collectionId)
             ->with('collections_type', $collections_type)
-            ->with('list_colleciton', $list_colleciton);
+        ;
     }
 
     public function getSearch(Request $request)
