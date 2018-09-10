@@ -84,14 +84,14 @@
             <div class="wrap_menu">
                 <nav class="menu">
                     <ul class="main_menu">
-                        <li>
+                        <li class="{{$active == 'home' ? 'sale-noti' : ''}}">
                             <a href="/home">Trang chủ</a>
                         </li>
 
-                        <li>
+                        <li class="{{$active == 'list' ? 'sale-noti' : ''}}">
                             <a href="/danh-sach-san-pham">Mua hàng</a>
                         </li>
-                        <li>
+                        <li class="{{$active == 'about' ? 'sale-noti' : ''}}">
                             <a href="/about">Giới thiệu</a>
                         </li>
                     </ul>
@@ -170,7 +170,7 @@
     <div class="wrap_header_mobile">
         <!-- Logo moblie -->
         <a href="/home" class="logo-mobile">
-            <img src="{{asset('https://scontent.fhan2-1.fna.fbcdn.net/v/t1.0-9/40139981_2247731608839244_8359472307663536128_n.jpg?_nc_cat=0&oh=06bbed7c0958d33fd7495f48d91d349c&oe=5C34BE32')}}"
+            <img src="{{asset('anh/logo.jpg')}}"
                  alt="IMG-LOGO">
         </a>
 
@@ -187,76 +187,47 @@
                 <div class="header-wrapicon2">
                     <img src="{{asset('images/icons/icon-header-02.png')}}" class="header-icon1 js-show-header-dropdown"
                          alt="ICON">
-                    <span class="header-icons-noti">0</span>
+                    <span class="header-icons-noti">{{\App\ShoppingCart::getTotalItem()}}</span>
 
                     <!-- Header cart noti -->
                     <div class="header-cart header-dropdown">
                         <ul class="header-cart-wrapitem">
+                            @if(count(\App\ShoppingCart::getCart()->items)>0)
+                                @foreach(\App\ShoppingCart::getCart()->items as $item)
                             <li class="header-cart-item">
                                 <div class="header-cart-item-img">
-                                    <img src="{{asset('images/item-cart-01.jpg')}}" alt="IMG">
+                                    <img src="{{$item->product->images}}" alt="IMG">
                                 </div>
 
                                 <div class="header-cart-item-txt">
                                     <a href="#" class="header-cart-item-name">
-                                        White Shirt With Pleat Detail Back
+                                        {{$item->product->name}}
                                     </a>
 
                                     <span class="header-cart-item-info">
-											1 x $19.00
+											{{$item->quantity}} x {{$item->product->discountPriceString}}
 										</span>
                                 </div>
                             </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="{{asset('images/item-cart-02.jpg')}}" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Converse All Star Hi Black Canvas
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="header-cart-item">
-                                <div class="header-cart-item-img">
-                                    <img src="{{asset('images/item-cart-03.jpg')}}" alt="IMG">
-                                </div>
-
-                                <div class="header-cart-item-txt">
-                                    <a href="#" class="header-cart-item-name">
-                                        Nixon Porter Leather Watch In Tan
-                                    </a>
-
-                                    <span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-                                </div>
-                            </li>
+                                @endforeach
+                            @else
+                                'Hiện tại không có sản phẩm nào trong giỏ hàng'
+                            @endif
                         </ul>
 
                         <div class="header-cart-total">
-                            Total: $75.00
+                            Tổng cộng: <span
+                                    id="header-cart-total">{{\App\ShoppingCart::getCart()->getTotalMoneyString()}}</span>
                         </div>
 
                         <div class="header-cart-buttons">
                             <div class="header-cart-wrapbtn">
-                                <!-- Button -->
-                                <a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    View Cart
-                                </a>
                             </div>
 
                             <div class="header-cart-wrapbtn">
                                 <!-- Button -->
-                                <a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-                                    Check Out
+                                <a href="/xem-gio-hang" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+                                    Đơn hàng
                                 </a>
                             </div>
                         </div>
@@ -310,11 +281,7 @@
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="product.html">Giới thiệu</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="cart.html">Liên hệ</a>
+                    <a href="/about">Giới thiệu</a>
                 </li>
             </ul>
         </nav>
