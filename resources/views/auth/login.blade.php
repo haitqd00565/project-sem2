@@ -1,4 +1,4 @@
-@extends('layout.client-layout-v2',['page_title'=>'Login'])
+@extends('layout.client-layout-v2',['page_title'=>'Login','active'=>''])
 
 @section('content')
 <div class="container">
