@@ -35,7 +35,7 @@ Route::get('/404', function () {
 
 // admin
 
-//Route::middleware('admin')->group(function () {
+Route::middleware('admin')->group(function () {
 Route::resource('admin/category', 'CategoryController');
 Route::resource('admin/collection', 'CollectionController');
 Route::resource('admin/product', 'ProductController');
@@ -44,7 +44,7 @@ Route::get('/admin/order', 'OrderController@index');
 Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 //
 Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
-//});
+});
 
 
 // Client
@@ -101,5 +101,5 @@ Route::get('error', function () {
 });
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
 Route::get('/xoa-san-pham', 'Client\ShoppingCartController@removeFromCart');
