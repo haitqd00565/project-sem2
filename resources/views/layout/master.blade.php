@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap core CSS     -->
+    <script src="/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet"/>
     <!--  Material Dashboard CSS    -->
     <link href="/assets/css/material-dashboard.css" rel="stylesheet"/>
@@ -23,7 +24,7 @@
     <link href="/assets/css/google-roboto-300-700.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <script src="/assets/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+
     <script src="{{asset('js/bootstrap-datepicker.min.js')}}"></script>
 </head>
 
@@ -326,8 +327,7 @@
 <script src="/assets/js/jquery.validate.min.js"></script>
 <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
 <script src="/assets/js/moment.min.js"></script>
-<!--  Charts Plugin -->
-<script src="/assets/js/chartist.min.js"></script>
+
 <!--  Plugin for the Wizard -->
 <script src="/assets/js/jquery.bootstrap-wizard.js"></script>
 <!--  Notifications Plugin    -->

@@ -2,13 +2,14 @@
 'current_menu'=>'chart_manager',
     'current_sub_menu'=>'list_item'])
 @section('content')
+    {{--Line chart--}}
     <div class="col-md-12">
         <div class="card">
             <div class="card-header card-header-icon" data-background-color="purple">
                 <i class="material-icons">assignment</i>
             </div>
             <div class="card-content">
-                <h4 class="card-title">DANH SÁCH ĐƠN HÀNG</h4>
+                <h4 class="card-title">HIển thị doanh thu theo thời gian</h4>
                 <div class="toolbar">
                     <!--        Here you can write extra buttons/actions for the toolbar              -->
                 </div>
@@ -22,9 +23,66 @@
         </div>
     </div>
 
+    {{--Pie chart--}}
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-icon" data-background-color="purple">
+                <i class="material-icons">assignment</i>
+            </div>
+            <div class="card-content">
+                <h4 class="card-title">Hiển thị số lượng sản phẩm đã bán</h4>
+                <div class="toolbar">
+                    <!--        Here you can write extra buttons/actions for the toolbar              -->
+                </div>
+                <div id="reportrange" style="cursor: pointer; float: right;">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span></span> <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="clearfix"></div>
+                <div id="piechart_material"></div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    {{--JS Pie Chart--}}
     <script type="text/javascript">
-        google.charts.load('current', {'packages': ['line']});
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart1);
+
+        function drawChart1() {
+            $.ajax({
+                url: '/api-get-chart-pie-data',
+                method: 'GET',
+                success: function (resp) {
+                    var data = new google.visualization.DataTable()
+                    data.addColumn('string', 'Product Name');
+                    data.addColumn('number', 'Quantity');
+                    for (var i = 0; i < resp.length; i++) {
+                        data.addRow([resp[i].product_name + '', Number(resp[i].number)]);
+                    }
+                    var options = {
+                        title: 'Biểu đồ hiển thị sản phẩm'
+                    };
+                    //
+                    var chart = new google.visualization.PieChart(document.getElementById('piechart_material'));
+
+                    chart.draw(data, options);
+                },
+                error: function () {
+                    swal('Có lỗi xảy ra', 'Không thể lấy dữ liệu từ api', 'error');
+                }
+            });
+        }
+
+
+
+
+        {{--</script>--}}
+        {{--JS Line chart--}}
+        // <
+        // script
+        // type = "text/javascript" >
+            google.charts.load('current', {'packages': ['line']});
         google.charts.setOnLoadCallback(function () {
             $.ajax({
                 url: '/api-get-chart-data?startDate=2018-08-10&endDate=2018-09-06',
@@ -61,7 +119,7 @@
             chart.draw(data, google.charts.Line.convertOptions(options));
         }
 
-        $(function() {
+        $(function () {
             var start = moment().subtract(29, 'days');
             var end = moment();
 
@@ -115,11 +173,11 @@
                 }
             }, cb);
             cb(start, end);
-            $('#reportrange').on('cancel.daterangepicker', function(ev, picker) {
+            $('#reportrange').on('cancel.daterangepicker', function (ev, picker) {
                 //do something, like clearing an input
                 $('#reportrange').val('');
             });
-            $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+            $('#reportrange').on('apply.daterangepicker', function (ev, picker) {
                 // console.log();
                 // console.log(picker.endDate.format('YYYY-MM-DD'));
                 var startDate = picker.startDate.format('YYYY-MM-DD');
@@ -128,10 +186,11 @@
                     url: '/api-get-chart-data?startDate=' + startDate + '&endDate=' + endDate,
                     method: 'GET',
                     success: function (resp) {
-                        if(resp.length ==0){
+                        if (resp.length == 0) {
                             swal('Không có dữ liệu', 'Vui lòng lựa chọn khoảng thời gian khác.', 'warning');
                             return;
-                        };
+                        }
+                        ;
                         drawChart(resp);
                     },
                     error: function () {

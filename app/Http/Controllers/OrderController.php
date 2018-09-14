@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\OrderDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -25,13 +26,30 @@ class OrderController extends Controller
         $start_date = Input::get('startDate');
         $end_date = Input::get('endDate');
         $chart_data = Order::select(DB::raw('sum(total_price) as revenue'), DB::raw('date(created_at) as day'))
-            ->whereBetween('created_at', array($start_date .' 00:00:00', $end_date . ' 23:59:59'))
+            ->whereBetween('created_at', array($start_date . ' 00:00:00', $end_date . ' 23:59:59'))
             ->groupBy('day')
             ->orderBy('day', 'desc')
             ->get();
         return $chart_data;
     }
 
+    public function getChartPieDataApi()
+    {
+//        $start_date = Input::get('startDate');
+//        $end_date = Input::get('endDate');
+        $chart_data = OrderDetail::select(DB::raw('product_id as product_id'), DB::raw('products.name as product_name'),DB::raw('sum(quantity) as number'))
+//            ->whereBetween('created_at', array($start_date . ' 00:00:00', $end_date . ' 23:59:59'))
+            ->join('products', 'products.id', '=', 'order_details.product_id')
+            ->groupBy('product_id')
+            ->groupBy('product_name')
+//->orderBy('product_id', 'desc')
+            ->get();
+//        $array[] = ['product_id', 'number'];
+//        foreach ($data as $key => $value) {
+//            $array[++$key] = [$value->product_id, $value->number];
+//        }
+        return $chart_data;
+    }
 
     public function changeStatus()
     {
