@@ -36,21 +36,22 @@ Route::get('/404', function () {
 // admin
 
 Route::middleware('admin')->group(function () {
-Route::resource('admin/category', 'CategoryController');
-Route::resource('admin/collection', 'CollectionController');
-Route::resource('admin/product', 'ProductController');
+    Route::resource('admin/category', 'CategoryController');
+    Route::resource('admin/collection', 'CollectionController');
+    Route::resource('admin/product', 'ProductController');
 // Order Manager
-Route::get('/admin/order', 'OrderController@index');
-Route::get('/admin/order/change-status', 'OrderController@changeStatus');
+    Route::get('/admin/order', 'OrderController@index');
+    Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 //
-Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
+    Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
+    Route::get('/api-get-chart-pie-data', 'OrderController@getChartPieDataApi');
 // Order Manager
     Route::get('/admin/order/', 'OrderController@index');
     Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
-Route::get('/admin/dashboard', function () {
-    return view('admin/dashboard/chart');
-});
+    Route::get('/admin/dashboard', function () {
+        return view('admin/dashboard/chart');
+    });
 });
 
 // Client
@@ -63,7 +64,7 @@ Route::get('/admin/dashboard', function () {
 //});
 Route::get('/search', 'Client\ProductController@getSearch');
 
-Route::get('/bo-suu-tap-san-pham','Client\ProductController@getListColleciton');
+Route::get('/bo-suu-tap-san-pham', 'Client\ProductController@getListColleciton');
 Route::get('/danh-sach-san-pham', 'Client\ProductController@getListProduct');
 Route::get('/them-gio-hang', 'Client\ShoppingCartController@addToCart');
 Route::post('/api-them-gio-hang', 'Client\ShoppingCartController@addToCartApi');
