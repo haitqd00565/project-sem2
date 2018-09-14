@@ -322,14 +322,14 @@
 
             <ul>
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Nam
+                    <a href="bo-suu-tap-san-pham/?collectionId=2" class="s-text7">
+                        Đông
                     </a>
                 </li>
 
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
-                        Nữ
+                    <a href="bo-suu-tap-san-pham/?collectionId=1" class="s-text7">
+                        Hè
                     </a>
                 </li>
             </ul>
@@ -342,19 +342,19 @@
 
             <ul>
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
+                    <a href="/home" class="s-text7">
                         Trang chủ
                     </a>
                 </li>
 
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
+                    <a href="/danh-sach-san-pham" class="s-text7">
                         Mua hàng
                     </a>
                 </li>
 
                 <li class="p-b-9">
-                    <a href="#" class="s-text7">
+                    <a href="/about" class="s-text7">
                         Giới thiệu
                     </a>
                 </li>
