@@ -78,7 +78,7 @@
                                                 <td>{{$item->sizes}}</td>
                                                 <td class="text-right">
                                                     <a href="/admin/product/{{$item->id}}" class="btn btn-simple btn-success btn-icon android-search"><i
-                                                                class="material-icons">search</i></a>
+                                                                class="material-icons">art_track</i></a>
                                                     <a href="/admin/product/{{$item->id}}/edit" class="btn btn-simple btn-warning btn-icon edit"><i
                                                                 class="material-icons">edit</i></a>
                                                     <a href="{{$item->id}}" class="btn btn-simple btn-danger btn-icon remove btn-delete"><i
