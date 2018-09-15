@@ -31,6 +31,7 @@
                                             <th class="col-1">ID</th>
                                             <th class="col-2">Người đặt</th>
                                             <th class="col-1">Thời gian</th>
+                                            <th class="col-1">Sản phẩm</th>
                                             <th class="col-1">Số lượng</th>
                                             <th class="col-2">Tổng tiền</th>
                                             <th class="col-1">Trạng thái</th>
@@ -43,10 +44,19 @@
                                                 <td class="col-1">{{$item->id}}</td>
                                                 <td class="col-2">{!! $item->shipInformation !!}</td>
                                                 <td class="col-1">{{$item->created_at}}</td>
-                                                <td class="col-1"></td>
+                                                <td class="col-1">
+                                                        @foreach($item->details as $order_detail)
+                                                            {{$order_detail->product->name}}
+                                                        @endforeach
+                                                </td>
+                                                <td class="col-1">
+                                                        @foreach($item->details as $order_detail)
+                                                            {{$order_detail->quantity}}
+                                                        @endforeach
+                                                </td>
                                                 <td class="col-2">{{$item->total_price}}</td>
                                                 <td class="col-1">{{$item->statusLabel}}</td>
-                                                <td class="col-3">
+                                                <td class="col-2">
                                                     @if($item->status==0)
                                                         <a href="/admin/order/change-status?id={{$item->id}}&status=1"
                                                            onclick="return confirm('Bạn có chắc muốn xác nhận đơn hàng?')"

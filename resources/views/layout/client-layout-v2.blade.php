@@ -54,15 +54,15 @@
 
             <div class="topbar-child2">
 
-                <span class="topbar-email">
-                        @if(Auth::check())
-                        <li><a href="">{{Auth::user()->name}}</a></li>
-                        <li><a href="{{route('logout')}}">Đăng xuất</a></li>
-                        @csrf
-                    @else
-                        <li><a href="{{route('login')}}">Đăng nhập</a></li>
-                    @endif
-					</span>
+                {{--<span class="topbar-email">--}}
+                        {{--@if(Auth::check())--}}
+                        {{--<li><a href="">{{Auth::user()->name}}</a></li>--}}
+                        {{--<li><a href="{{route('logout')}}">Đăng xuất</a></li>--}}
+                        {{--@csrf--}}
+                    {{--@else--}}
+                        {{--<li><a href="{{route('login')}}">Đăng nhập</a></li>--}}
+                    {{--@endif--}}
+					{{--</span>--}}
 
                 <div class="topbar-language rs1-select2">
                     <select class="selection-1" name="time">

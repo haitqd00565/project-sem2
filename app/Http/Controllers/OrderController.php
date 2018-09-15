@@ -37,11 +37,11 @@ class OrderController extends Controller
     {
 //        $start_date = Input::get('startDate');
 //        $end_date = Input::get('endDate');
-        $chart_data = OrderDetail::select(DB::raw('product_id as product_id'), DB::raw('products.name as product_name'),DB::raw('sum(quantity) as number'))
+        $chart_data = OrderDetail::select(DB::raw('product_id as product_id'), DB::raw('categories.name as category_name'),DB::raw('sum(quantity) as number'))
 //            ->whereBetween('created_at', array($start_date . ' 00:00:00', $end_date . ' 23:59:59'))
-            ->join('products', 'products.id', '=', 'order_details.product_id')
+            ->join('categories', 'categories.id', '=', 'order_details.product_id')
             ->groupBy('product_id')
-            ->groupBy('product_name')
+            ->groupBy('category_name')
 //->orderBy('product_id', 'desc')
             ->get();
 //        $array[] = ['product_id', 'number'];

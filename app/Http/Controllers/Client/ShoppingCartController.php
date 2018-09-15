@@ -94,6 +94,7 @@ class ShoppingCartController extends Controller
 
     public function showCart()
     {
+
         $shopping_cart = new ShoppingCart();
         if (Session::has('cart')) {
             $shopping_cart = Session::get('cart');
