@@ -58,7 +58,7 @@
                     data.addColumn('string', 'Product Name');
                     data.addColumn('number', 'Quantity');
                     for (var i = 0; i < resp.length; i++) {
-                        data.addRow([resp[i].product_name + '', Number(resp[i].number)]);
+                        data.addRow([resp[i].category_name + '', Number(resp[i].number)]);
                     }
                     var options = {
                         title: 'Biểu đồ hiển thị sản phẩm'

@@ -35,24 +35,24 @@ Route::get('/404', function () {
 
 // admin
 
-Route::middleware('admin')->group(function () {
-    Route::resource('admin/category', 'CategoryController');
-    Route::resource('admin/collection', 'CollectionController');
-    Route::resource('admin/product', 'ProductController');
+//Route::middleware('admin')->group(function () {
+Route::resource('admin/category', 'CategoryController');
+Route::resource('admin/collection', 'CollectionController');
+Route::resource('admin/product', 'ProductController');
 // Order Manager
-    Route::get('/admin/order', 'OrderController@index');
-    Route::get('/admin/order/change-status', 'OrderController@changeStatus');
+Route::get('/admin/order', 'OrderController@index');
+Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 //
-    Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
-    Route::get('/api-get-chart-pie-data', 'OrderController@getChartPieDataApi');
+Route::get('/api-get-chart-data', 'OrderController@getChartDataApi');
+Route::get('/api-get-chart-pie-data', 'OrderController@getChartPieDataApi');
 // Order Manager
-    Route::get('/admin/order/', 'OrderController@index');
-    Route::get('/admin/order/change-status', 'OrderController@changeStatus');
+Route::get('/admin/order/', 'OrderController@index');
+Route::get('/admin/order/change-status', 'OrderController@changeStatus');
 
-    Route::get('/admin/dashboard', function () {
-        return view('admin/dashboard/chart');
-    });
+Route::get('/admin/dashboard', function () {
+    return view('admin/dashboard/chart');
 });
+//});
 
 // Client
 
@@ -85,15 +85,15 @@ Route::get('/detail', 'Client\ProductController@show');
 //    return view('client/detailProduct');
 //});
 
-Route::get('/login', ['as' => 'login', 'uses' => 'Client\ProductController@getSignIn']);
-
-Route::get('/register', ['as' => 'register', 'uses' => 'Client\ProductController@getSignUp']);
-
-Route::post('/login', ['as' => 'login', 'uses' => 'Client\ProductController@postSignIn']);
-
-Route::post('/register', ['as' => 'register', 'uses' => 'Client\ProductController@postSignUp']);
-
-Route::get('/logout', ['as' => 'logout', 'uses' => 'Client\ProductController@getLogOut']);
+//Route::get('/login', ['as' => 'login', 'uses' => 'Client\ProductController@getSignIn']);
+//
+//Route::get('/register', ['as' => 'register', 'uses' => 'Client\ProductController@getSignUp']);
+//
+//Route::post('/login', ['as' => 'login', 'uses' => 'Client\ProductController@postSignIn']);
+//
+//Route::post('/register', ['as' => 'register', 'uses' => 'Client\ProductController@postSignUp']);
+//
+//Route::get('/logout', ['as' => 'logout', 'uses' => 'Client\ProductController@getLogOut']);
 
 Route::get('about', function () {
     return view('client/about');
@@ -101,7 +101,7 @@ Route::get('about', function () {
 Route::get('error', function () {
     return view('client/error');
 });
-Auth::routes();
+//Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('admin');
+//Route::get('/admin', 'HomeController@index')->name('admin');
 Route::get('/xoa-san-pham', 'Client\ShoppingCartController@removeFromCart');
