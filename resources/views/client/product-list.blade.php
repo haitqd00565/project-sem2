@@ -91,10 +91,13 @@
                         @endforeach
                     </div>
                     <!-- Pagination -->
-                    {{--<div class="pagination flex-m flex-w p-t-26">--}}
-                        {{--<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>--}}
-                        {{--<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>--}}
-                    {{--</div>--}}
+                    <div class="row" id="pagination">
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-10 parent-paginate">
+                            {{ $list_product->links() }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

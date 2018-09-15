@@ -47,7 +47,7 @@
                                             </button>
 
                                             <input class="size8 m-text18 t-center num-product"
-                                                   type="number" name="products[{{$item->product->id}}]"
+                                                   type="number" min=0 oninput="validity.valid||(value='');"  name="products[{{$item->product->id}}]"
                                                    value="{{$item->quantity}}">
 
                                             <button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
