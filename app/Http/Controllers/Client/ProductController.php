@@ -43,7 +43,7 @@ class ProductController extends Controller
             $product_filter = $product_filter->where('categoryId', $selected_categoryId);
         }
         $selected_category = Category::find($selected_categoryId);
-        $list_product = $product_filter->orderBy('created_at', 'DESC')->paginate(100);
+        $list_product = $product_filter->orderBy('created_at', 'DESC')->paginate(12);
         return view('client.product-list')
             ->with('categories', $categories)
             ->with('list_product', $list_product)
@@ -60,7 +60,7 @@ class ProductController extends Controller
             $product_filter = $product_filter->where('collectionId', $selected_collectionId);
             $collections_type = Collection::where('id', $selected_collectionId)->first();
         }
-        $list_collection = $product_filter->orderBy('created_at', 'DESC')->paginate(48);
+        $list_collection = $product_filter->orderBy('created_at', 'DESC')->paginate(16);
         return view('client.collection')
             ->with('list_collection', $list_collection)
             ->with('selected_collectionId', $selected_collectionId)
